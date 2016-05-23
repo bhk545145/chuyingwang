@@ -7,55 +7,55 @@
 //
 
 #import "ViewController.h"
-#import "bhkCollectionViewCell.h"
 
-@interface ViewController ()<UICollectionViewDataSource>
+@interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 1;
-}
+- (void)viewDidLoad{
+    [super viewDidLoad];
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return  4;
-}
+    self.view.backgroundColor = [UIColor blackColor];
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    bhkCollectionViewCell *cell = (bhkCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"reuse" forIndexPath:indexPath];
-    [self configureCell:cell withIndexPath:indexPath];
-    return cell;
-}
-
-- (void)configureCell:(bhkCollectionViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
-{
-    UIView  *subview = [cell.contentView viewWithTag:99];
-    [subview removeFromSuperview];
+    // 0.一些固定的尺寸参数
+    CGFloat imageW = self.scrollview.frame.size.width;
+    CGFloat imageH = self.scrollview.frame.size.height;
+    CGFloat imageX = 0;
     
-    switch (indexPath.section) {
-        case 0:
-            cell.cardimageview.image =  [UIImage imageNamed:@"i1"];
-            break;
-        case 1:
-            cell.cardimageview.image =  [UIImage imageNamed:@"i2"];
-            break;
-        case 2:
-            cell.cardimageview.image =  [UIImage imageNamed:@"i3"];
-            break;
-        case 3:
-            cell.cardimageview.image =  [UIImage imageNamed:@"i4"];
-            break;
-        case 4:
-            cell.cardimageview.image =  [UIImage imageNamed:@"i5"];
-            break;
-        default:
-            break;
+    // 1.添加图片到scrollView中
+    for (int i = 0; i<3; i++) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        
+        // 设置frame
+        CGFloat imageY = i * imageH;
+        imageView.frame = CGRectMake(imageX, imageY, imageW, imageH);
+        
+        // 设置图片
+        NSString *name = [NSString stringWithFormat:@"i%d", i + 1];
+        imageView.image = [UIImage imageNamed:name];
+        
+        [self.scrollview addSubview:imageView];
     }
+    // 2.设置内容尺寸
+    CGFloat contentY = 3 * imageH;
+    self.scrollview.contentSize = CGSizeMake(0, contentY);
+    
+    // 3.隐藏垂直滚动条
+    self.scrollview.showsVerticalScrollIndicator = NO;
+    
+    // 4.分页
+    self.scrollview.pagingEnabled = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleLightContent;
+    
+}
 @end

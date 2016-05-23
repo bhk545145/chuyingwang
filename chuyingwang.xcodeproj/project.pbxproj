@@ -12,11 +12,8 @@
 		026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4EB1CF2FCCC003A8A95 /* ViewController.m */; };
 		026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026EF4ED1CF2FCCC003A8A95 /* Main.storyboard */; };
 		026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */; };
-		026EF4F41CF2FCCC003A8A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026EF4F21CF2FCCC003A8A95 /* LaunchScreen.storyboard */; };
 		026EF4FF1CF2FCCC003A8A95 /* chuyingwangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4FE1CF2FCCC003A8A95 /* chuyingwangTests.m */; };
 		026EF50A1CF2FCCC003A8A95 /* chuyingwangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF5091CF2FCCC003A8A95 /* chuyingwangUITests.m */; };
-		026EF5241CF3022C003A8A95 /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF5221CF3022C003A8A95 /* RGCardViewLayout.m */; };
-		026EF5271CF30368003A8A95 /* bhkCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF5261CF30368003A8A95 /* bhkCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +42,6 @@
 		026EF4EB1CF2FCCC003A8A95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		026EF4EE1CF2FCCC003A8A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		026EF4F31CF2FCCC003A8A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		026EF4F51CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026EF4FA1CF2FCCC003A8A95 /* chuyingwangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuyingwangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF4FE1CF2FCCC003A8A95 /* chuyingwangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chuyingwangTests.m; sourceTree = "<group>"; };
@@ -53,10 +49,6 @@
 		026EF5051CF2FCCC003A8A95 /* chuyingwangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuyingwangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF5091CF2FCCC003A8A95 /* chuyingwangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chuyingwangUITests.m; sourceTree = "<group>"; };
 		026EF50B1CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026EF5211CF3022C003A8A95 /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
-		026EF5221CF3022C003A8A95 /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
-		026EF5251CF30368003A8A95 /* bhkCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bhkCollectionViewCell.h; sourceTree = "<group>"; };
-		026EF5261CF30368003A8A95 /* bhkCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bhkCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +104,7 @@
 				026EF4EA1CF2FCCC003A8A95 /* ViewController.h */,
 				026EF4EB1CF2FCCC003A8A95 /* ViewController.m */,
 				026EF4ED1CF2FCCC003A8A95 /* Main.storyboard */,
-				026EF5251CF30368003A8A95 /* bhkCollectionViewCell.h */,
-				026EF5261CF30368003A8A95 /* bhkCollectionViewCell.m */,
 				026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */,
-				026EF4F21CF2FCCC003A8A95 /* LaunchScreen.storyboard */,
 				026EF4F51CF2FCCC003A8A95 /* Info.plist */,
 				026EF51E1CF3022C003A8A95 /* lib */,
 				026EF4E41CF2FCCC003A8A95 /* Supporting Files */,
@@ -161,18 +150,8 @@
 		026EF51F1CF3022C003A8A95 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				026EF5201CF3022C003A8A95 /* RGCardView */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		026EF5201CF3022C003A8A95 /* RGCardView */ = {
-			isa = PBXGroup;
-			children = (
-				026EF5211CF3022C003A8A95 /* RGCardViewLayout.h */,
-				026EF5221CF3022C003A8A95 /* RGCardViewLayout.m */,
-			);
-			path = RGCardView;
 			sourceTree = "<group>";
 		};
 		026EF5231CF3022C003A8A95 /* tool */ = {
@@ -285,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026EF4F41CF2FCCC003A8A95 /* LaunchScreen.storyboard in Resources */,
 				026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */,
 				026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */,
 			);
@@ -313,9 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */,
-				026EF5241CF3022C003A8A95 /* RGCardViewLayout.m in Sources */,
 				026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */,
-				026EF5271CF30368003A8A95 /* bhkCollectionViewCell.m in Sources */,
 				026EF4E61CF2FCCC003A8A95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,14 +334,6 @@
 				026EF4EE1CF2FCCC003A8A95 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		026EF4F21CF2FCCC003A8A95 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				026EF4F31CF2FCCC003A8A95 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -542,6 +510,7 @@
 				026EF5101CF2FCCC003A8A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		026EF5111CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +519,7 @@
 				026EF5131CF2FCCC003A8A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		026EF5141CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +528,7 @@
 				026EF5161CF2FCCC003A8A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
