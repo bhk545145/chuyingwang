@@ -16,9 +16,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor blackColor];
-
     // 0.一些固定的尺寸参数
     CGFloat imageW = self.scrollview.frame.size.width;
     CGFloat imageH = self.scrollview.frame.size.height;
@@ -54,8 +51,6 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    
     return UIStatusBarStyleLightContent;
-    
 }
 @end
