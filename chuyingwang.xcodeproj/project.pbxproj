@@ -14,6 +14,16 @@
 		026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */; };
 		026EF4FF1CF2FCCC003A8A95 /* chuyingwangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4FE1CF2FCCC003A8A95 /* chuyingwangTests.m */; };
 		026EF50A1CF2FCCC003A8A95 /* chuyingwangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF5091CF2FCCC003A8A95 /* chuyingwangUITests.m */; };
+		027491831CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491701CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m */; };
+		027491841CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491721CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m */; };
+		027491851CF55CE200C8E0B0 /* DefaultViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491741CF55CE200C8E0B0 /* DefaultViewAnimator.m */; };
+		027491861CF55CE200C8E0B0 /* PanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491761CF55CE200C8E0B0 /* PanGestureRecognizer.m */; };
+		027491871CF55CE200C8E0B0 /* Scheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491781CF55CE200C8E0B0 /* Scheduler.m */; };
+		027491881CF55CE200C8E0B0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0274917A1CF55CE200C8E0B0 /* Utils.m */; };
+		027491891CF55CE200C8E0B0 /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0274917C1CF55CE200C8E0B0 /* ViewManager.m */; };
+		0274918A1CF55CE200C8E0B0 /* ZLSwipeableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0274917E1CF55CE200C8E0B0 /* ZLSwipeableView.m */; };
+		0274918B1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491801CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m */; };
+		0274918C1CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 027491821CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m */; };
 		02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7AFE1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02DF7B3A1CF3FEAF00C9C8F0 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7B011CF3FEAF00C9C8F0 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02DF7B3B1CF3FEAF00C9C8F0 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7B031CF3FEAF00C9C8F0 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -81,6 +91,26 @@
 		026EF5051CF2FCCC003A8A95 /* chuyingwangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuyingwangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF5091CF2FCCC003A8A95 /* chuyingwangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chuyingwangUITests.m; sourceTree = "<group>"; };
 		026EF50B1CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0274916F1CF55CE200C8E0B0 /* DefaultDirectionInterpretor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultDirectionInterpretor.h; sourceTree = "<group>"; };
+		027491701CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultDirectionInterpretor.m; sourceTree = "<group>"; };
+		027491711CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultShouldSwipeDeterminator.h; sourceTree = "<group>"; };
+		027491721CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultShouldSwipeDeterminator.m; sourceTree = "<group>"; };
+		027491731CF55CE200C8E0B0 /* DefaultViewAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultViewAnimator.h; sourceTree = "<group>"; };
+		027491741CF55CE200C8E0B0 /* DefaultViewAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultViewAnimator.m; sourceTree = "<group>"; };
+		027491751CF55CE200C8E0B0 /* PanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureRecognizer.h; sourceTree = "<group>"; };
+		027491761CF55CE200C8E0B0 /* PanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureRecognizer.m; sourceTree = "<group>"; };
+		027491771CF55CE200C8E0B0 /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		027491781CF55CE200C8E0B0 /* Scheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheduler.m; sourceTree = "<group>"; };
+		027491791CF55CE200C8E0B0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		0274917A1CF55CE200C8E0B0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		0274917B1CF55CE200C8E0B0 /* ViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewManager.h; sourceTree = "<group>"; };
+		0274917C1CF55CE200C8E0B0 /* ViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewManager.m; sourceTree = "<group>"; };
+		0274917D1CF55CE200C8E0B0 /* ZLSwipeableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwipeableView.h; sourceTree = "<group>"; };
+		0274917E1CF55CE200C8E0B0 /* ZLSwipeableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableView.m; sourceTree = "<group>"; };
+		0274917F1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwipeableViewMovement.h; sourceTree = "<group>"; };
+		027491801CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableViewMovement.m; sourceTree = "<group>"; };
+		027491811CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwipeableViewSwipeOptions.h; sourceTree = "<group>"; };
+		027491821CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableViewSwipeOptions.m; sourceTree = "<group>"; };
 		02DF7AFD1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		02DF7AFE1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		02DF7AFF1CF3FEAF00C9C8F0 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -258,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				02DF7AFB1CF3FEAF00C9C8F0 /* ASIHttpRequest */,
+				0274916E1CF55CE200C8E0B0 /* ZLSwipeableView */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -267,6 +298,33 @@
 			children = (
 			);
 			path = tool;
+			sourceTree = "<group>";
+		};
+		0274916E1CF55CE200C8E0B0 /* ZLSwipeableView */ = {
+			isa = PBXGroup;
+			children = (
+				0274916F1CF55CE200C8E0B0 /* DefaultDirectionInterpretor.h */,
+				027491701CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m */,
+				027491711CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.h */,
+				027491721CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m */,
+				027491731CF55CE200C8E0B0 /* DefaultViewAnimator.h */,
+				027491741CF55CE200C8E0B0 /* DefaultViewAnimator.m */,
+				027491751CF55CE200C8E0B0 /* PanGestureRecognizer.h */,
+				027491761CF55CE200C8E0B0 /* PanGestureRecognizer.m */,
+				027491771CF55CE200C8E0B0 /* Scheduler.h */,
+				027491781CF55CE200C8E0B0 /* Scheduler.m */,
+				027491791CF55CE200C8E0B0 /* Utils.h */,
+				0274917A1CF55CE200C8E0B0 /* Utils.m */,
+				0274917B1CF55CE200C8E0B0 /* ViewManager.h */,
+				0274917C1CF55CE200C8E0B0 /* ViewManager.m */,
+				0274917D1CF55CE200C8E0B0 /* ZLSwipeableView.h */,
+				0274917E1CF55CE200C8E0B0 /* ZLSwipeableView.m */,
+				0274917F1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.h */,
+				027491801CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m */,
+				027491811CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.h */,
+				027491821CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m */,
+			);
+			path = ZLSwipeableView;
 			sourceTree = "<group>";
 		};
 		02DF7AFB1CF3FEAF00C9C8F0 /* ASIHttpRequest */ = {
@@ -521,21 +579,31 @@
 				026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */,
 				02DF7B4E1CF3FEAF00C9C8F0 /* ASIS3ServiceRequest.m in Sources */,
 				02DF7B3E1CF3FEAF00C9C8F0 /* ASIHTTPRequest.m in Sources */,
+				027491871CF55CE200C8E0B0 /* Scheduler.m in Sources */,
+				027491851CF55CE200C8E0B0 /* DefaultViewAnimator.m in Sources */,
 				02DF7B4C1CF3FEAF00C9C8F0 /* ASIS3ObjectRequest.m in Sources */,
 				02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */,
 				02DF7B4D1CF3FEAF00C9C8F0 /* ASIS3Request.m in Sources */,
 				02DF7B421CF3FEAF00C9C8F0 /* ASICloudFilesCDNRequest.m in Sources */,
 				02DF7B3D1CF3FEAF00C9C8F0 /* ASIFormDataRequest.m in Sources */,
+				027491881CF55CE200C8E0B0 /* Utils.m in Sources */,
 				026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */,
 				02DF7B4B1CF3FEAF00C9C8F0 /* ASIS3BucketRequest.m in Sources */,
+				027491831CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m in Sources */,
+				027491841CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m in Sources */,
 				02DF7B451CF3FEAF00C9C8F0 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				02DF7B511CF3FEAF00C9C8F0 /* UIImage+MJ.m in Sources */,
 				02DF7B441CF3FEAF00C9C8F0 /* ASICloudFilesContainerRequest.m in Sources */,
 				02DF7B3F1CF3FEAF00C9C8F0 /* ASIInputStream.m in Sources */,
+				0274918C1CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m in Sources */,
+				027491861CF55CE200C8E0B0 /* PanGestureRecognizer.m in Sources */,
 				02DF7B481CF3FEAF00C9C8F0 /* ASICloudFilesRequest.m in Sources */,
 				02DF7B411CF3FEAF00C9C8F0 /* ASIWebPageRequest.m in Sources */,
+				0274918B1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m in Sources */,
 				02DF7B431CF3FEAF00C9C8F0 /* ASICloudFilesContainer.m in Sources */,
 				02DF7B471CF3FEAF00C9C8F0 /* ASICloudFilesObjectRequest.m in Sources */,
+				027491891CF55CE200C8E0B0 /* ViewManager.m in Sources */,
+				0274918A1CF55CE200C8E0B0 /* ZLSwipeableView.m in Sources */,
 				026EF4E61CF2FCCC003A8A95 /* main.m in Sources */,
 				02DF7B401CF3FEAF00C9C8F0 /* ASINetworkQueue.m in Sources */,
 				02DF7B4A1CF3FEAF00C9C8F0 /* ASIS3BucketObject.m in Sources */,
