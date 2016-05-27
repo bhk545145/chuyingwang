@@ -24,7 +24,7 @@
     
     // Required Data Source
     self.swipeableView.dataSource = self;
-    
+    self.swipeableView.viewAnimator = self;
     // Optional Delegate
     self.swipeableView.delegate = self;
     
@@ -33,14 +33,14 @@
     NSDictionary *metrics = @{};
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-50-[swipeableView]-50-|"
+                               constraintsWithVisualFormat:@"|-10-[swipeableView]-10-|"
                                options:0
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(
                                                                     swipeableView)]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-120-[swipeableView]-100-|"
+                               constraintsWithVisualFormat:@"V:|-75-[swipeableView]-155-|"
                                options:0
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(
@@ -58,6 +58,54 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+- (void)animateView:(UIView *)view
+              index:(NSUInteger)index
+              views:(NSArray<UIView *> *)views
+      swipeableView:(ZLSwipeableView *)swipeableView {
+    CGFloat degree = sin(0 * index);
+    NSTimeInterval duration = 0.4;
+    CGPoint offset = CGPointMake(0, CGRectGetHeight(swipeableView.bounds) * 0.3);
+    CGPoint translation = CGPointMake(0, index * 15.0);
+    [self rotateAndTranslateView:view
+                       forDegree:degree
+                     translation:translation
+                        duration:duration
+              atOffsetFromCenter:offset
+                   swipeableView:swipeableView];
+}
+
+- (CGFloat)degreesToRadians:(CGFloat)degrees {
+    return degrees * M_PI / 180;
+}
+
+- (CGFloat)radiansToDegrees:(CGFloat)radians {
+    return radians * 180 / M_PI;
+}
+
+- (void)rotateAndTranslateView:(UIView *)view
+                     forDegree:(float)degree
+                   translation:(CGPoint)translation
+                      duration:(NSTimeInterval)duration
+            atOffsetFromCenter:(CGPoint)offset
+                 swipeableView:(ZLSwipeableView *)swipeableView {
+    float rotationRadian = [self degreesToRadians:degree];
+    [UIView animateWithDuration:duration
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         view.center = [swipeableView convertPoint:swipeableView.center
+                                                          fromView:swipeableView.superview];
+                         CGAffineTransform transform =
+                         CGAffineTransformMakeTranslation(0, offset.y);
+                         transform = CGAffineTransformRotate(transform, rotationRadian);
+                         transform = CGAffineTransformTranslate(transform, -offset.x, -offset.y);
+                         transform =
+                         CGAffineTransformTranslate(transform, translation.x, translation.y);
+                         view.transform = transform;
+                     }
+                     completion:nil];
 }
 
 #pragma mark - ZLSwipeableViewDelegate
@@ -98,7 +146,6 @@
     
     CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
     view.backgroundColor = [UIColor whiteColor];
-    
 
     return view;
 }
