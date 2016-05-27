@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--我的-->
@@ -112,9 +111,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u27" translatesAutoresizingMaskIntoConstraints="NO" id="I93-76-4NW">
                                 <rect key="frame" x="26" y="514" width="323" height="10"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-fD-Azu">
-                                <rect key="frame" x="16" y="76" width="343" height="439"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRZ-se-52k">
                                 <rect key="frame" x="313" y="572" width="46" height="30"/>
                                 <state key="normal" title="顶部">
@@ -129,17 +125,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="E3x-fD-Azu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0rf-GL-TbC"/>
-                            <constraint firstItem="E3x-fD-Azu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KiI-bC-UtE"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="9Au-jX-ki5"/>
                     <navigationItem key="navigationItem" title="雏鹰网" id="T4k-ra-k8M"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="scrollview" destination="E3x-fD-Azu" id="Cdk-PZ-04w"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

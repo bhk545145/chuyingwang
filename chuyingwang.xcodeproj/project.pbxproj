@@ -56,6 +56,8 @@
 		02DF7B5D1CF3FF3300C9C8F0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF7B571CF3FF3300C9C8F0 /* MobileCoreServices.framework */; };
 		02DF7B5E1CF3FF3300C9C8F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF7B581CF3FF3300C9C8F0 /* SystemConfiguration.framework */; };
 		02DF7B5F1CF3FF3300C9C8F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF7B591CF3FF3300C9C8F0 /* CFNetwork.framework */; };
+		02E1ECB71CF6FEF500BD56E8 /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E1ECB41CF6FEF500BD56E8 /* CardContentView.xib */; };
+		02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E1ECB61CF6FEF500BD56E8 /* CardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +174,9 @@
 		02DF7B571CF3FF3300C9C8F0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
 		02DF7B581CF3FF3300C9C8F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
 		02DF7B591CF3FF3300C9C8F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CFNetwork.framework; sourceTree = "<group>"; };
+		02E1ECB41CF6FEF500BD56E8 /* CardContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
+		02E1ECB51CF6FEF500BD56E8 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		02E1ECB61CF6FEF500BD56E8 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +239,7 @@
 				026EF4EA1CF2FCCC003A8A95 /* ViewController.h */,
 				026EF4EB1CF2FCCC003A8A95 /* ViewController.m */,
 				026EF4ED1CF2FCCC003A8A95 /* Main.storyboard */,
+				02E1ECB31CF6FEE700BD56E8 /* CardView */,
 				026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */,
 				026EF4F51CF2FCCC003A8A95 /* Info.plist */,
 				026EF51E1CF3022C003A8A95 /* lib */,
@@ -444,6 +450,16 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		02E1ECB31CF6FEE700BD56E8 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				02E1ECB41CF6FEF500BD56E8 /* CardContentView.xib */,
+				02E1ECB51CF6FEF500BD56E8 /* CardView.h */,
+				02E1ECB61CF6FEF500BD56E8 /* CardView.m */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -547,6 +563,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E1ECB71CF6FEF500BD56E8 /* CardContentView.xib in Resources */,
 				026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */,
 				026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */,
 				02DF7B4F1CF3FEAF00C9C8F0 /* README-GHUnit in Resources */,
@@ -602,6 +619,7 @@
 				0274918B1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m in Sources */,
 				02DF7B431CF3FEAF00C9C8F0 /* ASICloudFilesContainer.m in Sources */,
 				02DF7B471CF3FEAF00C9C8F0 /* ASICloudFilesObjectRequest.m in Sources */,
+				02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */,
 				027491891CF55CE200C8E0B0 /* ViewManager.m in Sources */,
 				0274918A1CF55CE200C8E0B0 /* ZLSwipeableView.m in Sources */,
 				026EF4E61CF2FCCC003A8A95 /* main.m in Sources */,

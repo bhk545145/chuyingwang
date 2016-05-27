@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CardView.h"
+
 
 @interface ViewController ()
 
@@ -16,34 +18,38 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // 0.一些固定的尺寸参数
-    CGFloat imageW = self.scrollview.frame.size.width;
-    CGFloat imageH = self.scrollview.frame.size.height;
-    CGFloat imageX = 0;
+    ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
+    self.swipeableView = swipeableView;
+    [self.view addSubview:self.swipeableView];
     
-    // 1.添加图片到scrollView中
-    for (int i = 0; i<3; i++) {
-        UIImageView *imageView = [[UIImageView alloc] init];
-        
-        // 设置frame
-        CGFloat imageY = i * imageH;
-        imageView.frame = CGRectMake(imageX, imageY, imageW, imageH);
-        
-        // 设置图片
-        NSString *name = [NSString stringWithFormat:@"i%d", i + 1];
-        imageView.image = [UIImage imageNamed:name];
-        
-        [self.scrollview addSubview:imageView];
-    }
-    // 2.设置内容尺寸
-    CGFloat contentY = 3 * imageH;
-    self.scrollview.contentSize = CGSizeMake(0, contentY);
+    // Required Data Source
+    self.swipeableView.dataSource = self;
     
-    // 3.隐藏垂直滚动条
-    self.scrollview.showsVerticalScrollIndicator = NO;
+    // Optional Delegate
+    self.swipeableView.delegate = self;
     
-    // 4.分页
-    self.scrollview.pagingEnabled = YES;
+    self.swipeableView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSDictionary *metrics = @{};
+    
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"|-50-[swipeableView]-50-|"
+                               options:0
+                               metrics:metrics
+                               views:NSDictionaryOfVariableBindings(
+                                                                    swipeableView)]];
+    
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"V:|-120-[swipeableView]-100-|"
+                               options:0
+                               metrics:metrics
+                               views:NSDictionaryOfVariableBindings(
+                                                                    swipeableView)]];
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [self.swipeableView loadViewsIfNeeded];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -53,4 +59,48 @@
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
+#pragma mark - ZLSwipeableViewDelegate
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+         didSwipeView:(UIView *)view
+          inDirection:(ZLSwipeableViewDirection)direction {
+    NSLog(@"did swipe in direction: %zd", direction);
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView didCancelSwipe:(UIView *)view {
+    NSLog(@"did cancel swipe");
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+  didStartSwipingView:(UIView *)view
+           atLocation:(CGPoint)location {
+    NSLog(@"did start swiping at location: x %f, y %f", location.x, location.y);
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+          swipingView:(UIView *)view
+           atLocation:(CGPoint)location
+          translation:(CGPoint)translation {
+    NSLog(@"swiping at location: x %f, y %f, translation: x %f, y %f", location.x, location.y,
+          translation.x, translation.y);
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+    didEndSwipingView:(UIView *)view
+           atLocation:(CGPoint)location {
+    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
+}
+
+#pragma mark - ZLSwipeableViewDataSource
+
+- (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
+    
+    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
+    view.backgroundColor = [UIColor whiteColor];
+    
+
+    return view;
+}
+
 @end

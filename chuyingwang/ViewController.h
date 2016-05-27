@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZLSwipeableView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ZLSwipeableViewDataSource, ZLSwipeableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
+@property (nonatomic, strong) ZLSwipeableView *swipeableView;
+
+- (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView;
+
+
 
 @end
 
