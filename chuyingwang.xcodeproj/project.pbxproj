@@ -58,6 +58,10 @@
 		02DF7B5F1CF3FF3300C9C8F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF7B591CF3FF3300C9C8F0 /* CFNetwork.framework */; };
 		02E1ECB71CF6FEF500BD56E8 /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E1ECB41CF6FEF500BD56E8 /* CardContentView.xib */; };
 		02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E1ECB61CF6FEF500BD56E8 /* CardView.m */; };
+		3AA6C2511CF9CA0D00AEE4A9 /* FirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2501CF9CA0D00AEE4A9 /* FirstView.m */; };
+		3AA6C2621CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */; };
+		3AA6C2661CF9F03D00AEE4A9 /* projectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */; };
+		3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +181,13 @@
 		02E1ECB41CF6FEF500BD56E8 /* CardContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
 		02E1ECB51CF6FEF500BD56E8 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		02E1ECB61CF6FEF500BD56E8 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		3AA6C24F1CF9CA0D00AEE4A9 /* FirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstView.h; path = View/FirstView.h; sourceTree = "<group>"; };
+		3AA6C2501CF9CA0D00AEE4A9 /* FirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstView.m; path = View/FirstView.m; sourceTree = "<group>"; };
+		3AA6C2601CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjcetViewTableViewController.h; sourceTree = "<group>"; };
+		3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjcetViewTableViewController.m; sourceTree = "<group>"; };
+		3AA6C2631CF9F03D00AEE4A9 /* projectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projectTableViewCell.h; sourceTree = "<group>"; };
+		3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = projectTableViewCell.m; sourceTree = "<group>"; };
+		3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = projectTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,10 +247,11 @@
 			children = (
 				026EF4E71CF2FCCC003A8A95 /* AppDelegate.h */,
 				026EF4E81CF2FCCC003A8A95 /* AppDelegate.m */,
-				026EF4EA1CF2FCCC003A8A95 /* ViewController.h */,
-				026EF4EB1CF2FCCC003A8A95 /* ViewController.m */,
 				026EF4ED1CF2FCCC003A8A95 /* Main.storyboard */,
-				02E1ECB31CF6FEE700BD56E8 /* CardView */,
+				3AA6C24B1CF9C56800AEE4A9 /* 首页 */,
+				3AA6C25C1CF9DF5E00AEE4A9 /* 项目 */,
+				3AA6C2541CF9DF5E00AEE4A9 /* 投资人 */,
+				3AA6C2581CF9DF5E00AEE4A9 /* 我的 */,
 				026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */,
 				026EF4F51CF2FCCC003A8A95 /* Info.plist */,
 				026EF51E1CF3022C003A8A95 /* lib */,
@@ -460,6 +472,148 @@
 			name = CardView;
 			sourceTree = "<group>";
 		};
+		3AA6C24B1CF9C56800AEE4A9 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C24C1CF9C5AD00AEE4A9 /* Controller */,
+				3AA6C24E1CF9C5CE00AEE4A9 /* View */,
+				3AA6C24D1CF9C5C400AEE4A9 /* Model */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		3AA6C24C1CF9C5AD00AEE4A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				026EF4EA1CF2FCCC003A8A95 /* ViewController.h */,
+				026EF4EB1CF2FCCC003A8A95 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3AA6C24D1CF9C5C400AEE4A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3AA6C24E1CF9C5CE00AEE4A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02E1ECB31CF6FEE700BD56E8 /* CardView */,
+				3AA6C2521CF9D4F300AEE4A9 /* FirstView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3AA6C2521CF9D4F300AEE4A9 /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C24F1CF9CA0D00AEE4A9 /* FirstView.h */,
+				3AA6C2501CF9CA0D00AEE4A9 /* FirstView.m */,
+			);
+			name = FirstView;
+			sourceTree = "<group>";
+		};
+		3AA6C2541CF9DF5E00AEE4A9 /* 投资人 */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C2551CF9DF5E00AEE4A9 /* Controller */,
+				3AA6C2561CF9DF5E00AEE4A9 /* Model */,
+				3AA6C2571CF9DF5E00AEE4A9 /* View */,
+			);
+			path = "投资人";
+			sourceTree = "<group>";
+		};
+		3AA6C2551CF9DF5E00AEE4A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3AA6C2561CF9DF5E00AEE4A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AA6C2571CF9DF5E00AEE4A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AA6C2581CF9DF5E00AEE4A9 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C2591CF9DF5E00AEE4A9 /* Controller */,
+				3AA6C25A1CF9DF5E00AEE4A9 /* Model */,
+				3AA6C25B1CF9DF5E00AEE4A9 /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		3AA6C2591CF9DF5E00AEE4A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3AA6C25A1CF9DF5E00AEE4A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AA6C25B1CF9DF5E00AEE4A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AA6C25C1CF9DF5E00AEE4A9 /* 项目 */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C25D1CF9DF5E00AEE4A9 /* Controller */,
+				3AA6C25F1CF9DF5E00AEE4A9 /* View */,
+				3AA6C25E1CF9DF5E00AEE4A9 /* Model */,
+			);
+			path = "项目";
+			sourceTree = "<group>";
+		};
+		3AA6C25D1CF9DF5E00AEE4A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C2601CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.h */,
+				3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3AA6C25E1CF9DF5E00AEE4A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AA6C25F1CF9DF5E00AEE4A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C2631CF9F03D00AEE4A9 /* projectTableViewCell.h */,
+				3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */,
+				3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +717,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */,
 				02E1ECB71CF6FEF500BD56E8 /* CardContentView.xib in Resources */,
 				026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */,
 				026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */,
@@ -599,6 +754,7 @@
 				027491871CF55CE200C8E0B0 /* Scheduler.m in Sources */,
 				027491851CF55CE200C8E0B0 /* DefaultViewAnimator.m in Sources */,
 				02DF7B4C1CF3FEAF00C9C8F0 /* ASIS3ObjectRequest.m in Sources */,
+				3AA6C2511CF9CA0D00AEE4A9 /* FirstView.m in Sources */,
 				02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */,
 				02DF7B4D1CF3FEAF00C9C8F0 /* ASIS3Request.m in Sources */,
 				02DF7B421CF3FEAF00C9C8F0 /* ASICloudFilesCDNRequest.m in Sources */,
@@ -614,6 +770,7 @@
 				02DF7B3F1CF3FEAF00C9C8F0 /* ASIInputStream.m in Sources */,
 				0274918C1CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m in Sources */,
 				027491861CF55CE200C8E0B0 /* PanGestureRecognizer.m in Sources */,
+				3AA6C2621CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m in Sources */,
 				02DF7B481CF3FEAF00C9C8F0 /* ASICloudFilesRequest.m in Sources */,
 				02DF7B411CF3FEAF00C9C8F0 /* ASIWebPageRequest.m in Sources */,
 				0274918B1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m in Sources */,
@@ -626,6 +783,7 @@
 				02DF7B401CF3FEAF00C9C8F0 /* ASINetworkQueue.m in Sources */,
 				02DF7B4A1CF3FEAF00C9C8F0 /* ASIS3BucketObject.m in Sources */,
 				02DF7B3B1CF3FEAF00C9C8F0 /* ASIDataDecompressor.m in Sources */,
+				3AA6C2661CF9F03D00AEE4A9 /* projectTableViewCell.m in Sources */,
 				02DF7B491CF3FEAF00C9C8F0 /* ASIS3Bucket.m in Sources */,
 				02DF7B461CF3FEAF00C9C8F0 /* ASICloudFilesObject.m in Sources */,
 				02DF7B3C1CF3FEAF00C9C8F0 /* ASIDownloadCache.m in Sources */,

@@ -10,4 +10,6 @@
 
 @interface CardView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame setiCard:(NSString *)icard;
+
 @end

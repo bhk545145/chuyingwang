@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "CardView.h"
+#import "FirstView.h"
 
 
-@interface ViewController ()
+@interface ViewController ()<ZLSwipeableViewAnimator>{
+    int icard;
+}
 
 @end
 
@@ -21,7 +24,7 @@
     ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
     self.swipeableView = swipeableView;
     [self.view addSubview:self.swipeableView];
-    
+    icard = 1;
     // Required Data Source
     self.swipeableView.dataSource = self;
     self.swipeableView.viewAnimator = self;
@@ -45,6 +48,9 @@
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(
                                                                     swipeableView)]];
+    //firstview
+//    FirstView *firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
+//    [self.view addSubview:firstview];
 
 }
 
@@ -94,40 +100,41 @@
 - (void)swipeableView:(ZLSwipeableView *)swipeableView
          didSwipeView:(UIView *)view
           inDirection:(ZLSwipeableViewDirection)direction {
-    NSLog(@"did swipe in direction: %zd", direction);
+//    NSLog(@"did swipe in direction: %zd", direction);
 }
 
 - (void)swipeableView:(ZLSwipeableView *)swipeableView didCancelSwipe:(UIView *)view {
-    NSLog(@"did cancel swipe");
+//    NSLog(@"did cancel swipe");
 }
 
 - (void)swipeableView:(ZLSwipeableView *)swipeableView
   didStartSwipingView:(UIView *)view
            atLocation:(CGPoint)location {
-    NSLog(@"did start swiping at location: x %f, y %f", location.x, location.y);
+//    NSLog(@"did start swiping at location: x %f, y %f", location.x, location.y);
 }
 
 - (void)swipeableView:(ZLSwipeableView *)swipeableView
           swipingView:(UIView *)view
            atLocation:(CGPoint)location
           translation:(CGPoint)translation {
-    NSLog(@"swiping at location: x %f, y %f, translation: x %f, y %f", location.x, location.y,
-          translation.x, translation.y);
+//    NSLog(@"swiping at location: x %f, y %f, translation: x %f, y %f", location.x, location.y, translation.x, translation.y);
 }
 
 - (void)swipeableView:(ZLSwipeableView *)swipeableView
     didEndSwipingView:(UIView *)view
            atLocation:(CGPoint)location {
-    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
+//    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
 }
 
 #pragma mark - ZLSwipeableViewDataSource
 
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
-    
-    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
-    view.backgroundColor = [UIColor whiteColor];
-
+    if (icard > 3) {
+        icard = 1;
+    }
+    NSString *icardstr = [NSString stringWithFormat:@"i%d",icard];
+    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds setiCard:icardstr];
+    icard++;
     return view;
 }
 

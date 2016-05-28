@@ -8,6 +8,14 @@
 
 #import "CardView.h"
 
+@interface CardView (){
+    //项目图片
+    UIImageView *ProjectPicture;
+    NSString *iCard;
+}
+
+@end
+
 @implementation CardView
 
 - (instancetype)init {
@@ -18,9 +26,12 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame setiCard:(NSString *)icard {
     self = [super initWithFrame:frame];
     if (self) {
+        iCard = icard;
+        ProjectPicture = [[UIImageView alloc]initWithFrame:frame];
+        [self addSubview:ProjectPicture];
         [self setup];
     }
     return self;
@@ -45,6 +56,9 @@
 
     // Corner Radius
     self.layer.cornerRadius = 10.0;
+    
+    ProjectPicture.image = [UIImage imageNamed:iCard];
+    
 }
 
 @end
