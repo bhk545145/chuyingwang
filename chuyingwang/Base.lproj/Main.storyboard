@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zaa-pL-yCl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zaa-pL-yCl">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--我的-->
@@ -16,6 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="TWu-Cd-sgg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的" id="uI8-Xr-DyE"/>
@@ -37,6 +38,7 @@
                     <view key="view" contentMode="scaleToFill" id="xbH-2k-Zt4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="投资人" id="2vT-6A-95z"/>
@@ -58,6 +60,7 @@
                     <view key="view" contentMode="scaleToFill" id="rx0-HQ-fAD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="项目" id="yfx-KH-ZxA"/>
@@ -77,6 +80,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="IAg-4A-o5L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -102,28 +106,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u23" translatesAutoresizingMaskIntoConstraints="NO" id="pZN-j9-L1P">
-                                <rect key="frame" x="46" y="514" width="283" height="30"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u25" translatesAutoresizingMaskIntoConstraints="NO" id="wHL-ZG-xPE">
-                                <rect key="frame" x="36" y="514" width="303" height="20"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u27" translatesAutoresizingMaskIntoConstraints="NO" id="I93-76-4NW">
-                                <rect key="frame" x="26" y="514" width="323" height="10"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRZ-se-52k">
                                 <rect key="frame" x="313" y="572" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="顶部">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上滑、下滑切换项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-d7-NbD">
                                 <rect key="frame" x="91" y="575" width="193" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="9Au-jX-ki5"/>
@@ -143,6 +141,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Gp-T8-oZU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b9P-1s-196"/>
@@ -161,6 +160,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VdO-IQ-wLC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="MLj-Tl-JHf" kind="relationship" relationship="rootViewController" id="RmV-kq-QOV"/>
@@ -179,6 +179,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KhC-29-zo2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="18L-tM-C2E" kind="relationship" relationship="rootViewController" id="bOc-4J-yIL"/>
@@ -197,6 +198,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rjd-U1-6WI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="1rY-lE-Jff" kind="relationship" relationship="rootViewController" id="AY1-ab-yk8"/>
@@ -207,9 +209,4 @@
             <point key="canvasLocation" x="-416.5" y="1552.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="u23" width="300" height="50"/>
-        <image name="u25" width="320" height="60"/>
-        <image name="u27" width="340" height="70"/>
-    </resources>
 </document>
