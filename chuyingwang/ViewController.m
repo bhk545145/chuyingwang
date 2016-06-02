@@ -21,6 +21,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,nil]];
+    
     ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
     self.swipeableView = swipeableView;
     [self.view addSubview:self.swipeableView];
@@ -58,13 +62,14 @@
     [self.swipeableView loadViewsIfNeeded];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
 
 - (void)animateView:(UIView *)view
               index:(NSUInteger)index

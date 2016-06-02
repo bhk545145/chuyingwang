@@ -19,7 +19,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="项目" id="V47-qV-VCR"/>
-                    <navigationItem key="navigationItem" title="项目" id="EOp-ig-zIU"/>
+                    <navigationItem key="navigationItem" title="项目" id="EOp-ig-zIU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Nzo-Ws-B8E"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6Y-mU-FnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,7 +153,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="投资人" id="DMD-w2-Jhv"/>
-                    <navigationItem key="navigationItem" title="投资人" id="cf0-de-hnw" colorLabel="IBBuiltInLabel-Green"/>
+                    <navigationItem key="navigationItem" title="投资人" id="cf0-de-hnw" colorLabel="IBBuiltInLabel-Green">
+                        <barButtonItem key="rightBarButtonItem" title="筛选" id="OFA-Pz-rYY"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnO-fb-X94" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="-416.5" y="1552.5"/>
         </scene>
-        <!--我的-->
+        <!--个人中心-->
         <scene sceneID="dmd-Ws-YGm">
             <objects>
                 <tableViewController id="I4t-9A-CmL" customClass="MyTableViewController" sceneMemberID="viewController">
@@ -318,7 +322,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="我的" id="qcj-Bx-d3a"/>
-                    <navigationItem key="navigationItem" title="我的" id="L8c-DU-Shy"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="L8c-DU-Shy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ide-zG-phN" userLabel="First Responder" sceneMemberID="firstResponder"/>
