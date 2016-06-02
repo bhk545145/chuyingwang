@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
 		026EF4E61CF2FCCC003A8A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E51CF2FCCC003A8A95 /* main.m */; };
 		026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E81CF2FCCC003A8A95 /* AppDelegate.m */; };
 		026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4EB1CF2FCCC003A8A95 /* ViewController.m */; };
@@ -84,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuyingwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF4E51CF2FCCC003A8A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		026EF4E71CF2FCCC003A8A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -570,6 +573,8 @@
 		3AA6C2591CF9DF5E00AEE4A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				021996381D004BBF00923E20 /* MyTableViewController.h */,
+				021996391D004BBF00923E20 /* MyTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -762,6 +767,7 @@
 				026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */,
 				02DF7B4E1CF3FEAF00C9C8F0 /* ASIS3ServiceRequest.m in Sources */,
 				02DF7B3E1CF3FEAF00C9C8F0 /* ASIHTTPRequest.m in Sources */,
+				0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */,
 				0286AA531D00371500C21703 /* InvestorTableViewController.m in Sources */,
 				027491871CF55CE200C8E0B0 /* Scheduler.m in Sources */,
 				027491851CF55CE200C8E0B0 /* DefaultViewAnimator.m in Sources */,
