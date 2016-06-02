@@ -18,14 +18,6 @@
 
 @implementation CardView
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame setiCard:(NSString *)icard {
     self = [super initWithFrame:frame];
     if (self) {
@@ -37,13 +29,6 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
 
 - (void)setup {
     // Shadow

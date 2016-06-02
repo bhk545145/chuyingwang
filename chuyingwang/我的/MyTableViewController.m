@@ -46,12 +46,16 @@
             SimleTableIdentifier =@"mythirdcell";
         }
     }else if (indexPath.section == 1){
+        if(indexPath.row == 0){
+            SimleTableIdentifier =@"myfourcell";
+        }else if(indexPath.row == 1){
+            SimleTableIdentifier =@"myfivecell";
+        }else if (indexPath.row == 2){
+            SimleTableIdentifier =@"mysixcell";
+        }
         
     }
-    
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
-    
     return cell;
 }
 
@@ -59,14 +63,20 @@
     static int height;
     if (indexPath.section == 0) {
         if(indexPath.row == 0){
-            height = 183;
+            height = 165;
         }else if (indexPath.row == 1){
             height = 44;
         }else if (indexPath.row == 2){
             height = 44;
         }
     }else if (indexPath.section == 1){
-        
+        if(indexPath.row == 0){
+            height = 10;
+        }else if (indexPath.section == 1){
+            height = 44;
+        }else if (indexPath.section == 1){
+            height = 44;
+        }
     }
     
     return height;
