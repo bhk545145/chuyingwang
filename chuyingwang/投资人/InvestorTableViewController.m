@@ -1,25 +1,25 @@
 //
-//  ProjcetViewTableViewController.m
+//  InvestorTableViewController.m
 //  chuyingwang
 //
-//  Created by bai on 16/5/28.
+//  Created by 白洪坤 on 16/6/2.
 //  Copyright © 2016年 白洪坤. All rights reserved.
 //
 
-#import "ProjcetViewTableViewController.h"
-#import "projectTableViewCell.h"
+#import "InvestorTableViewController.h"
+#import "investorTableViewCell.h"
 
-@interface ProjcetViewTableViewController (){
-    NSArray *projectarray;
+@interface InvestorTableViewController (){
+    NSArray *investorarray;
 }
 
 @end
 
-@implementation ProjcetViewTableViewController
+@implementation InvestorTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    projectarray = [NSArray arrayWithObjects:@"project1",@"project2", nil];
+    investorarray = [NSArray arrayWithObjects:@"investor1",@"investor2", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +34,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [projectarray count];
+    return [investorarray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *SimleTableIdentifier = @"SimleTableIdentifier";
-    projectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
-    if(cell == nil){
-        NSArray *cells = [[NSBundle mainBundle] loadNibNamed:@"projectTableViewCell" owner:nil options:nil];
+    static NSString *SimleTableIdentifier =@"reuseIdentifier";
+    investorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
+    if (cell == nil) {
+        NSArray *cells = [[NSBundle mainBundle]loadNibNamed:@"investorTableViewCell" owner:nil options:nil];
         cell = [cells lastObject];
     }
-    cell.projectimage.image = [UIImage imageNamed:projectarray[indexPath.row]];
+    cell.investorimage.image = [UIImage imageNamed:investorarray[indexPath.row]];
+    // Configure the cell...
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 313;
+    return 236;
 }
 
 /*

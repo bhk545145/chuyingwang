@@ -10,4 +10,5 @@
 
 @interface projectTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *projectimage;
 @end
