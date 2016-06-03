@@ -122,6 +122,7 @@
 		027491801CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableViewMovement.m; sourceTree = "<group>"; };
 		027491811CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwipeableViewSwipeOptions.h; sourceTree = "<group>"; };
 		027491821CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableViewSwipeOptions.m; sourceTree = "<group>"; };
+		027E29301D015B16001A2956 /* bhkCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bhkCommon.h; sourceTree = "<group>"; };
 		0286AA511D00371500C21703 /* InvestorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvestorTableViewController.h; path = "chuyingwang/投资人/InvestorTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		0286AA521D00371500C21703 /* InvestorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InvestorTableViewController.m; path = "chuyingwang/投资人/InvestorTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		0286AA541D00373F00C21703 /* investorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = investorTableViewCell.h; path = "chuyingwang/投资人/investorTableViewCell.h"; sourceTree = SOURCE_ROOT; };
@@ -305,6 +306,7 @@
 		026EF51E1CF3022C003A8A95 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				027E29301D015B16001A2956 /* bhkCommon.h */,
 				026EF51F1CF3022C003A8A95 /* src */,
 				026EF5231CF3022C003A8A95 /* tool */,
 			);

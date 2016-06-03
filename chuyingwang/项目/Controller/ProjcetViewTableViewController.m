@@ -8,6 +8,7 @@
 
 #import "ProjcetViewTableViewController.h"
 #import "projectTableViewCell.h"
+#import "bhkCommon.h"
 
 @interface ProjcetViewTableViewController (){
     NSArray *projectarray;
@@ -19,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (IsiOS7Later) {
+        //导航栏背景和字体颜色
+        [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
+        [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
+    }
     projectarray = [NSArray arrayWithObjects:@"project1",@"project2", nil];
 }
 

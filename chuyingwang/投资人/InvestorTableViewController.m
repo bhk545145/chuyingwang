@@ -8,6 +8,8 @@
 
 #import "InvestorTableViewController.h"
 #import "investorTableViewCell.h"
+#import "bhkCommon.h"
+
 
 @interface InvestorTableViewController (){
     NSArray *investorarray;
@@ -19,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (IsiOS7Later) {
+        //导航栏背景和字体颜色
+        [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
+        [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
+    }
     investorarray = [NSArray arrayWithObjects:@"investor1",@"investor2", nil];
 }
 

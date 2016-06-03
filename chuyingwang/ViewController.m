@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CardView.h"
 #import "FirstView.h"
+#import "bhkCommon.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator>{
@@ -21,9 +22,11 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,nil]];
+    if (IsiOS7Later) {
+        //导航栏背景和字体颜色
+        [self.navigationController.navigationBar setBarTintColor:IWcolor(27, 27, 27)];
+        [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,[UIColor whiteColor],UITextAttributeTextShadowColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
+    }
     
     ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
     self.swipeableView = swipeableView;
@@ -43,15 +46,13 @@
                                constraintsWithVisualFormat:@"|-10-[swipeableView]-10-|"
                                options:0
                                metrics:metrics
-                               views:NSDictionaryOfVariableBindings(
-                                                                    swipeableView)]];
+                               views:NSDictionaryOfVariableBindings(swipeableView)]];
     
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:|-75-[swipeableView]-155-|"
                                options:0
                                metrics:metrics
-                               views:NSDictionaryOfVariableBindings(
-                                                                    swipeableView)]];
+                               views:NSDictionaryOfVariableBindings(swipeableView)]];
     //firstview
 //    FirstView *firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
 //    [self.view addSubview:firstview];
@@ -63,6 +64,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    //状态栏颜色
     [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
 }
 
@@ -138,7 +140,8 @@
         icard = 1;
     }
     NSString *icardstr = [NSString stringWithFormat:@"i%d",icard];
-    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds setiCard:icardstr];
+    UIImage *icardimg = [UIImage imageNamed:icardstr];
+    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds setiCardimg:icardimg setCardstr:@"Bikernel 项目"];
     icard++;
     return view;
 }
