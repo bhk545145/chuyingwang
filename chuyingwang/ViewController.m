@@ -10,6 +10,7 @@
 #import "CardView.h"
 #import "FirstView.h"
 #import "bhkCommon.h"
+#import "CardModel.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator>{
@@ -140,8 +141,17 @@
         icard = 1;
     }
     NSString *icardstr = [NSString stringWithFormat:@"i%d",icard];
-    UIImage *icardimg = [UIImage imageNamed:icardstr];
-    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds setiCardimg:icardimg setCardstr:@"Bikernel 项目"];
+    CardModel *cardModel = [[CardModel alloc]init];
+    cardModel.iCardimg = icardstr;
+    cardModel.Cardstr = @"Bikernel 项目";
+    cardModel.financingStatus = @"股权融资中";
+    cardModel.financingStatusPercentage = 0.25f;
+    cardModel.projectIntroduction = @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀";
+    cardModel.reading = 5;
+    cardModel.collection = 8;
+
+    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
+    view.CardModel = cardModel;
     icard++;
     return view;
 }

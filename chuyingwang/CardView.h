@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CardModel;
 @interface CardView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame setiCardimg:(UIImage *)icardimg setCardstr:(NSString *)cardstr;
+@property(nonatomic,strong)CardModel *CardModel;
+
 
 @end

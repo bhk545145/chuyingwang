@@ -65,6 +65,7 @@
 		3AA6C2621CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */; };
 		3AA6C2661CF9F03D00AEE4A9 /* projectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */; };
 		3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */; };
+		3ACC92861D02DC67002CFD86 /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC92851D02DC67002CFD86 /* CardModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,8 @@
 		3AA6C2631CF9F03D00AEE4A9 /* projectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projectTableViewCell.h; sourceTree = "<group>"; };
 		3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = projectTableViewCell.m; sourceTree = "<group>"; };
 		3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = projectTableViewCell.xib; sourceTree = "<group>"; };
+		3ACC92841D02DC67002CFD86 /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardModel.h; path = "首页/Model/CardModel.h"; sourceTree = "<group>"; };
+		3ACC92851D02DC67002CFD86 /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardModel.m; path = "首页/Model/CardModel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +507,8 @@
 		3AA6C24D1CF9C5C400AEE4A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3ACC92841D02DC67002CFD86 /* CardModel.h */,
+				3ACC92851D02DC67002CFD86 /* CardModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -782,6 +787,7 @@
 				027491881CF55CE200C8E0B0 /* Utils.m in Sources */,
 				026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */,
 				02DF7B4B1CF3FEAF00C9C8F0 /* ASIS3BucketRequest.m in Sources */,
+				3ACC92861D02DC67002CFD86 /* CardModel.m in Sources */,
 				027491831CF55CE200C8E0B0 /* DefaultDirectionInterpretor.m in Sources */,
 				027491841CF55CE200C8E0B0 /* DefaultShouldSwipeDeterminator.m in Sources */,
 				02DF7B451CF3FEAF00C9C8F0 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
