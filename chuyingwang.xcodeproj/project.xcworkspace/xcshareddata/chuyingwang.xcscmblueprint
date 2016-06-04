@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "41BF0AA54EE900EDA50DDAE9EE9D1D79059A611A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "41BF0AA54EE900EDA50DDAE9EE9D1D79059A611A" : 0,
+    "D796CE150EED11227945B623498FF314BE9D05CE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BF09F01B-ACB0-4D7A-8EC7-0873B98E2582",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "41BF0AA54EE900EDA50DDAE9EE9D1D79059A611A" : "chuyingwang\/",
+    "D796CE150EED11227945B623498FF314BE9D05CE" : "chuyingwang\/chuyingwang\/lib\/src\/KDGoalBar\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "chuyingwang",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "chuyingwang.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bhk545145\/chuyingwang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "41BF0AA54EE900EDA50DDAE9EE9D1D79059A611A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/donnellyk\/KDGoalBar.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D796CE150EED11227945B623498FF314BE9D05CE"
+    }
+  ]
+}

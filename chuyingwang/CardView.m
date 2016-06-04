@@ -9,6 +9,7 @@
 #import "CardView.h"
 #import "bhkCommon.h"
 #import "CardModel.h"
+#import "ProgressView.h"
 
 @interface CardView (){
     //项目图片
@@ -24,7 +25,7 @@
     //阅读和收藏
     UILabel *readingCollection;
     //融资进度表
-    //GoalBar
+    ProgressView *financingStatusProgress;
 
     
 }
@@ -60,6 +61,9 @@
         financingStatuslab = [[UILabel alloc]initWithFrame:CGRectMake(100, ProjectCardheight/2 + 55, 100, 22)];
         financingStatuslab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:10.0];
         [self.ProjectCard addSubview:financingStatuslab];
+        
+        financingStatusProgress = [[ProgressView alloc]initWithFrame:CGRectMake(200, ProjectCardheight/2 +10, 100, 100)];
+        [self.ProjectCard addSubview:financingStatusProgress];
         
         projectIntroductionlab = [[UITextView alloc]initWithFrame:CGRectMake(25,ProjectCardheight - 100,ProjectCardwidth - 50, 40)];
         projectIntroductionlab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:11.0];
@@ -101,6 +105,8 @@
     [financingStatusbtn setTitle:_CardModel.financingStatus forState:UIControlStateNormal];
     
     financingStatuslab.text = [NSString stringWithFormat:@"已完成%0.2f",_CardModel.financingStatusPercentage];
+    
+    financingStatusProgress.percent = _CardModel.financingStatusPercentage;
     
     projectIntroductionlab.text = _CardModel.projectIntroduction;
     

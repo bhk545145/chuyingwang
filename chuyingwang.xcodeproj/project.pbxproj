@@ -66,6 +66,7 @@
 		3AA6C2661CF9F03D00AEE4A9 /* projectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */; };
 		3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */; };
 		3ACC92861D02DC67002CFD86 /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC92851D02DC67002CFD86 /* CardModel.m */; };
+		3ACC93821D02FAC4002CFD86 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC93811D02FAC4002CFD86 /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,8 @@
 		3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = projectTableViewCell.xib; sourceTree = "<group>"; };
 		3ACC92841D02DC67002CFD86 /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardModel.h; path = "首页/Model/CardModel.h"; sourceTree = "<group>"; };
 		3ACC92851D02DC67002CFD86 /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardModel.m; path = "首页/Model/CardModel.m"; sourceTree = "<group>"; };
+		3ACC93801D02FAC4002CFD86 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		3ACC93811D02FAC4002CFD86 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,7 @@
 		026EF51F1CF3022C003A8A95 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3ACC937F1D02FAC4002CFD86 /* ProgressView */,
 				02DF7AFB1CF3FEAF00C9C8F0 /* ASIHttpRequest */,
 				0274916E1CF55CE200C8E0B0 /* ZLSwipeableView */,
 			);
@@ -636,6 +640,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3ACC937F1D02FAC4002CFD86 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				3ACC93801D02FAC4002CFD86 /* ProgressView.h */,
+				3ACC93811D02FAC4002CFD86 /* ProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -813,6 +826,7 @@
 				02DF7B491CF3FEAF00C9C8F0 /* ASIS3Bucket.m in Sources */,
 				02DF7B461CF3FEAF00C9C8F0 /* ASICloudFilesObject.m in Sources */,
 				02DF7B3C1CF3FEAF00C9C8F0 /* ASIDownloadCache.m in Sources */,
+				3ACC93821D02FAC4002CFD86 /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
