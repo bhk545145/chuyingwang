@@ -55,14 +55,18 @@
         
         financingStatusbtn = [[UIButton alloc]initWithFrame:CGRectMake(90, ProjectCardheight/2 + 30, 70, 22)];
         [financingStatusbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        financingStatusbtn.titleLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:10.0];
+        financingStatusbtn.titleLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:11.0];
         [self.ProjectCard addSubview:financingStatusbtn];
         
         financingStatuslab = [[UILabel alloc]initWithFrame:CGRectMake(100, ProjectCardheight/2 + 55, 100, 22)];
-        financingStatuslab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:10.0];
+        financingStatuslab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:11.0];
         [self.ProjectCard addSubview:financingStatuslab];
         
         financingStatusProgress = [[ProgressView alloc]initWithFrame:CGRectMake(200, ProjectCardheight/2 +10, 100, 100)];
+        financingStatusProgress.arcBackColor = IWcolor(253, 201, 24);
+        financingStatusProgress.arcFinishColor = IWcolor(40, 82, 135);
+        financingStatusProgress.arcUnfinishColor = IWcolor(40, 82, 135);
+        financingStatusProgress.width = 20;
         [self.ProjectCard addSubview:financingStatusProgress];
         
         projectIntroductionlab = [[UITextView alloc]initWithFrame:CGRectMake(25,ProjectCardheight - 100,ProjectCardwidth - 50, 40)];
@@ -104,7 +108,7 @@
     [financingStatusbtn setBackgroundImage:[UIImage imageNamed:@"financing_status"] forState:UIControlStateNormal];
     [financingStatusbtn setTitle:_CardModel.financingStatus forState:UIControlStateNormal];
     
-    financingStatuslab.text = [NSString stringWithFormat:@"已完成%0.2f",_CardModel.financingStatusPercentage];
+    financingStatuslab.text = [NSString stringWithFormat:@"已完成%1.0f%%",_CardModel.financingStatusPercentage*100];
     
     financingStatusProgress.percent = _CardModel.financingStatusPercentage;
     
