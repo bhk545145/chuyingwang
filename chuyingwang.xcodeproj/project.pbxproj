@@ -557,9 +557,6 @@
 		3AA6C2561CF9DF5E00AEE4A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0286AA541D00373F00C21703 /* investorTableViewCell.h */,
-				0286AA551D00373F00C21703 /* investorTableViewCell.m */,
-				0286AA561D00373F00C21703 /* investorTableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,6 +564,9 @@
 		3AA6C2571CF9DF5E00AEE4A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0286AA541D00373F00C21703 /* investorTableViewCell.h */,
+				0286AA551D00373F00C21703 /* investorTableViewCell.m */,
+				0286AA561D00373F00C21703 /* investorTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

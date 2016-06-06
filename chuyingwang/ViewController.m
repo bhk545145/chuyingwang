@@ -14,7 +14,7 @@
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator>{
-    int icard;
+    
 }
 
 @end
@@ -32,7 +32,6 @@
     ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
     self.swipeableView = swipeableView;
     [self.view addSubview:self.swipeableView];
-    icard = 1;
     // Required Data Source
     self.swipeableView.dataSource = self;
     self.swipeableView.viewAnimator = self;
@@ -137,6 +136,7 @@
 #pragma mark - ZLSwipeableViewDataSource
 
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
+    static int icard = 1;
     if (icard > 3) {
         icard = 1;
     }

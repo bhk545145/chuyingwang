@@ -84,8 +84,8 @@
     return self;
 }
 
-- (void)setCardModel:(CardModel *)cardModel{
-    _CardModel = cardModel;
+- (void)setCardModel:(CardModel *)CardModel{
+    _CardModel = CardModel;
     [self setup];
 }
 

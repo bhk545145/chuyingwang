@@ -3,36 +3,75 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="242" id="KGk-i7-Jjw" customClass="investorTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="337" height="236"/>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="investor22" id="aib-rd-1bC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="696.5" y="254.5"/>
+        </imageView>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="346" id="KGk-i7-Jjw" customClass="investorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="346"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="337" height="235"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="investor1" translatesAutoresizingMaskIntoConstraints="NO" id="aib-rd-1bC">
-                        <rect key="frame" x="0.0" y="0.0" width="337" height="236"/>
+                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="investorBackimage" translatesAutoresizingMaskIntoConstraints="NO" id="fas-Hq-0KB">
+                        <rect key="frame" x="0.0" y="78" width="375" height="267"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="齐小吓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9R-L1-Exx">
+                        <rect key="frame" x="159" y="162" width="56" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="香港新创有限公司   联合创始人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-J1-tcu">
+                        <rect key="frame" x="68" y="209" width="238" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="关注：金融、新内容生态、消费互联网  偏好：A轮、B轮" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-J2-gpD">
+                        <rect key="frame" x="10" y="244" width="355" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiO-Gp-OWU">
+                        <rect key="frame" x="93" y="286" width="189" height="40"/>
+                        <state key="normal" title="查看主页" backgroundImage="lookupbtn">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="lookHome:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8lo-rY-JTp"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="investor1" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-JV-Wde">
+                        <rect key="frame" x="137" y="35" width="100" height="100"/>
                     </imageView>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="aib-rd-1bC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="0JP-GA-mzD"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="aib-rd-1bC" secondAttribute="bottom" constant="-9" id="15B-Fh-v3x"/>
-                    <constraint firstItem="aib-rd-1bC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="TQm-di-nPO"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="aib-rd-1bC" secondAttribute="trailing" constant="-8" id="ksB-gr-gel"/>
-                </constraints>
+                <color key="backgroundColor" red="0.89803921568627454" green="0.89411764705882346" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
-                <outlet property="investorimage" destination="aib-rd-1bC" id="fdq-hK-re0"/>
+                <outlet property="investorCompany" destination="u7u-J1-tcu" id="jOL-qW-U1b"/>
+                <outlet property="investorFollow" destination="9Sq-J2-gpD" id="Upx-hA-Ypf"/>
+                <outlet property="investorName" destination="i9R-L1-Exx" id="b0w-B0-n4l"/>
+                <outlet property="investorheadimage" destination="NaE-JV-Wde" id="wYJ-Zh-cIM"/>
             </connections>
-            <point key="canvasLocation" x="261" y="255"/>
+            <point key="canvasLocation" x="260.5" y="211"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="investor1" width="337" height="236"/>
+        <image name="investor1" width="100" height="100"/>
+        <image name="investor22" width="337" height="239"/>
+        <image name="investorBackimage" width="381" height="215"/>
+        <image name="lookupbtn" width="190" height="40"/>
     </resources>
 </document>

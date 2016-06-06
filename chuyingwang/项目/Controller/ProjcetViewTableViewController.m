@@ -9,6 +9,7 @@
 #import "ProjcetViewTableViewController.h"
 #import "projectTableViewCell.h"
 #import "bhkCommon.h"
+#import "CardModel.h"
 
 @interface ProjcetViewTableViewController (){
     NSArray *projectarray;
@@ -25,7 +26,7 @@
         [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
     }
-    projectarray = [NSArray arrayWithObjects:@"project1",@"project2", nil];
+    projectarray = [NSArray arrayWithObjects:@"i1",@"i2",@"i3", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,13 +56,22 @@
         NSArray *cells = [[NSBundle mainBundle] loadNibNamed:@"projectTableViewCell" owner:nil options:nil];
         cell = [cells lastObject];
     }
-    cell.projectimage.image = [UIImage imageNamed:projectarray[indexPath.row]];
-    
+
+    NSString *icardstr = projectarray[indexPath.row];
+    CardModel *cardModel = [[CardModel alloc]init];
+    cardModel.iCardimg = icardstr;
+    cardModel.Cardstr = @"Bikernel 项目";
+    cardModel.financingStatus = @"股权融资中";
+    cardModel.financingStatusPercentage = 0.25f;
+    cardModel.projectIntroduction = @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀123123123";
+    cardModel.reading = 5;
+    cardModel.collection = 8;
+    cell.CardModel = cardModel;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 313;
+    return 324;
 }
 
 /*
