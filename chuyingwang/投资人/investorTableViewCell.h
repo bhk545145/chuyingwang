@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class InvestorModel;
 @interface investorTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *investorimage;
-@property (weak, nonatomic) IBOutlet UIImageView *investorheadimage;
 
+@property(nonatomic,strong)InvestorModel *InvestorModel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *investorheadimage;
 @property (weak, nonatomic) IBOutlet UILabel *investorName;
 @property (weak, nonatomic) IBOutlet UILabel *investorCompany;
 @property (weak, nonatomic) IBOutlet UILabel *investorFollow;

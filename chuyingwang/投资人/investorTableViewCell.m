@@ -7,6 +7,7 @@
 //
 
 #import "investorTableViewCell.h"
+#import "InvestorModel.h"
 
 @implementation investorTableViewCell
 
@@ -19,6 +20,14 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setInvestorModel:(InvestorModel *)InvestorModel{
+    _InvestorModel = InvestorModel;
+    self.investorheadimage.image = [UIImage imageNamed:_InvestorModel.investorheadimage];
+    self.investorName.text = _InvestorModel.investorName;
+    self.investorFollow.text = _InvestorModel.investorFollow;
+    self.investorCompany.text = _InvestorModel.investorCompany;
 }
 
 - (IBAction)lookHome:(id)sender {

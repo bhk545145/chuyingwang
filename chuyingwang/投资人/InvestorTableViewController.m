@@ -9,6 +9,7 @@
 #import "InvestorTableViewController.h"
 #import "investorTableViewCell.h"
 #import "bhkCommon.h"
+#import "InvestorModel.h"
 
 
 @interface InvestorTableViewController (){
@@ -56,14 +57,19 @@
         NSArray *cells = [[NSBundle mainBundle]loadNibNamed:@"investorTableViewCell" owner:nil options:nil];
         cell = [cells lastObject];
     }
-    cell.investorimage.image = [UIImage imageNamed:investorarray[indexPath.row]];
-    // Configure the cell...
+    NSString *investorheadstr = investorarray[indexPath.row];
+    InvestorModel *investorModel = [[InvestorModel alloc]init];
+    investorModel.investorheadimage = investorheadstr;
+    investorModel.investorName = @"齐小吓";
+    investorModel.investorFollow = @"香港新创有限公司   联合创始人";
+    investorModel.investorCompany = @"关注：金融、新内容生态、消费互联网  偏好：A轮、B轮";
+    cell.InvestorModel = investorModel;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 346;
+    return 285;
 }
 
 /*

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,10 +20,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
                         <rect key="frame" x="0.0" y="176" width="375" height="40"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                         <state key="normal" backgroundImage="black_pic">
@@ -31,35 +31,59 @@
                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-am-qSs">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-am-qSs">
                         <rect key="frame" x="0.0" y="216" width="375" height="51"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="Xis-0X-3oW"/>
+                        </constraints>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb4-UJ-ms1">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb4-UJ-ms1">
                         <rect key="frame" x="8" y="275" width="75" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="Lu7-KG-pRG"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" backgroundImage="financing_status">
                             <color key="titleColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" progressImage="u137" trackImage="u139" translatesAutoresizingMaskIntoConstraints="NO" id="5Fr-uz-Npm">
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" progressImage="u137" trackImage="u139" translatesAutoresizingMaskIntoConstraints="NO" id="5Fr-uz-Npm">
                         <rect key="frame" x="109" y="286" width="108" height="3"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="108" id="r95-cL-G4A"/>
+                        </constraints>
                     </progressView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDh-w5-l9R">
-                        <rect key="frame" x="251" y="279" width="100" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDh-w5-l9R">
+                        <rect key="frame" x="351" y="279" width="0.0" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="DWI-jV-tMs" secondAttribute="trailing" constant="-8" id="1rY-oA-BT6"/>
+                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="centerY" secondItem="TDh-w5-l9R" secondAttribute="centerY" id="26c-IM-asL"/>
+                    <constraint firstItem="DWI-jV-tMs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="5Km-Jj-Y0M"/>
+                    <constraint firstItem="5Fr-uz-Npm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="109" id="AMg-kA-JJG"/>
+                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="centerY" secondItem="5Fr-uz-Npm" secondAttribute="centerY" id="FjE-us-lR5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="TDh-w5-l9R" secondAttribute="bottom" constant="20" id="OSI-tp-Ol9"/>
+                    <constraint firstAttribute="bottom" secondItem="Wxx-am-qSs" secondAttribute="bottom" constant="56" id="PaC-EN-i2x"/>
                     <constraint firstAttribute="trailingMargin" secondItem="TDh-w5-l9R" secondAttribute="trailing" constant="16" id="Q4T-5H-XKt"/>
+                    <constraint firstItem="Wxx-am-qSs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Rox-ZG-2vo"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Rb4-UJ-ms1" secondAttribute="bottom" constant="16" id="SQR-sq-DBa"/>
+                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="top" secondItem="Wxx-am-qSs" secondAttribute="bottom" constant="8" symbolic="YES" id="Tzr-cA-dEV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Wxx-am-qSs" secondAttribute="trailing" constant="-8" id="ZNt-Wu-2eg"/>
+                    <constraint firstItem="GdT-wb-2vG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="aQX-rD-TvE"/>
+                    <constraint firstItem="Wxx-am-qSs" firstAttribute="top" secondItem="GdT-wb-2vG" secondAttribute="bottom" id="bSu-uA-lC4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GdT-wb-2vG" secondAttribute="trailing" constant="-8" id="lRe-TO-yMg"/>
+                    <constraint firstItem="DWI-jV-tMs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="lks-uM-hYS"/>
+                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="noV-xd-g8i"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
