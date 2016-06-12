@@ -23,6 +23,8 @@
         [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
     }
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = IWcolor(193, 193, 193);
     
 }
 
@@ -42,9 +44,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section == 0) {
+        return 3;
+    }else{
+        return 1;
+    }
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *SimleTableIdentifier;
@@ -58,16 +63,21 @@
         }
     }else if (indexPath.section == 1){
         if(indexPath.row == 0){
-            SimleTableIdentifier =@"myfourcell";
-        }else if(indexPath.row == 1){
             SimleTableIdentifier =@"myfivecell";
-        }else if (indexPath.row == 2){
-            SimleTableIdentifier =@"mysixcell";
         }
         
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
     return cell;
+}
+
+//每个分组下边预留的空白高度
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if(section == 0){
+        return 5;
+    }
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -82,10 +92,6 @@
         }
     }else if (indexPath.section == 1){
         if(indexPath.row == 0){
-            height = 10;
-        }else if (indexPath.section == 1){
-            height = 44;
-        }else if (indexPath.section == 1){
             height = 44;
         }
     }

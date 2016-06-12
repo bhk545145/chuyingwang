@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zaa-pL-yCl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zaa-pL-yCl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--项目-->
@@ -18,9 +19,17 @@
                             <outlet property="delegate" destination="K67-En-pNT" id="p4i-3C-hke"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="项目" id="V47-qV-VCR"/>
+                    <tabBarItem key="tabBarItem" title="项目" image="settings_browsemode_icon" id="V47-qV-VCR"/>
                     <navigationItem key="navigationItem" title="项目" id="EOp-ig-zIU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Nzo-Ws-B8E"/>
+                        <barButtonItem key="rightBarButtonItem" id="unK-9V-mSS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XwT-y3-M3E">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tabbar_discover"/>
+                                <state key="selected" image="tabbar_discover_selected"/>
+                                <state key="highlighted" image="tabbar_discover_selected"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
@@ -59,17 +68,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRZ-se-52k">
-                                <rect key="frame" x="313" y="572" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRZ-se-52k">
+                                <rect key="frame" x="348" y="641" width="30" height="30"/>
                                 <state key="normal" title="顶部">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="上滑、下滑切换项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-d7-NbD">
-                                <rect key="frame" x="91" y="575" width="193" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上滑、下滑切换项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-d7-NbD">
+                                <rect key="frame" x="95" y="647" width="224" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -77,13 +86,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="kRZ-se-52k" firstAttribute="leading" secondItem="yYI-d7-NbD" secondAttribute="trailing" constant="29" id="Aef-Kk-GUX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yYI-d7-NbD" secondAttribute="bottom" constant="22" id="gsE-aQ-x13"/>
+                            <constraint firstItem="yYI-d7-NbD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="hkJ-EC-Q3k"/>
+                            <constraint firstItem="yYI-d7-NbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uBw-cJ-nGp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kRZ-se-52k" secondAttribute="bottom" constant="16" id="zFu-hE-JYs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="9Au-jX-ki5"/>
                     <navigationItem key="navigationItem" title="雏鹰网" id="T4k-ra-k8M"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +105,7 @@
         <scene sceneID="Pmf-Fq-ueQ">
             <objects>
                 <navigationController id="oSZ-rm-Nc6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="9J6-zu-rzy"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" selectedImage="tabbar_home_highlighted" id="9J6-zu-rzy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Gp-T8-oZU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -156,7 +168,7 @@
                             <outlet property="delegate" destination="vb7-dR-Ufy" id="1wd-ZW-qhI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="投资人" id="DMD-w2-Jhv"/>
+                    <tabBarItem key="tabBarItem" title="投资人" image="tabbar_profile" selectedImage="tabbar_profile_selected" id="DMD-w2-Jhv"/>
                     <navigationItem key="navigationItem" title="投资人" id="cf0-de-hnw" colorLabel="IBBuiltInLabel-Green">
                         <barButtonItem key="rightBarButtonItem" title="筛选" id="OFA-Pz-rYY"/>
                     </navigationItem>
@@ -188,7 +200,7 @@
         <scene sceneID="dmd-Ws-YGm">
             <objects>
                 <tableViewController id="I4t-9A-CmL" customClass="MyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YfI-hf-4cW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YfI-hf-4cW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -286,17 +298,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myfourcell" rowHeight="8" id="Txr-xF-tCl">
-                                <rect key="frame" x="0.0" y="351" width="375" height="8"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Txr-xF-tCl" id="KIW-Xf-da1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.89803921568627454" green="0.89411764705882357" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myfivecell" rowHeight="44" id="1oU-RI-oOD">
-                                <rect key="frame" x="0.0" y="359" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="351" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1oU-RI-oOD" id="UZm-NK-Va4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -305,27 +308,20 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="动态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDk-zC-hyO">
                                             <rect key="frame" x="31" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mysixcell" id="Fpk-KC-0Pz">
-                                <rect key="frame" x="0.0" y="403" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fpk-KC-0Pz" id="QZR-eX-ltj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="I4t-9A-CmL" id="uuf-Tk-Zb1"/>
                             <outlet property="delegate" destination="I4t-9A-CmL" id="uqV-aD-ulU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="我的" id="qcj-Bx-d3a"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="settings_accounts_icon" id="qcj-Bx-d3a"/>
                     <navigationItem key="navigationItem" title="个人中心" id="L8c-DU-Shy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
@@ -336,5 +332,13 @@
     </scenes>
     <resources>
         <image name="my" width="100" height="100"/>
+        <image name="settings_accounts_icon" width="24" height="24"/>
+        <image name="settings_browsemode_icon" width="24" height="24"/>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_selected" width="30" height="30"/>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_highlighted" width="30" height="30"/>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_selected" width="30" height="30"/>
     </resources>
 </document>
