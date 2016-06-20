@@ -14,7 +14,7 @@
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator>{
-    
+
 }
 
 @end
@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
     if (IsiOS7Later) {
         //导航栏背景和字体颜色
         [self.navigationController.navigationBar setBarTintColor:IWcolor(27, 27, 27)];
@@ -136,23 +137,38 @@
 #pragma mark - ZLSwipeableViewDataSource
 
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
-    static int icard = 1;
-    if (icard > 3) {
-        icard = 1;
-    }
-    NSString *icardstr = [NSString stringWithFormat:@"i%d",icard];
-    CardModel *cardModel = [[CardModel alloc]init];
-    cardModel.iCardimg = icardstr;
-    cardModel.Cardstr = @"Bikernel 项目";
-    cardModel.financingStatus = @"股权融资中";
-    cardModel.financingStatusPercentage = 0.25f;
-    cardModel.projectIntroduction = @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀";
-    cardModel.reading = 5;
-    cardModel.collection = 8;
+    NSArray *array = @[@{
+                           @"iCardimg"     :   @"i1",
+                           @"Cardstr"     :   @"Bikernel 项目",
+                           @"financingStatus"       :   @"股权融资中",
+                           @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
+                           @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                           @"reading":   [NSNumber numberWithInt:5],
+                           @"collection"     :   [NSNumber numberWithInt:8]
+                           },@{
+                           @"iCardimg"     :   @"i2",
+                           @"Cardstr"     :   @"Bikernel 项目",
+                           @"financingStatus"       :   @"股权融资中",
+                           @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
+                           @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                           @"reading":   [NSNumber numberWithInt:5],
+                           @"collection"     :   [NSNumber numberWithInt:8]
+                           },@{
+                           @"iCardimg"     :   @"i3",
+                           @"Cardstr"     :   @"Bikernel 项目",
+                           @"financingStatus"       :   @"股权融资中",
+                           @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
+                           @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                           @"reading":   [NSNumber numberWithInt:5],
+                           @"collection"     :   [NSNumber numberWithInt:8]
+                           }];
 
+    CardModel *cardModel = [[CardModel alloc]init];
     CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
+    for (NSDictionary *dict in array) {
+        cardModel = [CardModel DeviceinfoWithDict:dict];
+    }
     view.CardModel = cardModel;
-    icard++;
     return view;
 }
 

@@ -114,7 +114,7 @@
     
     projectIntroductionlab.text = _CardModel.projectIntroduction;
     
-    readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",_CardModel.reading,_CardModel.collection];
+    readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",(long)_CardModel.reading,_CardModel.collection];
 }
 
 @end

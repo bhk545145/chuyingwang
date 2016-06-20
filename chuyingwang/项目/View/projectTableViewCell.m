@@ -37,7 +37,7 @@
     self.projectIntroductionlab.textColor = IWcolor(135, 135, 135);
     self.projectIntroductionlab.backgroundColor = IWcolor(244, 244, 244);
     
-    self.readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",_CardModel.reading,_CardModel.collection];
+    self.readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",(long)_CardModel.reading,_CardModel.collection];
 }
 
 

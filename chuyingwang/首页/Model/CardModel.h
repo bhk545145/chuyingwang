@@ -18,4 +18,7 @@
 @property(nonatomic,assign)NSInteger reading;
 @property(nonatomic,assign)NSInteger collection;
 
+- (id)initWithDict:(NSDictionary *)dict;
++ (id)DeviceinfoWithDict:(NSDictionary *)dict;
+
 @end
