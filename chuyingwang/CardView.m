@@ -46,11 +46,13 @@
         CGFloat ProjectCardheight = self.ProjectCard.bounds.size.height;
         
         projectbtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, ProjectCardwidth, ProjectCardheight/2)];
-        [self.ProjectCard addSubview:projectbtn];
+        //[self.ProjectCard addSubview:projectbtn]; 不可触发点击事件
+        [self addSubview:projectbtn];
         
         projectNamebtn = [[UIButton alloc]initWithFrame:CGRectMake(0, ProjectCardheight/2 - 40, ProjectCardwidth, 40)];
         projectNamebtn.titleLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:13.0];
         [projectNamebtn setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        projectNamebtn.userInteractionEnabled = NO;
         [projectbtn addSubview:projectNamebtn];
         
         financingStatusbtn = [[UIButton alloc]initWithFrame:CGRectMake(90, ProjectCardheight/2 + 30, 70, 22)];
@@ -100,6 +102,7 @@
     self.layer.cornerRadius = 10.0;
     
     [projectbtn setBackgroundImage:[UIImage imageNamed:_CardModel.iCardimg] forState:UIControlStateNormal];
+    [projectbtn addTarget:self action:@selector(projectbtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [projectNamebtn setBackgroundImage:[UIImage imageNamed:@"black_pic"] forState:UIControlStateNormal];
     [projectNamebtn setTitle:_CardModel.Cardstr forState:UIControlStateNormal];
@@ -114,7 +117,12 @@
     
     projectIntroductionlab.text = _CardModel.projectIntroduction;
     
-    readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",(long)_CardModel.reading,_CardModel.collection];
+    readingCollection.text = [NSString stringWithFormat:@"阅读(%ld)  收藏(%ld)",(long)_CardModel.reading,(long)_CardModel.collection];
 }
-
+//CardView点击事件
+- (void)projectbtnClick:(UIButton *)btn{
+    if ([self.delegate respondsToSelector:@selector(CardModelbtn:)]) {
+        [self.delegate CardModelbtn:_CardModel];
+    }
+}
 @end

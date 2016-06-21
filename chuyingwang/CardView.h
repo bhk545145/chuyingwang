@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@protocol CardDelegate;
 @class CardModel;
 @interface CardView : UIView
-
+@property(nonatomic,weak)id<CardDelegate> delegate;
 @property(nonatomic,strong)CardModel *CardModel;
 
+@end
 
+@protocol CardDelegate<NSObject>
+- (void)CardModelbtn:(CardModel *)cardModel;
 @end

@@ -12,21 +12,47 @@
 #import "CardModel.h"
 
 @interface ProjcetViewTableViewController (){
-    NSArray *projectarray;
+    
 }
 
+@property (nonatomic,strong) NSMutableArray *Cardarray;
 @end
 
 @implementation ProjcetViewTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *devicearray = @[@{
+                       @"iCardimg"     :   @"i1",
+                       @"Cardstr"     :   @"Bikernel 项目",
+                       @"financingStatus"       :   @"股权融资中",
+                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
+                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                       @"reading":   [NSNumber numberWithInt:5],
+                       @"collection"     :   [NSNumber numberWithInt:8]
+                       },@{
+                       @"iCardimg"     :   @"i2",
+                       @"Cardstr"     :   @"Bikernel 项目",
+                       @"financingStatus"       :   @"股权融资中",
+                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.75f],
+                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                       @"reading":   [NSNumber numberWithInt:5],
+                       @"collection"     :   [NSNumber numberWithInt:18]
+                       },@{
+                       @"iCardimg"     :   @"i3",
+                       @"Cardstr"     :   @"Bikernel 项目",
+                       @"financingStatus"       :   @"股权融资完成",
+                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
+                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                       @"reading":   [NSNumber numberWithInt:15],
+                       @"collection"     :   [NSNumber numberWithInt:8]
+                       }];
     if (IsiOS7Later) {
         //导航栏背景和字体颜色
         [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
     }
-    projectarray = [NSArray arrayWithObjects:@"i1",@"i2",@"i3", nil];
+    _Cardarray = [self cardModelarray:devicearray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +71,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [projectarray count];
+    return [_Cardarray count];
 }
 
 
@@ -56,16 +82,7 @@
         NSArray *cells = [[NSBundle mainBundle] loadNibNamed:@"projectTableViewCell" owner:nil options:nil];
         cell = [cells lastObject];
     }
-
-    NSString *icardstr = projectarray[indexPath.row];
-    CardModel *cardModel = [[CardModel alloc]init];
-    cardModel.iCardimg = icardstr;
-    cardModel.Cardstr = @"Bikernel 项目";
-    cardModel.financingStatus = @"股权融资中";
-    cardModel.financingStatusPercentage = 0.25f;
-    cardModel.projectIntroduction = @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀123123123";
-    cardModel.reading = 5;
-    cardModel.collection = 8;
+    CardModel *cardModel = _Cardarray[indexPath.row];
     cell.CardModel = cardModel;
     return cell;
 }
@@ -74,6 +91,24 @@
     return 324;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CardModel *cardModel = _Cardarray[indexPath.row];
+    NSLog(@"%@我被点击了",cardModel);
+}
 
-
+/**
+ *  数组转模型数组
+ *
+ *  @param array 获取的数据数组
+ *
+ *  @return 模型数组
+ */
+- (NSMutableArray *)cardModelarray:(NSArray *)array{
+    NSMutableArray *Cardarray = [[NSMutableArray alloc]init];
+    for (NSDictionary *dict in array) {
+        CardModel *cardModel = [CardModel DeviceinfoWithDict:dict];
+        [Cardarray addObject:cardModel];
+    }
+    return Cardarray;
+}
 @end
