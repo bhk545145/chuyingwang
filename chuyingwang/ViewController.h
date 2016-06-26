@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <ZLSwipeableViewDataSource, ZLSwipeableViewDelegate>
 
 @property (nonatomic, strong) ZLSwipeableView *swipeableView;
+- (IBAction)topbtn:(id)sender;
 
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView;
 

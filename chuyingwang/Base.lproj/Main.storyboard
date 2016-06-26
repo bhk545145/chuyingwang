@@ -77,6 +77,9 @@
                                 <state key="normal" title="顶部">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="topbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGi-Pt-UNW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上滑、下滑切换项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-d7-NbD">
                                 <rect key="frame" x="91" y="578" width="193" height="18"/>

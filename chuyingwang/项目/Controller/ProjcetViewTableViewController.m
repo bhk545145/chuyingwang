@@ -41,7 +41,7 @@
                        },@{
                        @"iCardimg"     :   @"i3",
                        @"Cardstr"     :   @"Bikernel 项目",
-                       @"financingStatus"       :   @"股权融资完成",
+                       @"financingStatus"       :   @"融资完成",
                        @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
                        @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
                        @"reading":   [NSNumber numberWithInt:15],

@@ -13,7 +13,8 @@
 #import "CardModel.h"
 
 
-@interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate>{
+@interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
+    UIScrollView *firstscrollview;
 }
 @property (nonatomic,strong) NSArray *Cardarray;
 @end
@@ -41,7 +42,7 @@
                    },@{
                    @"iCardimg"     :   @"i3",
                    @"Cardstr"     :   @"Bikernel 项目",
-                   @"financingStatus"       :   @"股权融资完成",
+                   @"financingStatus"       :   @"融资完成",
                    @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
                    @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
                    @"reading":   [NSNumber numberWithInt:15],
@@ -77,9 +78,7 @@
                                options:0
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(swipeableView)]];
-    //firstview
-//    FirstView *firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
-//    [self.view addSubview:firstview];
+    [self topbtn:nil];
 
 }
 
@@ -155,6 +154,33 @@
     didEndSwipingView:(UIView *)view
            atLocation:(CGPoint)location {
 //    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
+}
+
+//顶部按钮
+- (IBAction)topbtn:(id)sender {
+    firstscrollview = [[UIScrollView alloc]initWithFrame:self.view.frame];
+    FirstView *firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
+    firstscrollview.contentSize = CGSizeMake(firstview.frame.size.width, firstview.frame.size.height*2);
+    firstscrollview.delegate = self;
+    firstscrollview.bounces = NO;
+    firstscrollview.showsVerticalScrollIndicator = NO;
+    firstscrollview.pagingEnabled = YES;
+    [firstscrollview addSubview:firstview];
+    [self.view addSubview:firstscrollview];
+
+}
+
+#pragma mark UIScrollViewDelegate
+//只要滚动了就会触发
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
+{
+    NSLog(@"%f,%f",scrollView.contentOffset.y,self.view.bounds.size.height - 91);
+    if (scrollView.contentOffset.y > self.view.bounds.size.height - 91) {
+        [firstscrollview removeFromSuperview];
+        return;
+    }else{
+        
+    }
 }
 
 #pragma mark - ZLSwipeableViewDataSource
