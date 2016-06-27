@@ -11,6 +11,7 @@
 #import "ASIFormDataRequest.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "bhkCommon.h"
 
 
 @interface FirstView (){
@@ -37,7 +38,7 @@
         UIView *FirstView = [views lastObject];
         FirstView.frame = self.frame;
         [self addSubview:FirstView];
-        [self upadteDisplay:[NSURL URLWithString:@"http://vodcdn.video.taobao.com/oss/ali-video/2b8b0b5f46a5a01145e3ae3e7fcaf08f/video.mp4"]];
+        [self upadteDisplay:[NSURL URLWithString:MovieURL]];
     }
     return self;
 }
@@ -45,7 +46,7 @@
 - (void)upadteDisplay:(NSURL *)movieURL{
     [self.movePlayController.view removeFromSuperview];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *filepath = [filepathFolder stringByAppendingPathComponent:[NSString stringWithFormat:@"video.mp4"]];
+    NSString *filepath = [filepathFolder stringByAppendingPathComponent:[NSString stringWithFormat:MP4Name]];
     //如果本地文件不存在，下载视频
     if (![fileManager fileExistsAtPath:filepath]) {
         [self download:movieURL];
@@ -70,7 +71,7 @@
     [request setCompletionBlock:^{
         if (reqblock.responseStatusCode == 200)
         {
-            NSString *filepath = [filepathFolder stringByAppendingPathComponent:[NSString stringWithFormat:@"video.mp4"]];
+            NSString *filepath = [filepathFolder stringByAppendingPathComponent:[NSString stringWithFormat:MP4Name]];
             if ([reqblock.responseData writeToFile:filepath atomically:YES])
             {
                 NSURL *moviepath = [NSURL fileURLWithPath:filepath];
