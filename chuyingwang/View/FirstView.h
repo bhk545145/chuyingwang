@@ -10,4 +10,7 @@
 
 @interface FirstView : UIView
 
+@property (weak, nonatomic) IBOutlet UIView *movieView;
+@property (weak, nonatomic) IBOutlet UILabel *HeadLab;
+@property (weak, nonatomic) IBOutlet UILabel *FootLab;
 @end

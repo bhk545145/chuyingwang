@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0214C56E1D20CCCC00F33FA7 /* FirstView.xib */; };
+		0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */; };
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
 		026EF4E61CF2FCCC003A8A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E51CF2FCCC003A8A95 /* main.m */; };
 		026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E81CF2FCCC003A8A95 /* AppDelegate.m */; };
@@ -88,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0214C56E1D20CCCC00F33FA7 /* FirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstView.xib; path = "首页/View/FirstView.xib"; sourceTree = "<group>"; };
+		0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuyingwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */,
 				02DF7B5C1CF3FF3300C9C8F0 /* CoreGraphics.framework in Frameworks */,
 				02DF7B531CF3FF1800C9C8F0 /* libxml2.tbd in Frameworks */,
 				02DF7B5F1CF3FF3300C9C8F0 /* CFNetwork.framework in Frameworks */,
@@ -244,6 +249,7 @@
 		026EF4D81CF2FCCC003A8A95 = {
 			isa = PBXGroup;
 			children = (
+				0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */,
 				026EF4E31CF2FCCC003A8A95 /* chuyingwang */,
 				026EF4FD1CF2FCCC003A8A95 /* chuyingwangTests */,
 				026EF5081CF2FCCC003A8A95 /* chuyingwangUITests */,
@@ -534,6 +540,7 @@
 			children = (
 				3AA6C24F1CF9CA0D00AEE4A9 /* FirstView.h */,
 				3AA6C2501CF9CA0D00AEE4A9 /* FirstView.m */,
+				0214C56E1D20CCCC00F33FA7 /* FirstView.xib */,
 			);
 			name = FirstView;
 			sourceTree = "<group>";
@@ -759,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */,
+				0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */,
 				026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */,
 				026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */,
 				0286AA581D00373F00C21703 /* investorTableViewCell.xib in Resources */,

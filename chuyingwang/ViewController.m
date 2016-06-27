@@ -15,6 +15,7 @@
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
     UIScrollView *firstscrollview;
+    FirstView *firstview;
 }
 @property (nonatomic,strong) NSArray *Cardarray;
 @end
@@ -159,7 +160,7 @@
 //顶部按钮
 - (IBAction)topbtn:(id)sender {
     firstscrollview = [[UIScrollView alloc]initWithFrame:self.view.frame];
-    FirstView *firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
+    firstview = [[FirstView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-45)];
     firstscrollview.contentSize = CGSizeMake(firstview.frame.size.width, firstview.frame.size.height*2);
     firstscrollview.delegate = self;
     firstscrollview.bounces = NO;
@@ -174,8 +175,10 @@
 //只要滚动了就会触发
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 {
-    NSLog(@"%f,%f",scrollView.contentOffset.y,self.view.bounds.size.height - 91);
+    //NSLog(@"%f,%f",scrollView.contentOffset.y,self.view.bounds.size.height - 91);
     if (scrollView.contentOffset.y > self.view.bounds.size.height - 91) {
+        scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
+        [firstview removeFromSuperview];
         [firstscrollview removeFromSuperview];
         return;
     }else{
