@@ -88,12 +88,13 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     //状态栏颜色
     [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear:animated];
 }
 
 

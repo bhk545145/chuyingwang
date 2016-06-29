@@ -34,6 +34,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleDefault;
 }
 
@@ -52,7 +53,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *SimleTableIdentifier;
+    static NSString *SimleTableIdentifier = @"myfirstcell";
     if (indexPath.section == 0) {
         if(indexPath.row == 0){
             SimleTableIdentifier =@"myfirstcell";
@@ -65,7 +66,6 @@
         if(indexPath.row == 0){
             SimleTableIdentifier =@"myfivecell";
         }
-        
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
     return cell;
