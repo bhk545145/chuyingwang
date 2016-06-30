@@ -64,14 +64,15 @@
         financingStatuslab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:11.0];
         [self.ProjectCard addSubview:financingStatuslab];
         
-        financingStatusProgress = [[ProgressView alloc]initWithFrame:CGRectMake(200, ProjectCardheight/2 +10, 100, 100)];
+        CGFloat financingStatusProgressWidth = self.frame.size.width/3;
+        financingStatusProgress = [[ProgressView alloc]initWithFrame:CGRectMake(200, ProjectCardheight/2 +10, financingStatusProgressWidth, financingStatusProgressWidth)];
         financingStatusProgress.arcBackColor = IWcolor(253, 201, 24);
         financingStatusProgress.arcFinishColor = IWcolor(40, 82, 135);
         financingStatusProgress.arcUnfinishColor = IWcolor(40, 82, 135);
         financingStatusProgress.width = 20;
         [self.ProjectCard addSubview:financingStatusProgress];
         
-        projectIntroductionlab = [[UITextView alloc]initWithFrame:CGRectMake(25,ProjectCardheight - 100,ProjectCardwidth - 50, 40)];
+        projectIntroductionlab = [[UITextView alloc]initWithFrame:CGRectMake(25,ProjectCardheight - 80,ProjectCardwidth - 50, 40)];
         projectIntroductionlab.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:11.0];
         projectIntroductionlab.textColor = IWcolor(135, 135, 135);
         projectIntroductionlab.backgroundColor = IWcolor(244, 244, 244);

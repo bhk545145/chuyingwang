@@ -54,7 +54,7 @@
         NSURL *moviepath = [NSURL fileURLWithPath:filepath];
         self.movePlayController = [[MPMoviePlayerController alloc]initWithContentURL:moviepath];
         self.movePlayController.scalingMode = MPMovieScalingModeAspectFit;
-        [self.movePlayController.view setFrame:CGRectMake(0, 64, self.frame.size.width, self.frame.size.width)];
+        [self.movePlayController.view setFrame:CGRectMake(0, 64, self.frame.size.width, 238)];
         [self.movePlayController play];
         self.movieView = self.movePlayController.view;
         self.movieView.clipsToBounds = YES;
