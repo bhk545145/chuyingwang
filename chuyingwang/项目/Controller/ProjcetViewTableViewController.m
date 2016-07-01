@@ -10,6 +10,8 @@
 #import "projectTableViewCell.h"
 #import "bhkCommon.h"
 #import "CardModel.h"
+#import "MJRefresh.h"
+#import "PublicTool.h"
 
 @interface ProjcetViewTableViewController (){
     
@@ -22,37 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *devicearray = @[@{
-                       @"iCardimg"     :   @"i1",
-                       @"Cardstr"     :   @"Bikernel 项目",
-                       @"financingStatus"       :   @"股权融资中",
-                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
-                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                       @"reading":   [NSNumber numberWithInt:5],
-                       @"collection"     :   [NSNumber numberWithInt:8]
-                       },@{
-                       @"iCardimg"     :   @"i2",
-                       @"Cardstr"     :   @"Bikernel 项目",
-                       @"financingStatus"       :   @"股权融资中",
-                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.75f],
-                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                       @"reading":   [NSNumber numberWithInt:5],
-                       @"collection"     :   [NSNumber numberWithInt:18]
-                       },@{
-                       @"iCardimg"     :   @"i3",
-                       @"Cardstr"     :   @"Bikernel 项目",
-                       @"financingStatus"       :   @"融资完成",
-                       @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
-                       @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                       @"reading":   [NSNumber numberWithInt:15],
-                       @"collection"     :   [NSNumber numberWithInt:8]
-                       }];
+
     if (IsiOS7Later) {
         //导航栏背景和字体颜色
         [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17.0],UITextAttributeFont,nil]];
     }
-    _Cardarray = [self cardModelarray:devicearray];
+    
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf listRefresh];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +48,40 @@
     [super viewDidAppear:animated];
     [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleDefault;
 }
+
+
+- (void)listRefresh{
+    NSArray *devicearray = @[@{
+                                 @"iCardimg"     :   @"i1",
+                                 @"Cardstr"     :   @"Bikernel 项目",
+                                 @"financingStatus"       :   @"股权融资中",
+                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
+                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                                 @"reading":   [NSNumber numberWithInt:5],
+                                 @"collection"     :   [NSNumber numberWithInt:8]
+                                 },@{
+                                 @"iCardimg"     :   @"i2",
+                                 @"Cardstr"     :   @"Bikernel 项目",
+                                 @"financingStatus"       :   @"股权融资中",
+                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.75f],
+                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                                 @"reading":   [NSNumber numberWithInt:5],
+                                 @"collection"     :   [NSNumber numberWithInt:18]
+                                 },@{
+                                 @"iCardimg"     :   @"i3",
+                                 @"Cardstr"     :   @"Bikernel 项目",
+                                 @"financingStatus"       :   @"融资完成",
+                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
+                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
+                                 @"reading":   [NSNumber numberWithInt:15],
+                                 @"collection"     :   [NSNumber numberWithInt:8]
+                                 }];
+    _Cardarray = [PublicTool cardModelarray:devicearray];
+    [self.tableView reloadData];
+    [self.tableView.mj_header endRefreshing];
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -97,19 +115,5 @@
     NSLog(@"%@我被点击了",cardModel);
 }
 
-/**
- *  数组转模型数组
- *
- *  @param array 获取的数据数组
- *
- *  @return 模型数组
- */
-- (NSMutableArray *)cardModelarray:(NSArray *)array{
-    NSMutableArray *Cardarray = [[NSMutableArray alloc]init];
-    for (NSDictionary *dict in array) {
-        CardModel *cardModel = [CardModel DeviceinfoWithDict:dict];
-        [Cardarray addObject:cardModel];
-    }
-    return Cardarray;
-}
+
 @end

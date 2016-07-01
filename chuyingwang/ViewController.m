@@ -11,6 +11,7 @@
 #import "FirstView.h"
 #import "bhkCommon.h"
 #import "CardModel.h"
+#import "PublicTool.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
@@ -190,7 +191,7 @@
 #pragma mark - ZLSwipeableViewDataSource
 //卡牌数据展示
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
-    NSMutableArray *Cardarray = [self cardModelarray:_Cardarray];
+    NSMutableArray *Cardarray = [PublicTool cardModelarray:_Cardarray];
     CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
     view.delegate = self;
     static int i;
@@ -208,19 +209,5 @@
     NSLog(@"%@我被点击了",cardModel);
 }
 
-/**
- *  数组转模型数组
- *
- *  @param array 获取的数据数组
- *
- *  @return 模型数组
- */
-- (NSMutableArray *)cardModelarray:(NSArray *)array{
-    NSMutableArray *Cardarray = [[NSMutableArray alloc]init];
-    for (NSDictionary *dict in array) {
-        CardModel *cardModel = [CardModel DeviceinfoWithDict:dict];
-        [Cardarray addObject:cardModel];
-    }
-    return Cardarray;
-}
+
 @end

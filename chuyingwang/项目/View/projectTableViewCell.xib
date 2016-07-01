@@ -15,11 +15,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                         <state key="normal" backgroundImage="i1"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
                         <rect key="frame" x="0.0" y="176" width="375" height="40"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                         <state key="normal" title="123" backgroundImage="black_pic">
