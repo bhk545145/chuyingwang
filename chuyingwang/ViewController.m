@@ -12,6 +12,7 @@
 #import "bhkCommon.h"
 #import "CardModel.h"
 #import "PublicTool.h"
+#import "DBHelp.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
@@ -81,6 +82,7 @@
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(swipeableView)]];
     [self topbtn:nil];
+    [DBHelp shareInstance];
 
 }
 

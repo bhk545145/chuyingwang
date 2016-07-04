@@ -36,7 +36,7 @@ static dispatch_once_t onceToken;
         NSFileManager *fm = [NSFileManager defaultManager];
         NSString *dbPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         dbPath = [dbPath stringByAppendingPathComponent:@"chuyingfound.sqlite"];
-        
+        NSLog(@"%@",dbPath);
         if(![fm fileExistsAtPath:dbPath])
         {
             [fm createFileAtPath:dbPath contents:nil attributes:nil];
