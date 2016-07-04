@@ -13,6 +13,15 @@
 #define StatusBarHeight                         [UIApplication sharedApplication].statusBarFrame.size.height
 #define RGB_TextLightBlue                       RGB(23.0f, 126.0f, 251.0f)
 
+#pragma mark - log信息函数预定义
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+
 #pragma maek - 首页顶部View预定义
 #define MovieURL                   @"http://vodcdn.video.taobao.com/oss/ali-video/2b8b0b5f46a5a01145e3ae3e7fcaf08f/video.mp4"
 #define MP4Name                    @"video.mp4"

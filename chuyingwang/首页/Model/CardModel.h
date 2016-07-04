@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface CardModel : NSObject
-
+//项目图片
 @property(nonatomic,strong)NSString *iCardimg;
+//项目名称
 @property(nonatomic,strong)NSString *Cardstr;
+//融资状态
 @property(nonatomic,strong)NSString *financingStatus;
+//融资进度
 @property(nonatomic,assign)float financingStatusPercentage;
+//项目介绍
 @property(nonatomic,strong)NSString *projectIntroduction;
+//阅读量
 @property(nonatomic,assign)NSInteger reading;
+//收藏量
 @property(nonatomic,assign)NSInteger collection;
 
 - (id)initWithDict:(NSDictionary *)dict;
