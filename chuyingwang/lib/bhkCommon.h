@@ -25,3 +25,8 @@
 #pragma maek - 首页顶部View预定义
 #define MovieURL                   @"http://vodcdn.video.taobao.com/oss/ali-video/2b8b0b5f46a5a01145e3ae3e7fcaf08f/video.mp4"
 #define MP4Name                    @"video.mp4"
+
+#pragma mark -
+#pragma mark - 数据库名称预定义
+#define CY_DB_NEWVERSION                        1
+#define CY_DB_NAME                              @"chuyingfound.db"

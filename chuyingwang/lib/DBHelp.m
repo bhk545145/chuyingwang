@@ -9,6 +9,7 @@
 #import "DBHelp.h"
 #import "FMDatabase.h"
 #import "bhkCommon.h"
+#import "Table.h"
 
 @implementation DBHelp
 
@@ -35,17 +36,159 @@ static dispatch_once_t onceToken;
     {
         NSFileManager *fm = [NSFileManager defaultManager];
         NSString *dbPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        dbPath = [dbPath stringByAppendingPathComponent:@"chuyingfound.sqlite"];
+        dbPath = [dbPath stringByAppendingPathComponent:CY_DB_NAME];
         NSLog(@"%@",dbPath);
         if(![fm fileExistsAtPath:dbPath])
         {
             [fm createFileAtPath:dbPath contents:nil attributes:nil];
         }
         self.dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-//        [self updateTables:CY_DB_NEWVERSION];
+        [self updateTables:CY_DB_NEWVERSION];
     }
     
     return self;
+}
+
+
+-(void)getCurrentDbVersionWithBlock:(void(^)(BOOL bRet, int version))block
+{
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        
+        NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version"];
+        FMResultSet *rs = [db executeQuery:sql];
+        
+        int nVersion = 0;
+        
+        while ([rs next])
+        {
+            nVersion = [rs intForColumn:@"user_version"];
+        }
+        [rs close];
+        rs = nil;
+        
+        if ([db hadError])
+        {
+            DLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+            block(NO,-1);
+            return;
+        }
+        
+        block(YES,nVersion);
+    }];
+}
+
+-(void)getCurrentDbVersion:(FMDatabase *)db withBlock:(void(^)(BOOL bRet, int version))block
+{
+    NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version"];
+    FMResultSet *rs = [db executeQuery:sql];
+    
+    int nVersion = 0;
+    
+    while ([rs next])
+    {
+        nVersion = [rs intForColumn:@"user_version"];
+    }
+    [rs close];
+    rs = nil;
+    
+    if ([db hadError])
+    {
+        DLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+        block(NO,-1);
+        return;
+    }
+    
+    block(YES,nVersion);
+}
+
+-(void)setNewDbVersion:(NSInteger)newVersion withBlock:(void(^)(BOOL bRet))block
+{
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        
+        NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version = %ld",(long)newVersion];
+        
+        BOOL ret = [db executeUpdate:sql];
+        
+        if ([db hadError])
+        {
+            DLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+        }
+        
+        block(ret);
+    }];
+}
+
+-(void)setNewDbVersion:(NSInteger)newVersion db:(FMDatabase *)db withBlock:(void(^)(BOOL bRet))block
+{
+    NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version = %ld",(long)newVersion];
+    
+    BOOL ret = [db executeUpdate:sql];
+    
+    if ([db hadError])
+    {
+        DLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+    }
+    
+    block(ret);
+}
+
+-(void)updateTables:(NSInteger)dbNewVersion
+{
+    @synchronized(_dbQueue)
+    {
+        //执行数据库更新
+        [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback){
+            
+            //获取数据库版本号
+            [self getCurrentDbVersion:db withBlock:^(BOOL bRet, int version) {
+                
+                if (bRet && (dbNewVersion > version || version == 0))
+                {
+                    [self executeSQLList:[self setSqlList] db:db withBlock:^(BOOL bRet, NSString *msg) {
+                        
+                        if (bRet)
+                        {
+                            //设置数据库版本号
+                            [self setNewDbVersion:dbNewVersion db:db withBlock:^(BOOL bRet) {
+                                
+                                if (bRet)
+                                {
+                                    DLog(@"set new db version successfully!");
+                                }
+                            }];
+                        }
+                    }];
+                }
+            }];
+        }];
+    }
+}
+
+-(NSArray *)setSqlList
+{
+    NSArray *sqlList = @[
+                         BL_TB_CREATE_SDKINFO,
+                         BL_TB_CREATE_FAMILYINFO,
+                         BL_TB_CREATE_ROOMINFO,
+                         BL_TB_CREATE_MODULEINFO,
+                         BL_TB_CREATE_DEVICEINFO,
+                         BL_TB_CREATE_SUBDEVICEINFO,
+                         BL_TB_CREATE_MODULESTATUSINFO,
+                         BL_TB_CREATE_ACTIONSINFO,
+                         BL_TB_CREATE_MODULEDEVICEINFO,
+                         BL_TB_CREATE_SCENECONTENTINFO,
+                         BL_TB_CREATE_SCENECONTENTCMDINFO,
+                         BL_TB_CREATE_IFTTTINFO,
+                         BL_TB_CREATE_USERFAMILYINFO,
+                         BL_TB_CREATE_FAMILYROOMINFO,
+                         BL_TB_CREATE_ROOMDEVICEINFO,
+                         BL_TB_CREATE_CLOUDCATEGORYINFO,
+                         BL_TB_CREATE_STATISTIC,
+                         BL_TB_CREATE_MODULE_RELATION_INFO,
+                         BL_TB_CREATE_CLOUD_AC_INFO
+                         ];
+    
+    return sqlList;
 }
 
 /*
@@ -91,6 +234,36 @@ static dispatch_once_t onceToken;
                 }
             }
         }];
+    }
+}
+
+/*
+ *  @brief                              批量处理更新或者新增sql语句，不需要返回记录集
+ *
+ *  @param  sqlStrList                  sql语句数组update或者insert into语句
+ *  @param  db                          FMDatabase数据库对象
+ *
+ *  @param  block                       返回执行结果的block
+ */
+-(void)executeSQLList:(NSArray *)sqlStrList db:(FMDatabase *)db withBlock:(void(^)(BOOL bRet, NSString *msg))block
+{
+    __block BOOL bRet = NO;
+    
+    int i=0;
+    for (NSString *sqlStr in sqlStrList)
+    {
+        bRet = [db executeUpdate:sqlStr];
+        if ([db hadError])
+        {
+            block(bRet, [db lastErrorMessage]);
+            DLog(@"executeSQLList Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+            break;
+        }
+        i++;
+    }
+    if (i == [sqlStrList count])
+    {
+        block(YES, nil);
     }
 }
 
