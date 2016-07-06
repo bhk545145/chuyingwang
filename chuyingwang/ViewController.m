@@ -12,6 +12,7 @@
 #import "bhkCommon.h"
 #import "CardModel.h"
 #import "PublicTool.h"
+#import "CYProjectService.h"
 #import "DBHelp.h"
 
 
@@ -82,8 +83,6 @@
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(swipeableView)]];
     [self topbtn:nil];
-    [DBHelp shareInstance];
-
 }
 
 - (void)viewDidLayoutSubviews {
@@ -208,6 +207,9 @@
 
 //CardView点击事件
 - (void)CardModelbtn:(CardModel *)cardModel{
+//    [[CYProjectService shareInstance] inserinto:cardModel withBlock:^(BOOL bRet, NSArray *array, NSString *msg) {
+//        DLog(@"%@%@%@",bRet,array,msg);
+//    }];
     NSLog(@"%@我被点击了",cardModel);
 }
 

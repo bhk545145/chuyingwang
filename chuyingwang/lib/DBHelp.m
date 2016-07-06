@@ -167,25 +167,7 @@ static dispatch_once_t onceToken;
 -(NSArray *)setSqlList
 {
     NSArray *sqlList = @[
-                         BL_TB_CREATE_SDKINFO,
-                         BL_TB_CREATE_FAMILYINFO,
-                         BL_TB_CREATE_ROOMINFO,
-                         BL_TB_CREATE_MODULEINFO,
-                         BL_TB_CREATE_DEVICEINFO,
-                         BL_TB_CREATE_SUBDEVICEINFO,
-                         BL_TB_CREATE_MODULESTATUSINFO,
-                         BL_TB_CREATE_ACTIONSINFO,
-                         BL_TB_CREATE_MODULEDEVICEINFO,
-                         BL_TB_CREATE_SCENECONTENTINFO,
-                         BL_TB_CREATE_SCENECONTENTCMDINFO,
-                         BL_TB_CREATE_IFTTTINFO,
-                         BL_TB_CREATE_USERFAMILYINFO,
-                         BL_TB_CREATE_FAMILYROOMINFO,
-                         BL_TB_CREATE_ROOMDEVICEINFO,
-                         BL_TB_CREATE_CLOUDCATEGORYINFO,
-                         BL_TB_CREATE_STATISTIC,
-                         BL_TB_CREATE_MODULE_RELATION_INFO,
-                         BL_TB_CREATE_CLOUD_AC_INFO
+                         CY_TB_PROJECTINFO
                          ];
     
     return sqlList;

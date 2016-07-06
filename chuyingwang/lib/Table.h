@@ -5,7 +5,7 @@
 
 
 //表名宏定义
-#define BL_TB_DEVICEINFO                    @"deviceInfoTable"              //设备信息表
+#define CY_TB_PROJECTINFO                    @"projectInfoTable"              //设备信息表
 
 
 
@@ -13,7 +13,7 @@
 
 
 /*
- *  @brief  project 设备信息表
+ *  @brief  project 项目信息表
  *
  *  @param  project_id             项目ID
  *  @param  name             项目名称

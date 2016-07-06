@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0214C56E1D20CCCC00F33FA7 /* FirstView.xib */; };
 		0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */; };
+		02157EBC1D2CD7950080A12D /* CYProjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02157EBB1D2CD7950080A12D /* CYProjectService.m */; };
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
 		026C49CE1D260C1000214630 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A21D260C1000214630 /* MJRefreshAutoFooter.m */; };
 		026C49CF1D260C1000214630 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A41D260C1000214630 /* MJRefreshBackFooter.m */; };
@@ -123,6 +124,8 @@
 /* Begin PBXFileReference section */
 		0214C56E1D20CCCC00F33FA7 /* FirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstView.xib; path = "首页/View/FirstView.xib"; sourceTree = "<group>"; };
 		0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		02157EBA1D2CD7950080A12D /* CYProjectService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYProjectService.h; path = "首页/Model/CYProjectService.h"; sourceTree = "<group>"; };
+		02157EBB1D2CD7950080A12D /* CYProjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYProjectService.m; path = "首页/Model/CYProjectService.m"; sourceTree = "<group>"; };
 		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		025CE8671D2B5BED005AC866 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
@@ -745,6 +748,8 @@
 			children = (
 				3ACC92841D02DC67002CFD86 /* CardModel.h */,
 				3ACC92851D02DC67002CFD86 /* CardModel.m */,
+				02157EBA1D2CD7950080A12D /* CYProjectService.h */,
+				02157EBB1D2CD7950080A12D /* CYProjectService.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1035,6 +1040,7 @@
 				026C49E01D260C1000214630 /* UIScrollView+MJRefresh.m in Sources */,
 				02DF7B3E1CF3FEAF00C9C8F0 /* ASIHTTPRequest.m in Sources */,
 				026C49DB1D260C1000214630 /* MJRefreshStateHeader.m in Sources */,
+				02157EBC1D2CD7950080A12D /* CYProjectService.m in Sources */,
 				0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */,
 				026C49D61D260C1000214630 /* MJRefreshBackGifFooter.m in Sources */,
 				026C49D51D260C1000214630 /* MJRefreshAutoStateFooter.m in Sources */,
