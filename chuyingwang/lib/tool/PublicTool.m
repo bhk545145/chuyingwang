@@ -6,6 +6,7 @@
 //  Copyright © 2016年 白洪坤. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "PublicTool.h"
 #import "CardModel.h"
 
@@ -25,6 +26,12 @@
         [Cardarray addObject:cardModel];
     }
     return Cardarray;
+}
+
+//输出frame
++ (void)printFrame:(CGRect)frame
+{
+    NSLog(@"Frame: x %.0f y %.0f w %.0f h %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 }
 
 @end

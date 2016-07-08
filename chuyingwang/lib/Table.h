@@ -5,7 +5,7 @@
 
 
 //表名宏定义
-#define CY_TB_PROJECTINFO                    @"projectInfoTable"              //设备信息表
+#define CY_TB_PROJECTINFO                    @"project"              //项目信息表
 
 
 
@@ -26,6 +26,6 @@
  *  @param  total_financing_amount             融资总额
  *  @param  collect          收藏
  */
-#define BL_TB_CREATE_DEVICEINFO    @"CREATE TABLE IF NOT EXISTS project(project_id int not null, name varchar(128), team_num int, team_intro varchar(255), introduction varchar(256), picture_path varchar(256), detail longtext,finish_financing_amount double, total_financing_amount double, collect text)"
+#define BL_TB_CREATE_DEVICEINFO    @"CREATE TABLE IF NOT EXISTS project(project_id int, name varchar(128), team_num int, team_intro varchar(255), introduction varchar(256), picture_path varchar(256), detail longtext,finish_financing_amount double, total_financing_amount double, collect text)"
 
 #endif

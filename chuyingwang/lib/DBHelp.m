@@ -167,7 +167,7 @@ static dispatch_once_t onceToken;
 -(NSArray *)setSqlList
 {
     NSArray *sqlList = @[
-                         CY_TB_PROJECTINFO
+                         BL_TB_CREATE_DEVICEINFO
                          ];
     
     return sqlList;

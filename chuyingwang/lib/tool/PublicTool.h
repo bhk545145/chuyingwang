@@ -18,4 +18,6 @@
  *  @return 模型数组
  */
 + (NSMutableArray *)cardModelarray:(NSArray *)array;
+//输出frame
++ (void)printFrame:(CGRect)frame;
 @end

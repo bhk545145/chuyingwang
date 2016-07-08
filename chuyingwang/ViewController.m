@@ -208,8 +208,13 @@
 //CardView点击事件
 - (void)CardModelbtn:(CardModel *)cardModel{
 //    [[CYProjectService shareInstance] inserinto:cardModel withBlock:^(BOOL bRet, NSArray *array, NSString *msg) {
-//        DLog(@"%@%@%@",bRet,array,msg);
+//        DLog(@"%d%@%@",bRet,array,msg);
 //    }];
+    [[CYProjectService shareInstance] selectProject:cardModel withBlock:^(BOOL bRet, NSMutableArray *array, NSString *msg) {
+        if (bRet) {
+            DLog(@"%@",array);
+        }
+    }];
     NSLog(@"%@我被点击了",cardModel);
 }
 

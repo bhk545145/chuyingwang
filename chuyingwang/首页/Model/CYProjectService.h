@@ -21,4 +21,6 @@
  *  @param block     返回数据
  */
 - (void)inserinto:(CardModel *)CardModel withBlock:(void(^)(BOOL bRet, NSArray *array, NSString *msg))block;
+
+- (void)selectProject:(CardModel *)CardModel withBlock:(void(^)(BOOL bRet, NSMutableArray *array, NSString *msg))block;
 @end
