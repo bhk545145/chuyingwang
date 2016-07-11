@@ -11,6 +11,8 @@
 		0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */; };
 		02157EBC1D2CD7950080A12D /* CYProjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02157EBB1D2CD7950080A12D /* CYProjectService.m */; };
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
+		0255150B1D33A67800D0CF2C /* HTTPrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150A1D33A67800D0CF2C /* HTTPrequest.m */; };
+		0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150E1D33A79400D0CF2C /* JSONKit.m */; };
 		026C49CE1D260C1000214630 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A21D260C1000214630 /* MJRefreshAutoFooter.m */; };
 		026C49CF1D260C1000214630 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A41D260C1000214630 /* MJRefreshBackFooter.m */; };
 		026C49D01D260C1000214630 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A61D260C1000214630 /* MJRefreshComponent.m */; };
@@ -128,6 +130,10 @@
 		02157EBB1D2CD7950080A12D /* CYProjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYProjectService.m; path = "首页/Model/CYProjectService.m"; sourceTree = "<group>"; };
 		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		025515091D33A67800D0CF2C /* HTTPrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPrequest.h; sourceTree = "<group>"; };
+		0255150A1D33A67800D0CF2C /* HTTPrequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPrequest.m; sourceTree = "<group>"; };
+		0255150D1D33A79400D0CF2C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		0255150E1D33A79400D0CF2C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		025CE8671D2B5BED005AC866 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
 		026C49A11D260C1000214630 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		026C49A21D260C1000214630 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -342,6 +348,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025515081D33A64500D0CF2C /* HTTPrequest */ = {
+			isa = PBXGroup;
+			children = (
+				025515091D33A67800D0CF2C /* HTTPrequest.h */,
+				0255150A1D33A67800D0CF2C /* HTTPrequest.m */,
+			);
+			name = HTTPrequest;
+			sourceTree = "<group>";
+		};
+		0255150C1D33A79400D0CF2C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				0255150D1D33A79400D0CF2C /* JSONKit.h */,
+				0255150E1D33A79400D0CF2C /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 		026C499F1D260C1000214630 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +537,7 @@
 		026EF51E1CF3022C003A8A95 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				025515081D33A64500D0CF2C /* HTTPrequest */,
 				02BED99D1D2A451A001304B5 /* DB */,
 				027E29301D015B16001A2956 /* bhkCommon.h */,
 				026EF51F1CF3022C003A8A95 /* src */,
@@ -524,6 +549,7 @@
 		026EF51F1CF3022C003A8A95 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0255150C1D33A79400D0CF2C /* JSONKit */,
 				02BED9881D2A0FE9001304B5 /* fmdb */,
 				026C499F1D260C1000214630 /* MJRefresh */,
 				3ACC937F1D02FAC4002CFD86 /* ProgressView */,
@@ -1054,6 +1080,7 @@
 				026C49D01D260C1000214630 /* MJRefreshComponent.m in Sources */,
 				02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */,
 				02DF7B4D1CF3FEAF00C9C8F0 /* ASIS3Request.m in Sources */,
+				0255150B1D33A67800D0CF2C /* HTTPrequest.m in Sources */,
 				02DF7B421CF3FEAF00C9C8F0 /* ASICloudFilesCDNRequest.m in Sources */,
 				02DF7B3D1CF3FEAF00C9C8F0 /* ASIFormDataRequest.m in Sources */,
 				026C49ED1D26665F00214630 /* ProjectDetailsTableViewCell.m in Sources */,
@@ -1082,6 +1109,7 @@
 				02DF7B431CF3FEAF00C9C8F0 /* ASICloudFilesContainer.m in Sources */,
 				02BED9A01D2A4664001304B5 /* DBHelp.m in Sources */,
 				02DF7B471CF3FEAF00C9C8F0 /* ASICloudFilesObjectRequest.m in Sources */,
+				0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */,
 				02BED9991D2A0FE9001304B5 /* FMResultSet.m in Sources */,
 				02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */,
 				027491891CF55CE200C8E0B0 /* ViewManager.m in Sources */,
