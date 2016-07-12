@@ -34,4 +34,60 @@
     NSLog(@"Frame: x %.0f y %.0f w %.0f h %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 }
 
+//根据宽度等比例改变图片
++ (UIImage *)scaleImage:(UIImage *)image withWidth:(CGFloat)width
+{
+    float widthScale = image.size.width /width;
+    UIImage *newImage = [UIImage imageWithCGImage:[image CGImage] scale:widthScale orientation:UIImageOrientationUp];
+    return newImage;
+}
+//根据高度等比例改变图片
++ (UIImage *)scaleImage:(UIImage *)image withHeight:(CGFloat)height
+{
+    float heightScale = image.size.height / height;
+    UIImage *newImage = [UIImage imageWithCGImage:[image CGImage] scale:heightScale orientation:UIImageOrientationUp];
+    return newImage;
+}
+//根据Size改变图片
++ (UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)size
+{
+    CGFloat ratio = size.height / size.width;
+    CGFloat widthScale = size.width / image.size.width;
+    CGFloat heightScale = size.height / (image.size.height * ratio);
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * widthScale, image.size.height * heightScale));
+    [image drawInRect:CGRectMake(0.0f, 0.0f, image.size.width * widthScale, image.size.height * heightScale)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    CGImageRef sourceImageRef = [scaledImage CGImage];
+    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef, rect);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    CGImageRelease(newImageRef);
+    
+    return newImage;
+}
+
+//按限制长度截取字符串
++ (NSString *)cutString:(NSString *)str withMaxByteLength:(NSUInteger)length
+{
+    if (length <= 0)
+    {
+        return nil;
+    }
+    NSString *returnString = [[NSString alloc] initWithString:str];
+    while (1)
+    {
+        if ([returnString dataUsingEncoding:NSUTF8StringEncoding].length > length)
+        {
+            returnString = [returnString substringToIndex:returnString.length - 1];
+        }
+        else
+        {
+            break;
+        }
+    }
+    return returnString;
+}
+
 @end

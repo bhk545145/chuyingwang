@@ -11,8 +11,9 @@
 		0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */; };
 		02157EBC1D2CD7950080A12D /* CYProjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02157EBB1D2CD7950080A12D /* CYProjectService.m */; };
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
+		0220AE2C1D34C8E9005E1A96 /* DetailProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */; };
 		0255150B1D33A67800D0CF2C /* HTTPrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150A1D33A67800D0CF2C /* HTTPrequest.m */; };
-		0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150E1D33A79400D0CF2C /* JSONKit.m */; };
+		0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150E1D33A79400D0CF2C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		026C49CE1D260C1000214630 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A21D260C1000214630 /* MJRefreshAutoFooter.m */; };
 		026C49CF1D260C1000214630 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A41D260C1000214630 /* MJRefreshBackFooter.m */; };
 		026C49D01D260C1000214630 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49A61D260C1000214630 /* MJRefreshComponent.m */; };
@@ -130,6 +131,8 @@
 		02157EBB1D2CD7950080A12D /* CYProjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYProjectService.m; path = "首页/Model/CYProjectService.m"; sourceTree = "<group>"; };
 		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		0220AE2A1D34C8E9005E1A96 /* DetailProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProjectTableViewController.h; sourceTree = "<group>"; };
+		0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProjectTableViewController.m; sourceTree = "<group>"; };
 		025515091D33A67800D0CF2C /* HTTPrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPrequest.h; sourceTree = "<group>"; };
 		0255150A1D33A67800D0CF2C /* HTTPrequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPrequest.m; sourceTree = "<group>"; };
 		0255150D1D33A79400D0CF2C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -885,6 +888,8 @@
 			children = (
 				3AA6C2601CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.h */,
 				3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */,
+				0220AE2A1D34C8E9005E1A96 /* DetailProjectTableViewController.h */,
+				0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1077,6 +1082,7 @@
 				02DF7B4C1CF3FEAF00C9C8F0 /* ASIS3ObjectRequest.m in Sources */,
 				3AA6C2511CF9CA0D00AEE4A9 /* FirstView.m in Sources */,
 				02BED9961D2A0FE9001304B5 /* FMDatabaseAdditions.m in Sources */,
+				0220AE2C1D34C8E9005E1A96 /* DetailProjectTableViewController.m in Sources */,
 				026C49D01D260C1000214630 /* MJRefreshComponent.m in Sources */,
 				02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */,
 				02DF7B4D1CF3FEAF00C9C8F0 /* ASIS3Request.m in Sources */,

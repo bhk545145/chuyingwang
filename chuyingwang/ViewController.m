@@ -14,6 +14,7 @@
 #import "PublicTool.h"
 #import "CYProjectService.h"
 #import "DBHelp.h"
+#import "DetailProjectTableViewController.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
@@ -207,14 +208,9 @@
 
 //CardView点击事件
 - (void)CardModelbtn:(CardModel *)cardModel{
-//    [[CYProjectService shareInstance] inserinto:cardModel withBlock:^(BOOL bRet, NSArray *array, NSString *msg) {
-//        DLog(@"%d%@%@",bRet,array,msg);
-//    }];
-    [[CYProjectService shareInstance] selectProject:cardModel withBlock:^(BOOL bRet, NSMutableArray *array, NSString *msg) {
-        if (bRet) {
-            DLog(@"%@",array);
-        }
-    }];
+    DetailProjectTableViewController *DetailProject = [[DetailProjectTableViewController alloc]init];
+    DetailProject.CardModel = cardModel;
+    [self.navigationController pushViewController:DetailProject animated:YES];
     NSLog(@"%@我被点击了",cardModel);
 }
 
