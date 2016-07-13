@@ -26,7 +26,6 @@
     UILabel *readingCollection;
     //融资进度表
     ProgressView *financingStatusProgress;
-
     
 }
 //项目卡片

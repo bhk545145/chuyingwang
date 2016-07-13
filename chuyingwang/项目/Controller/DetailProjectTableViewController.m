@@ -8,6 +8,7 @@
 
 #import "DetailProjectTableViewController.h"
 #import "CardModel.h"
+#import "ProjectDetailsTableViewCell.h"
 
 @interface DetailProjectTableViewController ()
 
@@ -19,7 +20,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = _CardModel.Cardstr;
-    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"首页" style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerback:)];
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"< 返回" style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerback:)];
     leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
 }
@@ -40,24 +41,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+//    if (section == 0) {
+//        return 1;
+//    }else if (section == 1){
+//        return 1;
+//    }else{
+//        return 3;
+//    }
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    static NSString *SimleTableIdentifier = @"SimleTableIdentifier";
+    ProjectDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
+    if(cell == nil){
+        cell = [[ProjectDetailsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimleTableIdentifier];
+    }
+    cell.CardModel = _CardModel;
     
     return cell;
 }
-*/
+
 
 
 

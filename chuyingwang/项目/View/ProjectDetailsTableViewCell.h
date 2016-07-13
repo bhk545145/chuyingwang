@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CardModel;
 @interface ProjectDetailsTableViewCell : UITableViewCell
+@property(nonatomic,strong)CardModel *CardModel;
 
 @end

@@ -211,7 +211,6 @@
     DetailProjectTableViewController *DetailProject = [[DetailProjectTableViewController alloc]init];
     DetailProject.CardModel = cardModel;
     [self.navigationController pushViewController:DetailProject animated:YES];
-    NSLog(@"%@我被点击了",cardModel);
 }
 
 

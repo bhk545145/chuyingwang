@@ -36,7 +36,6 @@
 		026C49E11D260C1000214630 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49CD1D260C1000214630 /* UIView+MJExtension.m */; };
 		026C49E41D2617FC00214630 /* PublicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49E31D2617FC00214630 /* PublicTool.m */; };
 		026C49ED1D26665F00214630 /* ProjectDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */; };
-		026C49EE1D26665F00214630 /* ProjectDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026C49EC1D26665F00214630 /* ProjectDetailsTableViewCell.xib */; };
 		026EF4E61CF2FCCC003A8A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E51CF2FCCC003A8A95 /* main.m */; };
 		026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4E81CF2FCCC003A8A95 /* AppDelegate.m */; };
 		026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026EF4EB1CF2FCCC003A8A95 /* ViewController.m */; };
@@ -182,7 +181,6 @@
 		026C49E31D2617FC00214630 /* PublicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTool.m; sourceTree = "<group>"; };
 		026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsTableViewCell.h; sourceTree = "<group>"; };
 		026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsTableViewCell.m; sourceTree = "<group>"; };
-		026C49EC1D26665F00214630 /* ProjectDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuyingwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF4E51CF2FCCC003A8A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		026EF4E71CF2FCCC003A8A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -909,7 +907,6 @@
 				3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */,
 				026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */,
 				026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */,
-				026C49EC1D26665F00214630 /* ProjectDetailsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1027,7 +1024,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026C49EE1D26665F00214630 /* ProjectDetailsTableViewCell.xib in Resources */,
 				3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */,
 				02BED99A1D2A0FE9001304B5 /* Info.plist in Resources */,
 				0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */,
