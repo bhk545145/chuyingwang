@@ -41,30 +41,42 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    if (section == 0) {
-//        return 1;
-//    }else if (section == 1){
-//        return 1;
-//    }else{
-//        return 3;
-//    }
-    return 1;
+    if (section == 0) {
+        return 1;
+    }else if (section == 1){
+        return 1;
+    }else{
+        return 3;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *SimleTableIdentifier = @"SimleTableIdentifier";
-    ProjectDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
-    if(cell == nil){
-        cell = [[ProjectDetailsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimleTableIdentifier];
+    if (indexPath.section == 0) {
+        static NSString *SimleTableIdentifier = @"SimleTableIdentifier";
+        ProjectDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
+        if(cell == nil){
+            cell = [[ProjectDetailsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimleTableIdentifier];
+        }
+        cell.CardModel = _CardModel;
+        return cell;
+    }else{
+        static NSString *SimleTableIdentifier = @"SimleTableIdentifier1";
+        ProjectDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimleTableIdentifier];
+        if(cell == nil){
+            cell = [[ProjectDetailsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimleTableIdentifier];
+        }
+        cell.CardModel = _CardModel;
+        return cell;
     }
-    cell.CardModel = _CardModel;
-    
-    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 
 
