@@ -8,6 +8,7 @@
 
 #import "DetailProjectTableViewController.h"
 #import "CardModel.h"
+#import "bhkCommon.h"
 #import "ProjectDetailsTableViewCell.h"
 
 @interface DetailProjectTableViewController ()
@@ -76,7 +77,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    if (indexPath.section == 0) {
+        CGFloat projectimageViewHight = UIScreenBounds.size.width/Projectimagewidth * Projectimagehight;
+        return projectimageViewHight * 2;
+    }else{
+        return 0;
+    }
 }
 
 

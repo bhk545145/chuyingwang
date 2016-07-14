@@ -12,6 +12,7 @@
 #define RGBA(r, g, b, a)                        [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define StatusBarHeight                         [UIApplication sharedApplication].statusBarFrame.size.height
 #define RGB_TextLightBlue                       RGB(23.0f, 126.0f, 251.0f)
+#define UIScreenBounds                          [[UIScreen mainScreen] bounds]
 
 #pragma mark - log信息函数预定义
 #ifdef DEBUG
@@ -26,7 +27,10 @@
 #define MovieURL                   @"http://vodcdn.video.taobao.com/oss/ali-video/2b8b0b5f46a5a01145e3ae3e7fcaf08f/video.mp4"
 #define MP4Name                    @"video.mp4"
 
-#pragma mark -
 #pragma mark - 数据库名称预定义
 #define CY_DB_NEWVERSION                        1
 #define CY_DB_NAME                              @"chuyingfound.db"
+
+#pragma maek - 项目预定义
+#define Projectimagewidth                       360
+#define Projectimagehight                       216

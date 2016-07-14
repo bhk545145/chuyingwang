@@ -20,4 +20,8 @@
 + (NSMutableArray *)cardModelarray:(NSArray *)array;
 //输出frame
 + (void)printFrame:(CGRect)frame;
+//根据宽度等比例改变图片
++ (UIImage *)scaleImage:(UIImage *)image withWidth:(CGFloat)width;
+//根据高度等比例改变图片
++ (UIImage *)scaleImage:(UIImage *)image withHeight:(CGFloat)height;
 @end
