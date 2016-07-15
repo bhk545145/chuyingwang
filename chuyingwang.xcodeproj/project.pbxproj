@@ -65,6 +65,8 @@
 		02BED99A1D2A0FE9001304B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02BED9941D2A0FE9001304B5 /* Info.plist */; };
 		02BED99C1D2A44F9001304B5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BED99B1D2A44F9001304B5 /* libsqlite3.tbd */; };
 		02BED9A01D2A4664001304B5 /* DBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BED99F1D2A4664001304B5 /* DBHelp.m */; };
+		02D4A14F1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */; };
+		02D4A1521D38EB96004543E8 /* ProjectTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */; };
 		02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7AFE1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02DF7B3A1CF3FEAF00C9C8F0 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7B011CF3FEAF00C9C8F0 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02DF7B3B1CF3FEAF00C9C8F0 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7B031CF3FEAF00C9C8F0 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -239,6 +241,10 @@
 		02BED99B1D2A44F9001304B5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		02BED99E1D2A4664001304B5 /* DBHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelp.h; sourceTree = "<group>"; };
 		02BED99F1D2A4664001304B5 /* DBHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelp.m; sourceTree = "<group>"; };
+		02D4A14D1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectIntroductionTableViewCell.h; sourceTree = "<group>"; };
+		02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectIntroductionTableViewCell.m; sourceTree = "<group>"; };
+		02D4A1501D38EB96004543E8 /* ProjectTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTeamTableViewCell.h; sourceTree = "<group>"; };
+		02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTeamTableViewCell.m; sourceTree = "<group>"; };
 		02DF7AFD1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		02DF7AFE1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		02DF7AFF1CF3FEAF00C9C8F0 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -907,6 +913,10 @@
 				3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */,
 				026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */,
 				026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */,
+				02D4A14D1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.h */,
+				02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */,
+				02D4A1501D38EB96004543E8 /* ProjectTeamTableViewCell.h */,
+				02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1062,6 +1072,7 @@
 				0286AA571D00373F00C21703 /* investorTableViewCell.m in Sources */,
 				026EF4EC1CF2FCCC003A8A95 /* ViewController.m in Sources */,
 				026C49D81D260C1000214630 /* MJRefreshBackStateFooter.m in Sources */,
+				02D4A1521D38EB96004543E8 /* ProjectTeamTableViewCell.m in Sources */,
 				02DF7B4E1CF3FEAF00C9C8F0 /* ASIS3ServiceRequest.m in Sources */,
 				026C49DA1D260C1000214630 /* MJRefreshNormalHeader.m in Sources */,
 				026C49E01D260C1000214630 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1102,6 +1113,7 @@
 				02DF7B441CF3FEAF00C9C8F0 /* ASICloudFilesContainerRequest.m in Sources */,
 				02DF7B3F1CF3FEAF00C9C8F0 /* ASIInputStream.m in Sources */,
 				0274918C1CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m in Sources */,
+				02D4A14F1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m in Sources */,
 				02BED9971D2A0FE9001304B5 /* FMDatabasePool.m in Sources */,
 				027491861CF55CE200C8E0B0 /* PanGestureRecognizer.m in Sources */,
 				3AA6C2621CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m in Sources */,
