@@ -14,7 +14,7 @@
 #import "PublicTool.h"
 #import "CYProjectService.h"
 #import "DBHelp.h"
-#import "DetailProjectTableViewController.h"
+#import "CYTabBarViewController.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
@@ -208,9 +208,11 @@
 
 //CardView点击事件
 - (void)CardModelbtn:(CardModel *)cardModel{
-    DetailProjectTableViewController *DetailProject = [[DetailProjectTableViewController alloc]init];
+    CYTabBarViewController *DetailProject = [[CYTabBarViewController alloc]init];
     DetailProject.CardModel = cardModel;
     [self.navigationController pushViewController:DetailProject animated:YES];
+    //隐藏底部Tabbar
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 

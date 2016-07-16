@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "026EF4E01CF2FCCC003A8A95"
-               BuildableName = "chuyingwang.app"
-               BlueprintName = "chuyingwang"
-               ReferencedContainer = "container:chuyingwang.xcodeproj">
+               BuildableName = "&#x96cf;&#x9e70;&#x7f51;.app"
+               BlueprintName = "&#x96cf;&#x9e70;&#x7f51;"
+               ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "026EF4F91CF2FCCC003A8A95"
-               BuildableName = "chuyingwangTests.xctest"
-               BlueprintName = "chuyingwangTests"
-               ReferencedContainer = "container:chuyingwang.xcodeproj">
+               BuildableName = "&#x96cf;&#x9e70;&#x7f51;.xctest"
+               BlueprintName = "&#x96cf;&#x9e70;&#x7f51;Tests"
+               ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "026EF5041CF2FCCC003A8A95"
-               BuildableName = "chuyingwangUITests.xctest"
-               BlueprintName = "chuyingwangUITests"
-               ReferencedContainer = "container:chuyingwang.xcodeproj">
+               BuildableName = "&#x96cf;&#x9e70;&#x7f51;.xctest"
+               BlueprintName = "&#x96cf;&#x9e70;&#x7f51;UITests"
+               ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "026EF4E01CF2FCCC003A8A95"
-            BuildableName = "chuyingwang.app"
-            BlueprintName = "chuyingwang"
-            ReferencedContainer = "container:chuyingwang.xcodeproj">
+            BuildableName = "&#x96cf;&#x9e70;&#x7f51;.app"
+            BlueprintName = "&#x96cf;&#x9e70;&#x7f51;"
+            ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "026EF4E01CF2FCCC003A8A95"
-            BuildableName = "chuyingwang.app"
-            BlueprintName = "chuyingwang"
-            ReferencedContainer = "container:chuyingwang.xcodeproj">
+            BuildableName = "&#x96cf;&#x9e70;&#x7f51;.app"
+            BlueprintName = "&#x96cf;&#x9e70;&#x7f51;"
+            ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -100,9 +100,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "026EF4E01CF2FCCC003A8A95"
-            BuildableName = "chuyingwang.app"
-            BlueprintName = "chuyingwang"
-            ReferencedContainer = "container:chuyingwang.xcodeproj">
+            BuildableName = "&#x96cf;&#x9e70;&#x7f51;.app"
+            BlueprintName = "&#x96cf;&#x9e70;&#x7f51;"
+            ReferencedContainer = "container:&#x96cf;&#x9e70;&#x7f51;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

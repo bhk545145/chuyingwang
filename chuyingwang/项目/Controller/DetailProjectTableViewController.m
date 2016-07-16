@@ -21,19 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //导航栏名称
-    self.navigationItem.title = _CardModel.Cardstr;
-    //导航栏返回按钮
-    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"< 返回" style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerback:)];
-    leftBarButtonItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
-    
-    self.tabBarController.tabBar.hidden = YES;
-}
-//返回之前的视图
-- (void)popViewControllerback:(UIBarButtonItem *)Item{
-    [self.navigationController popViewControllerAnimated:YES];
-    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

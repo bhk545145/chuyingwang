@@ -65,6 +65,11 @@
 		02BED99A1D2A0FE9001304B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02BED9941D2A0FE9001304B5 /* Info.plist */; };
 		02BED99C1D2A44F9001304B5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BED99B1D2A44F9001304B5 /* libsqlite3.tbd */; };
 		02BED9A01D2A4664001304B5 /* DBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BED99F1D2A4664001304B5 /* DBHelp.m */; };
+		02C564071D39CD2E00B2371B /* CYTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C564061D39CD2E00B2371B /* CYTabbar.m */; };
+		02C5640A1D39DDAF00B2371B /* CYTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C564091D39DDAF00B2371B /* CYTabbarButton.m */; };
+		02C5640D1D3A053E00B2371B /* CYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5640C1D3A053E00B2371B /* CYTabBarViewController.m */; };
+		02C564101D3A283B00B2371B /* BusinessPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5640F1D3A283B00B2371B /* BusinessPlanViewController.m */; };
+		02C564131D3A286500B2371B /* ProjectDynamicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C564121D3A286500B2371B /* ProjectDynamicsTableViewController.m */; };
 		02D4A14F1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */; };
 		02D4A1521D38EB96004543E8 /* ProjectTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */; };
 		02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF7AFE1CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -183,7 +188,7 @@
 		026C49E31D2617FC00214630 /* PublicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTool.m; sourceTree = "<group>"; };
 		026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsTableViewCell.h; sourceTree = "<group>"; };
 		026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsTableViewCell.m; sourceTree = "<group>"; };
-		026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuyingwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		026EF4E11CF2FCCC003A8A95 /* 雏鹰网.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "雏鹰网.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF4E51CF2FCCC003A8A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		026EF4E71CF2FCCC003A8A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		026EF4E81CF2FCCC003A8A95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,10 +197,10 @@
 		026EF4EE1CF2FCCC003A8A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		026EF4F01CF2FCCC003A8A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026EF4F51CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026EF4FA1CF2FCCC003A8A95 /* chuyingwangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuyingwangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		026EF4FA1CF2FCCC003A8A95 /* 雏鹰网.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "雏鹰网.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF4FE1CF2FCCC003A8A95 /* chuyingwangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chuyingwangTests.m; sourceTree = "<group>"; };
 		026EF5001CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026EF5051CF2FCCC003A8A95 /* chuyingwangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuyingwangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		026EF5051CF2FCCC003A8A95 /* 雏鹰网.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "雏鹰网.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026EF5091CF2FCCC003A8A95 /* chuyingwangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chuyingwangUITests.m; sourceTree = "<group>"; };
 		026EF50B1CF2FCCC003A8A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0274916F1CF55CE200C8E0B0 /* DefaultDirectionInterpretor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultDirectionInterpretor.h; sourceTree = "<group>"; };
@@ -241,6 +246,16 @@
 		02BED99B1D2A44F9001304B5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		02BED99E1D2A4664001304B5 /* DBHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelp.h; sourceTree = "<group>"; };
 		02BED99F1D2A4664001304B5 /* DBHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelp.m; sourceTree = "<group>"; };
+		02C564051D39CD2E00B2371B /* CYTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabbar.h; sourceTree = "<group>"; };
+		02C564061D39CD2E00B2371B /* CYTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabbar.m; sourceTree = "<group>"; };
+		02C564081D39DDAF00B2371B /* CYTabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabbarButton.h; sourceTree = "<group>"; };
+		02C564091D39DDAF00B2371B /* CYTabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabbarButton.m; sourceTree = "<group>"; };
+		02C5640B1D3A053E00B2371B /* CYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBarViewController.h; sourceTree = "<group>"; };
+		02C5640C1D3A053E00B2371B /* CYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBarViewController.m; sourceTree = "<group>"; };
+		02C5640E1D3A283B00B2371B /* BusinessPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessPlanViewController.h; sourceTree = "<group>"; };
+		02C5640F1D3A283B00B2371B /* BusinessPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessPlanViewController.m; sourceTree = "<group>"; };
+		02C564111D3A286500B2371B /* ProjectDynamicsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDynamicsTableViewController.h; sourceTree = "<group>"; };
+		02C564121D3A286500B2371B /* ProjectDynamicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDynamicsTableViewController.m; sourceTree = "<group>"; };
 		02D4A14D1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectIntroductionTableViewCell.h; sourceTree = "<group>"; };
 		02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectIntroductionTableViewCell.m; sourceTree = "<group>"; };
 		02D4A1501D38EB96004543E8 /* ProjectTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTeamTableViewCell.h; sourceTree = "<group>"; };
@@ -481,9 +496,9 @@
 		026EF4E21CF2FCCC003A8A95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */,
-				026EF4FA1CF2FCCC003A8A95 /* chuyingwangTests.xctest */,
-				026EF5051CF2FCCC003A8A95 /* chuyingwangUITests.xctest */,
+				026EF4E11CF2FCCC003A8A95 /* 雏鹰网.app */,
+				026EF4FA1CF2FCCC003A8A95 /* 雏鹰网.xctest */,
+				026EF5051CF2FCCC003A8A95 /* 雏鹰网.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -629,6 +644,22 @@
 				025CE8671D2B5BED005AC866 /* Table.h */,
 			);
 			name = DB;
+			sourceTree = "<group>";
+		};
+		02C564041D39CBB200B2371B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6C2631CF9F03D00AEE4A9 /* projectTableViewCell.h */,
+				3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */,
+				3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */,
+				026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */,
+				026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */,
+				02D4A14D1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.h */,
+				02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */,
+				02D4A1501D38EB96004543E8 /* ProjectTeamTableViewCell.h */,
+				02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		02DF7AFB1CF3FEAF00C9C8F0 /* ASIHttpRequest */ = {
@@ -892,8 +923,14 @@
 			children = (
 				3AA6C2601CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.h */,
 				3AA6C2611CF9E1AD00AEE4A9 /* ProjcetViewTableViewController.m */,
+				02C5640B1D3A053E00B2371B /* CYTabBarViewController.h */,
+				02C5640C1D3A053E00B2371B /* CYTabBarViewController.m */,
 				0220AE2A1D34C8E9005E1A96 /* DetailProjectTableViewController.h */,
 				0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */,
+				02C5640E1D3A283B00B2371B /* BusinessPlanViewController.h */,
+				02C5640F1D3A283B00B2371B /* BusinessPlanViewController.m */,
+				02C564111D3A286500B2371B /* ProjectDynamicsTableViewController.h */,
+				02C564121D3A286500B2371B /* ProjectDynamicsTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -908,15 +945,11 @@
 		3AA6C25F1CF9DF5E00AEE4A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3AA6C2631CF9F03D00AEE4A9 /* projectTableViewCell.h */,
-				3AA6C2641CF9F03D00AEE4A9 /* projectTableViewCell.m */,
-				3AA6C2651CF9F03D00AEE4A9 /* projectTableViewCell.xib */,
-				026C49EA1D26665F00214630 /* ProjectDetailsTableViewCell.h */,
-				026C49EB1D26665F00214630 /* ProjectDetailsTableViewCell.m */,
-				02D4A14D1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.h */,
-				02D4A14E1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m */,
-				02D4A1501D38EB96004543E8 /* ProjectTeamTableViewCell.h */,
-				02D4A1511D38EB96004543E8 /* ProjectTeamTableViewCell.m */,
+				02C564041D39CBB200B2371B /* Cell */,
+				02C564051D39CD2E00B2371B /* CYTabbar.h */,
+				02C564061D39CD2E00B2371B /* CYTabbar.m */,
+				02C564081D39DDAF00B2371B /* CYTabbarButton.h */,
+				02C564091D39DDAF00B2371B /* CYTabbarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -933,9 +966,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		026EF4E01CF2FCCC003A8A95 /* chuyingwang */ = {
+		026EF4E01CF2FCCC003A8A95 /* 雏鹰网 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026EF50E1CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwang" */;
+			buildConfigurationList = 026EF50E1CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网" */;
 			buildPhases = (
 				026EF4DD1CF2FCCC003A8A95 /* Sources */,
 				026EF4DE1CF2FCCC003A8A95 /* Frameworks */,
@@ -945,14 +978,14 @@
 			);
 			dependencies = (
 			);
-			name = chuyingwang;
+			name = "雏鹰网";
 			productName = chuyingwang;
-			productReference = 026EF4E11CF2FCCC003A8A95 /* chuyingwang.app */;
+			productReference = 026EF4E11CF2FCCC003A8A95 /* 雏鹰网.app */;
 			productType = "com.apple.product-type.application";
 		};
-		026EF4F91CF2FCCC003A8A95 /* chuyingwangTests */ = {
+		026EF4F91CF2FCCC003A8A95 /* 雏鹰网Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026EF5111CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangTests" */;
+			buildConfigurationList = 026EF5111CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网Tests" */;
 			buildPhases = (
 				026EF4F61CF2FCCC003A8A95 /* Sources */,
 				026EF4F71CF2FCCC003A8A95 /* Frameworks */,
@@ -963,14 +996,14 @@
 			dependencies = (
 				026EF4FC1CF2FCCC003A8A95 /* PBXTargetDependency */,
 			);
-			name = chuyingwangTests;
+			name = "雏鹰网Tests";
 			productName = chuyingwangTests;
-			productReference = 026EF4FA1CF2FCCC003A8A95 /* chuyingwangTests.xctest */;
+			productReference = 026EF4FA1CF2FCCC003A8A95 /* 雏鹰网.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		026EF5041CF2FCCC003A8A95 /* chuyingwangUITests */ = {
+		026EF5041CF2FCCC003A8A95 /* 雏鹰网UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026EF5141CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangUITests" */;
+			buildConfigurationList = 026EF5141CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网UITests" */;
 			buildPhases = (
 				026EF5011CF2FCCC003A8A95 /* Sources */,
 				026EF5021CF2FCCC003A8A95 /* Frameworks */,
@@ -981,9 +1014,9 @@
 			dependencies = (
 				026EF5071CF2FCCC003A8A95 /* PBXTargetDependency */,
 			);
-			name = chuyingwangUITests;
+			name = "雏鹰网UITests";
 			productName = chuyingwangUITests;
-			productReference = 026EF5051CF2FCCC003A8A95 /* chuyingwangUITests.xctest */;
+			productReference = 026EF5051CF2FCCC003A8A95 /* 雏鹰网.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1009,7 +1042,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 026EF4DC1CF2FCCC003A8A95 /* Build configuration list for PBXProject "chuyingwang" */;
+			buildConfigurationList = 026EF4DC1CF2FCCC003A8A95 /* Build configuration list for PBXProject "雏鹰网" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1022,9 +1055,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				026EF4E01CF2FCCC003A8A95 /* chuyingwang */,
-				026EF4F91CF2FCCC003A8A95 /* chuyingwangTests */,
-				026EF5041CF2FCCC003A8A95 /* chuyingwangUITests */,
+				026EF4E01CF2FCCC003A8A95 /* 雏鹰网 */,
+				026EF4F91CF2FCCC003A8A95 /* 雏鹰网Tests */,
+				026EF5041CF2FCCC003A8A95 /* 雏鹰网UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1066,6 +1099,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C564071D39CD2E00B2371B /* CYTabbar.m in Sources */,
 				02DF7B501CF3FEAF00C9C8F0 /* Reachability.m in Sources */,
 				026C49DE1D260C1000214630 /* NSBundle+MJRefresh.m in Sources */,
 				02DF7B3A1CF3FEAF00C9C8F0 /* ASIDataCompressor.m in Sources */,
@@ -1090,6 +1124,7 @@
 				3AA6C2511CF9CA0D00AEE4A9 /* FirstView.m in Sources */,
 				02BED9961D2A0FE9001304B5 /* FMDatabaseAdditions.m in Sources */,
 				0220AE2C1D34C8E9005E1A96 /* DetailProjectTableViewController.m in Sources */,
+				02C564101D3A283B00B2371B /* BusinessPlanViewController.m in Sources */,
 				026C49D01D260C1000214630 /* MJRefreshComponent.m in Sources */,
 				02DF7B391CF3FEAF00C9C8F0 /* ASIAuthenticationDialog.m in Sources */,
 				02DF7B4D1CF3FEAF00C9C8F0 /* ASIS3Request.m in Sources */,
@@ -1098,8 +1133,10 @@
 				02DF7B3D1CF3FEAF00C9C8F0 /* ASIFormDataRequest.m in Sources */,
 				026C49ED1D26665F00214630 /* ProjectDetailsTableViewCell.m in Sources */,
 				027491881CF55CE200C8E0B0 /* Utils.m in Sources */,
+				02C5640A1D39DDAF00B2371B /* CYTabbarButton.m in Sources */,
 				026EF4E91CF2FCCC003A8A95 /* AppDelegate.m in Sources */,
 				026C49D71D260C1000214630 /* MJRefreshBackNormalFooter.m in Sources */,
+				02C564131D3A286500B2371B /* ProjectDynamicsTableViewController.m in Sources */,
 				02DF7B4B1CF3FEAF00C9C8F0 /* ASIS3BucketRequest.m in Sources */,
 				3ACC92861D02DC67002CFD86 /* CardModel.m in Sources */,
 				026C49DF1D260C1000214630 /* UIScrollView+MJExtension.m in Sources */,
@@ -1111,6 +1148,7 @@
 				02DF7B511CF3FEAF00C9C8F0 /* UIImage+MJ.m in Sources */,
 				0288D0D31D0713490057D970 /* InvestorModel.m in Sources */,
 				02DF7B441CF3FEAF00C9C8F0 /* ASICloudFilesContainerRequest.m in Sources */,
+				02C5640D1D3A053E00B2371B /* CYTabBarViewController.m in Sources */,
 				02DF7B3F1CF3FEAF00C9C8F0 /* ASIInputStream.m in Sources */,
 				0274918C1CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m in Sources */,
 				02D4A14F1D38DDEB004543E8 /* ProjectIntroductionTableViewCell.m in Sources */,
@@ -1170,12 +1208,12 @@
 /* Begin PBXTargetDependency section */
 		026EF4FC1CF2FCCC003A8A95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 026EF4E01CF2FCCC003A8A95 /* chuyingwang */;
+			target = 026EF4E01CF2FCCC003A8A95 /* 雏鹰网 */;
 			targetProxy = 026EF4FB1CF2FCCC003A8A95 /* PBXContainerItemProxy */;
 		};
 		026EF5071CF2FCCC003A8A95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 026EF4E01CF2FCCC003A8A95 /* chuyingwang */;
+			target = 026EF4E01CF2FCCC003A8A95 /* 雏鹰网 */;
 			targetProxy = 026EF5061CF2FCCC003A8A95 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1294,7 +1332,7 @@
 					"$(PROJECT_DIR)/chuyingwang",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "雏鹰网";
 				PROVISIONING_PROFILE = "86c60867-c394-4ef6-ad2e-18b0a0726e65";
 			};
 			name = Debug;
@@ -1315,7 +1353,7 @@
 					"$(PROJECT_DIR)/chuyingwang",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "雏鹰网";
 				PROVISIONING_PROFILE = "86c60867-c394-4ef6-ad2e-18b0a0726e65";
 			};
 			name = Release;
@@ -1327,8 +1365,8 @@
 				INFOPLIST_FILE = chuyingwangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwangTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chuyingwang.app/chuyingwang";
+				PRODUCT_NAME = "雏鹰网";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/雏鹰网.app/雏鹰网";
 			};
 			name = Debug;
 		};
@@ -1339,8 +1377,8 @@
 				INFOPLIST_FILE = chuyingwangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwangTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chuyingwang.app/chuyingwang";
+				PRODUCT_NAME = "雏鹰网";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/雏鹰网.app/雏鹰网";
 			};
 			name = Release;
 		};
@@ -1350,7 +1388,7 @@
 				INFOPLIST_FILE = chuyingwangUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwangUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "雏鹰网";
 				TEST_TARGET_NAME = chuyingwang;
 			};
 			name = Debug;
@@ -1361,7 +1399,7 @@
 				INFOPLIST_FILE = chuyingwangUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwangUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "雏鹰网";
 				TEST_TARGET_NAME = chuyingwang;
 			};
 			name = Release;
@@ -1369,7 +1407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		026EF4DC1CF2FCCC003A8A95 /* Build configuration list for PBXProject "chuyingwang" */ = {
+		026EF4DC1CF2FCCC003A8A95 /* Build configuration list for PBXProject "雏鹰网" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026EF50C1CF2FCCC003A8A95 /* Debug */,
@@ -1378,7 +1416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026EF50E1CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwang" */ = {
+		026EF50E1CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026EF50F1CF2FCCC003A8A95 /* Debug */,
@@ -1387,7 +1425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026EF5111CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangTests" */ = {
+		026EF5111CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026EF5121CF2FCCC003A8A95 /* Debug */,
@@ -1396,7 +1434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026EF5141CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "chuyingwangUITests" */ = {
+		026EF5141CF2FCCC003A8A95 /* Build configuration list for PBXNativeTarget "雏鹰网UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026EF5151CF2FCCC003A8A95 /* Debug */,
