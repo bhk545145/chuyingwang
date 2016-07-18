@@ -12,6 +12,7 @@
 #import "CardModel.h"
 #import "MJRefresh.h"
 #import "PublicTool.h"
+#import "CYTabBarViewController.h"
 
 @interface ProjcetViewTableViewController (){
     
@@ -112,7 +113,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CardModel *cardModel = _Cardarray[indexPath.row];
-    NSLog(@"%@我被点击了",cardModel);
+    CYTabBarViewController *DetailProject = [[CYTabBarViewController alloc]init];
+    DetailProject.CardModel = cardModel;
+    [self.navigationController pushViewController:DetailProject animated:YES];
+    //隐藏底部Tabbar
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 
