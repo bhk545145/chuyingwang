@@ -12,7 +12,7 @@
 
 @optional
 - (void)tabBar:(CYTabbar *)tabBar didSelectedButtonFrom:(NSInteger)from to:(NSInteger)to;
-- (void)tabBarDidClickedPlusButton:(CYTabbar *)tabBar;
+- (void)tabBarDidClickedcollectButton:(CYTabbar *)tabBar;
 @end
 @interface CYTabbar : UIView
 - (void)addTabBarButtonWithItem:(UITabBarItem *)item;

@@ -24,8 +24,8 @@
         // 字体大小
         self.titleLabel.font = [UIFont systemFontOfSize:11];
         // 文字颜色
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self setTitleColor:IWcolor(248, 139, 0) forState:UIControlStateSelected];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self setTitleColor:IWcolor(61, 168, 244) forState:UIControlStateSelected];
         [self setBackgroundImage:[UIImage imageNamed:@"tabbar_slider"] forState:UIControlStateSelected];
 
     }
@@ -36,22 +36,7 @@
 // 重写去掉高亮状态
 - (void)setHighlighted:(BOOL)highlighted {}
 
-// 内部图片的frame
-- (CGRect)imageRectForContentRect:(CGRect)contentRect
-{
-    CGFloat imageW = contentRect.size.width;
-    CGFloat imageH = contentRect.size.height * IWTabBarButtonImageRatio;
-    return CGRectMake(0, 0, imageW, imageH);
-}
 
-// 内部文字的frame
-- (CGRect)titleRectForContentRect:(CGRect)contentRect
-{
-    CGFloat titleY = contentRect.size.height * IWTabBarButtonImageRatio;
-    CGFloat titleW = contentRect.size.width;
-    CGFloat titleH = contentRect.size.height - titleY;
-    return CGRectMake(0, titleY, titleW, titleH);
-}
 
 // 设置item
 - (void)setItem:(UITabBarItem *)item

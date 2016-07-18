@@ -11,6 +11,7 @@
 		0214C5711D20CF8800F33FA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0214C5701D20CF8800F33FA7 /* MediaPlayer.framework */; };
 		02157EBC1D2CD7950080A12D /* CYProjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02157EBB1D2CD7950080A12D /* CYProjectService.m */; };
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
+		021B79761D3C72D4007CA42A /* CYCollectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 021B79751D3C72D4007CA42A /* CYCollectButton.m */; };
 		0220AE2C1D34C8E9005E1A96 /* DetailProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */; };
 		0255150B1D33A67800D0CF2C /* HTTPrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150A1D33A67800D0CF2C /* HTTPrequest.m */; };
 		0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0255150E1D33A79400D0CF2C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -137,6 +138,8 @@
 		02157EBB1D2CD7950080A12D /* CYProjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYProjectService.m; path = "首页/Model/CYProjectService.m"; sourceTree = "<group>"; };
 		021996381D004BBF00923E20 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = "chuyingwang/我的/MyTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		021996391D004BBF00923E20 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = "chuyingwang/我的/MyTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		021B79741D3C72D4007CA42A /* CYCollectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCollectButton.h; sourceTree = "<group>"; };
+		021B79751D3C72D4007CA42A /* CYCollectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCollectButton.m; sourceTree = "<group>"; };
 		0220AE2A1D34C8E9005E1A96 /* DetailProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProjectTableViewController.h; sourceTree = "<group>"; };
 		0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProjectTableViewController.m; sourceTree = "<group>"; };
 		025515091D33A67800D0CF2C /* HTTPrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPrequest.h; sourceTree = "<group>"; };
@@ -950,6 +953,8 @@
 				02C564061D39CD2E00B2371B /* CYTabbar.m */,
 				02C564081D39DDAF00B2371B /* CYTabbarButton.h */,
 				02C564091D39DDAF00B2371B /* CYTabbarButton.m */,
+				021B79741D3C72D4007CA42A /* CYCollectButton.h */,
+				021B79751D3C72D4007CA42A /* CYCollectButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1119,6 +1124,7 @@
 				0286AA531D00371500C21703 /* InvestorTableViewController.m in Sources */,
 				027491871CF55CE200C8E0B0 /* Scheduler.m in Sources */,
 				027491851CF55CE200C8E0B0 /* DefaultViewAnimator.m in Sources */,
+				021B79761D3C72D4007CA42A /* CYCollectButton.m in Sources */,
 				02BED9981D2A0FE9001304B5 /* FMDatabaseQueue.m in Sources */,
 				02DF7B4C1CF3FEAF00C9C8F0 /* ASIS3ObjectRequest.m in Sources */,
 				3AA6C2511CF9CA0D00AEE4A9 /* FirstView.m in Sources */,

@@ -101,7 +101,7 @@
     CGSize _projectCoreDatatxtViewsize = [_projectCoreDatatxtView.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_projectCoreDatatxtView.font,NSFontAttributeName, nil]];
     [_projectCoreDatatxtView setFrame:CGRectMake(_totalFinancingAmountlab.frame.origin.x + 50, _totalFinancingAmountlab.frame.origin.y + 40, UIScreenBounds.size.width - 110, _projectCoreDatatxtViewsize.height + 50)];
     
-    [_requestbtn setBackgroundImage:[UIImage imageNamed:@"black_pic"] forState:UIControlStateNormal];
+    [_requestbtn setBackgroundImage:[UIImage imageNamed:@"blue_pic"] forState:UIControlStateNormal];
     [_requestbtn setTitle:@"申请查看" forState:UIControlStateNormal];
     [_requestbtn setFrame:CGRectMake(_projectCoreDatatxtView.frame.origin.x + 10, _projectCoreDatatxtView.frame.origin.y +50, UIScreenBounds.size.width - 130, 30)];
 }

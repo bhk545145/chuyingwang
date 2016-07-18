@@ -8,10 +8,11 @@
 
 #import "CYTabbar.h"
 #import "CYTabbarButton.h"
+#import "CYCollectButton.h"
 
 @interface CYTabbar ()
 @property (nonatomic, strong) NSMutableArray *tabBarButtons;
-@property (nonatomic, weak) UIButton *plusButton;
+@property (nonatomic, weak) CYCollectButton *collectButton;
 @property (nonatomic, weak) CYTabbarButton *selectedButton;
 
 @end
@@ -33,16 +34,13 @@
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background"]];
     }
     
-    // 添加一个加号按钮
-    UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    plusButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-    plusButton.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-    [plusButton setTitle:@"收藏" forState:UIControlStateNormal];
-    [plusButton setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
-    [plusButton setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateHighlighted];
-    [plusButton addTarget:self action:@selector(plusButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:plusButton];
-    self.plusButton = plusButton;
+    // 添加一个收藏按钮
+    CYCollectButton *collectButton = [[CYCollectButton alloc] init];
+    BOOL btnbool = 1;
+    collectButton.isboolcollect = btnbool;
+    [collectButton addTarget:self action:@selector(collectButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:collectButton];
+    self.collectButton = collectButton;
     return self;
 }
 
@@ -66,11 +64,12 @@
     }
 }
 
-- (void)plusButtonClick
+- (void)collectButtonClick
 {
-    if ([self.delegate respondsToSelector:@selector(tabBarDidClickedPlusButton:)]) {
-        [self.delegate tabBarDidClickedPlusButton:self];
+    if ([self.delegate respondsToSelector:@selector(tabBarDidClickedcollectButton:)]) {
+        [self.delegate tabBarDidClickedcollectButton:self];
     }
+    self.collectButton.isboolcollect = !self.collectButton.isboolcollect;
 }
 
 /**
@@ -95,7 +94,7 @@
     
     CGFloat h = self.frame.size.height;
     CGFloat w = self.frame.size.width;
-    self.plusButton.frame = CGRectMake(0, 0, w / 7, 64);
+    self.collectButton.frame = CGRectMake(0, 0, w / 7, 64);
     
     // 按钮的frame数据
     CGFloat buttonH = h;
@@ -111,7 +110,7 @@
         if (index > 1) {
             buttonX += buttonW;
         }else{
-            buttonX = self.plusButton.frame.size.width + index * buttonW;
+            buttonX = self.collectButton.frame.size.width + index * buttonW;
         }
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         

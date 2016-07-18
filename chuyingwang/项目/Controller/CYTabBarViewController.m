@@ -83,7 +83,7 @@
 
 - (void)tabBarDidClickedPlusButton:(CYTabbar *)tabBar
 {
-    
+    NSLog(@"我被点击了");
 }
 
 /**
