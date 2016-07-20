@@ -81,7 +81,7 @@
     self.selectedIndex = to;
 }
 
-- (void)tabBarDidClickedPlusButton:(CYTabbar *)tabBar
+- (void)tabBarDidClickedcollectButton:(CYTabbar *)tabBar
 {
     NSLog(@"我被点击了");
 }
@@ -91,16 +91,16 @@
  */
 - (void)setupAllChildViewControllers
 {
-//    // 1.首页
+//    // 项目详情
     DetailProjectTableViewController *DetailProject = [[DetailProjectTableViewController alloc] init];
     [self setupChildViewController:DetailProject title:@"项目详情" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
     DetailProject.CardModel = _CardModel;
 //
-//    // 2.消息
+//    // 商业计划
     BusinessPlanViewController *BusinessPlan = [[BusinessPlanViewController alloc] init];
     [self setupChildViewController:BusinessPlan title:@"商业计划" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
 //    
-//    // 3.广场
+//    // 项目动态
     ProjectDynamicsTableViewController *ProjectDynamics = [[ProjectDynamicsTableViewController alloc] init];
     [self setupChildViewController:ProjectDynamics title:@"项目动态" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
 }
