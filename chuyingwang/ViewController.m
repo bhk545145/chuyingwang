@@ -15,6 +15,7 @@
 #import "CYProjectService.h"
 #import "DBHelp.h"
 #import "CYTabBarViewController.h"
+#import "BmobTool.h"
 
 
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
@@ -84,6 +85,8 @@
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(swipeableView)]];
     [self topbtn:nil];
+    BmobTool *bmobtool = [[BmobTool alloc]init];
+    [bmobtool Bmobquery];
 }
 
 - (void)viewDidLayoutSubviews {
