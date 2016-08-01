@@ -10,6 +10,7 @@
 #import "bhkCommon.h"
 #import "CardModel.h"
 #import "ProgressView.h"
+#import "UIButton+WebCache.h"
 
 @interface CardView (){
     //项目图片
@@ -101,7 +102,7 @@
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
     self.layer.cornerRadius = 10.0;
     
-    [projectbtn setBackgroundImage:[UIImage imageNamed:_CardModel.iCardimg] forState:UIControlStateNormal];
+    [projectbtn sd_setBackgroundImageWithURL:[NSURL URLWithString:_CardModel.iCardimg] forState:UIControlStateNormal];
     [projectbtn addTarget:self action:@selector(projectbtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [projectNamebtn setBackgroundImage:[UIImage imageNamed:@"black_pic"] forState:UIControlStateNormal];

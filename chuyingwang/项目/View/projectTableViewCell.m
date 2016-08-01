@@ -9,6 +9,8 @@
 #import "projectTableViewCell.h"
 #import "CardModel.h"
 #import "bhkCommon.h"
+#import "UIButton+WebCache.h"
+#import "PublicTool.h"
 
 @implementation projectTableViewCell
 
@@ -24,7 +26,7 @@
 
 - (void)setCardModel:(CardModel *)CardModel{
     _CardModel = CardModel;
-    [self.projectbtn setBackgroundImage:[UIImage imageNamed:_CardModel.iCardimg] forState:UIControlStateDisabled];
+    [self.projectbtn sd_setBackgroundImageWithURL:[NSURL URLWithString:_CardModel.iCardimg] forState:UIControlStateDisabled];
     
     [self.projectNamebtn setTitle:_CardModel.Cardstr forState:UIControlStateNormal];
     

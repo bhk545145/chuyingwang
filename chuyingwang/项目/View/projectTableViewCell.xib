@@ -15,11 +15,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-jV-tMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="216" id="EYZ-gs-c69"/>
+                        </constraints>
                         <state key="normal" backgroundImage="i1"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-wb-2vG">
                         <rect key="frame" x="0.0" y="176" width="375" height="40"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                         <state key="normal" title="123" backgroundImage="black_pic">
@@ -35,13 +38,10 @@
                             <color key="titleShadowColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.59999999999999998" progressImage="u137" trackImage="u139" translatesAutoresizingMaskIntoConstraints="NO" id="5Fr-uz-Npm">
-                        <rect key="frame" x="109" y="285" width="108" height="2"/>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" progressImage="u137" trackImage="u139" translatesAutoresizingMaskIntoConstraints="NO" id="5Fr-uz-Npm">
+                        <rect key="frame" x="109" y="286" width="108" height="2"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="108" id="dp5-d3-zFc"/>
-                        </constraints>
                         <color key="progressTintColor" red="0.1764705882352941" green="0.30980392156862746" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </progressView>
@@ -54,29 +54,32 @@
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="213" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-am-qSs">
                         <rect key="frame" x="0.0" y="215" width="375" height="51"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="Q69-hx-XNL"/>
+                        </constraints>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="5Fr-uz-Npm" secondAttribute="bottom" constant="10" id="0ze-Qy-DCh"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Rb4-UJ-ms1" secondAttribute="bottom" constant="-3" id="3e4-4y-YBe"/>
-                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="top" secondItem="Wxx-am-qSs" secondAttribute="bottom" constant="11" id="4ji-Mz-muw"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="DWI-jV-tMs" secondAttribute="trailing" constant="-8" id="58w-3P-ZKd"/>
-                    <constraint firstItem="GdT-wb-2vG" firstAttribute="bottom" secondItem="DWI-jV-tMs" secondAttribute="bottom" id="Bgh-9Y-5Vl"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="TDh-w5-l9R" secondAttribute="bottom" constant="3" id="Bra-MG-9JZ"/>
-                    <constraint firstItem="Wxx-am-qSs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="DTs-Zo-K6E"/>
-                    <constraint firstItem="Wxx-am-qSs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="207" id="Dq6-Nj-wfM"/>
-                    <constraint firstItem="DWI-jV-tMs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="GFc-ki-xin"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Wxx-am-qSs" secondAttribute="trailing" constant="-8" id="Jnu-ZR-gSl"/>
-                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LcH-gg-pmP"/>
-                    <constraint firstItem="5Fr-uz-Npm" firstAttribute="centerY" secondItem="TDh-w5-l9R" secondAttribute="centerY" id="MDb-DV-hAO"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="TDh-w5-l9R" secondAttribute="trailing" constant="16" id="dDz-0N-pw7"/>
-                    <constraint firstItem="GdT-wb-2vG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="e9q-pe-10R"/>
-                    <constraint firstItem="DWI-jV-tMs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="o9p-pM-T2s"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="GdT-wb-2vG" secondAttribute="trailing" constant="-8" id="qjJ-5c-QAa"/>
-                    <constraint firstItem="5Fr-uz-Npm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="101" id="xwG-hx-Ogj"/>
+                    <constraint firstItem="Wxx-am-qSs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="207" id="2mN-sK-fFz"/>
+                    <constraint firstItem="DWI-jV-tMs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="8Qd-VH-gZY"/>
+                    <constraint firstItem="TDh-w5-l9R" firstAttribute="leading" secondItem="Rb4-UJ-ms1" secondAttribute="trailing" constant="161" id="9zk-tS-Urs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TDh-w5-l9R" secondAttribute="trailing" constant="16" id="ICo-Ld-tKp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Wxx-am-qSs" secondAttribute="trailing" constant="-8" id="LLp-AY-NZH"/>
+                    <constraint firstItem="Rb4-UJ-ms1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Qph-8M-Kd8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="TDh-w5-l9R" secondAttribute="bottom" constant="3" id="Rhc-Ts-UA7"/>
+                    <constraint firstItem="GdT-wb-2vG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Rz5-8X-lHW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5Fr-uz-Npm" secondAttribute="bottom" constant="10" id="Tu0-Cm-jJ2"/>
+                    <constraint firstItem="Wxx-am-qSs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Ya8-kt-QdY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GdT-wb-2vG" secondAttribute="trailing" constant="-8" id="g17-rG-q0l"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5Fr-uz-Npm" secondAttribute="trailing" constant="150" id="i1t-co-egS"/>
+                    <constraint firstItem="DWI-jV-tMs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="kuk-ft-ZHM"/>
+                    <constraint firstItem="GdT-wb-2vG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="168" id="m6o-cA-oY6"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Rb4-UJ-ms1" secondAttribute="bottom" constant="-3" id="tKI-Hw-ZGR"/>
+                    <constraint firstItem="5Fr-uz-Npm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="101" id="wqm-nj-XdF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DWI-jV-tMs" secondAttribute="trailing" constant="-8" id="xRJ-9q-GWw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

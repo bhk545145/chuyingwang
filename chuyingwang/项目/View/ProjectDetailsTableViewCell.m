@@ -10,6 +10,7 @@
 #import "CardModel.h"
 #import "PublicTool.h"
 #import "bhkCommon.h"
+#import "UIImageView+WebCache.h"
 
 @interface ProjectDetailsTableViewCell(){
     
@@ -75,8 +76,8 @@
 }
 
 - (void)setup{
-    UIImage *Projectimage = [UIImage imageNamed:_CardModel.iCardimg];
-    Projectimage = [PublicTool scaleImage:Projectimage withWidth:UIScreenBounds.size.width];
+    [_projectimageView sd_setImageWithURL:[NSURL URLWithString:_CardModel.iCardimg]];
+    UIImage *Projectimage = [PublicTool scaleImage:_projectimageView.image withWidth:UIScreenBounds.size.width];
     _projectimageView.image = Projectimage;
      CGFloat projectimageViewHight = UIScreenBounds.size.width/Projectimagewidth * Projectimagehight;
     [_projectimageView setFrame:CGRectMake(0, 0, UIScreenBounds.size.width, projectimageViewHight)];

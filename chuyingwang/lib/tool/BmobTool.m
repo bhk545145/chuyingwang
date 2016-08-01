@@ -8,22 +8,36 @@
 
 #import "BmobTool.h"
 #import <BmobSDK/Bmob.h>
+#import "CardModel.h"
 
 @implementation BmobTool
 
-- (void)Bmobquery{
+- (void)Bmobquery:(NSString *)ClassName andBlock:(void(^)(BOOL ret,NSMutableArray *mainarray))block{
+    NSMutableArray *mainarray = [NSMutableArray array];
     //查找project表
-    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"project"];
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:ClassName];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         for (BmobObject *obj in array) {
-            //打印playerName
-            NSLog(@"obj.name = %@", [obj objectForKey:@"name"]);
-            //打印objectId,createdAt,updatedAt
-            NSLog(@"obj.objectId = %@", [obj objectId]);
-            NSLog(@"obj.createdAt = %@", [obj createdAt]);
-            NSLog(@"obj.updatedAt = %@", [obj updatedAt]);
+            CardModel *cardmodel = [[CardModel alloc]init];
+            BmobFile *file = (BmobFile *)[obj objectForKey:@"iCardimg"];
+            cardmodel.iCardimg = file.url;
+            cardmodel.Cardstr = [obj objectForKey:@"Cardstr"];
+            cardmodel.financingStatus = [obj objectForKey:@"financingStatus"];
+            cardmodel.financingStatusPercentage = [[obj objectForKey:@"financingPercentage"] floatValue];
+            cardmodel.projectIntroduction = [obj objectForKey:@"projectIntroduction"];
+            cardmodel.reading = [[obj objectForKey:@"reading"] integerValue
+            ];
+            cardmodel.collection = [[obj objectForKey:@"collection"] integerValue];
+            [mainarray addObject:cardmodel];
         }
+        if (error) {
+            block(NO,mainarray);
+        }else{
+            block(YES,mainarray);
+        }
+        
     }];
+    
 }
 
 @end

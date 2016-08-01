@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface BmobTool : NSObject
-- (void)Bmobquery;
+
+- (void)Bmobquery:(NSString *)ClassName andBlock:(void(^)(BOOL ret,NSMutableArray *mainarray))block;
 @end

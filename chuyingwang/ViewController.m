@@ -21,6 +21,7 @@
 @interface ViewController ()<ZLSwipeableViewAnimator,CardDelegate,UIScrollViewDelegate>{
     UIScrollView *firstscrollview;
     FirstView *firstview;
+    dispatch_queue_t networkQueue;
 }
 @property (nonatomic,strong) NSArray *Cardarray;
 @end
@@ -29,31 +30,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    _Cardarray = @[@{
-                   @"iCardimg"     :   @"i1",
-                   @"Cardstr"     :   @"Bikernel 项目",
-                   @"financingStatus"       :   @"股权融资中",
-                   @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
-                   @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                   @"reading":   [NSNumber numberWithInt:5],
-                   @"collection"     :   [NSNumber numberWithInt:8]
-                   },@{
-                   @"iCardimg"     :   @"i2",
-                   @"Cardstr"     :   @"Bikernel 项目",
-                   @"financingStatus"       :   @"股权融资中",
-                   @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.75f],
-                   @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                   @"reading":   [NSNumber numberWithInt:5],
-                   @"collection"     :   [NSNumber numberWithInt:18]
-                   },@{
-                   @"iCardimg"     :   @"i3",
-                   @"Cardstr"     :   @"Bikernel 项目",
-                   @"financingStatus"       :   @"融资完成",
-                   @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
-                   @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                   @"reading":   [NSNumber numberWithInt:15],
-                   @"collection"     :   [NSNumber numberWithInt:8]
-                   }];
+    networkQueue = dispatch_queue_create("CYWNetworkQueue", DISPATCH_QUEUE_CONCURRENT);
     if (IsiOS7Later) {
         //导航栏背景和字体颜色
         [self.navigationController.navigationBar setBarTintColor:IWcolor(27, 27, 27)];
@@ -85,8 +62,14 @@
                                metrics:metrics
                                views:NSDictionaryOfVariableBindings(swipeableView)]];
     [self topbtn:nil];
-    BmobTool *bmobtool = [[BmobTool alloc]init];
-    [bmobtool Bmobquery];
+    dispatch_async(networkQueue, ^{
+        BmobTool *bmobtool = [[BmobTool alloc]init];
+        [bmobtool Bmobquery:@"projecttest" andBlock:^(BOOL ret, NSArray *mainarray) {
+            _Cardarray = mainarray;
+            [self.view reloadInputViews];
+        }];
+    });
+    
 }
 
 - (void)viewDidLayoutSubviews {
@@ -196,17 +179,21 @@
 #pragma mark - ZLSwipeableViewDataSource
 //卡牌数据展示
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
-    NSMutableArray *Cardarray = [PublicTool cardModelarray:_Cardarray];
-    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
-    view.delegate = self;
-    static int i;
-    if (i > Cardarray.count -1) {
-        i = 0;
+    if (_Cardarray == nil) {
+        return 0;
+    }else{
+        CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
+        view.delegate = self;
+        static int i;
+        if (i > _Cardarray.count -1) {
+            i = 0;
+        }
+        CardModel *cardModel = _Cardarray[i];
+        i++;
+        view.CardModel = cardModel;
+        return view;
     }
-    CardModel *cardModel = Cardarray[i];
-    i++;
-    view.CardModel = cardModel;
-    return view;
+    
 }
 
 //CardView点击事件

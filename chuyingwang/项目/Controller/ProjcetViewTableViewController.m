@@ -13,19 +13,20 @@
 #import "MJRefresh.h"
 #import "PublicTool.h"
 #import "CYTabBarViewController.h"
+#import "BmobTool.h"
 
 @interface ProjcetViewTableViewController (){
-    
+    dispatch_queue_t networkQueue;
 }
 
-@property (nonatomic,strong) NSMutableArray *Cardarray;
+@property (nonatomic,strong) NSArray *Cardarray;
 @end
 
 @implementation ProjcetViewTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    networkQueue = dispatch_queue_create("CYWNetworkQueue", DISPATCH_QUEUE_CONCURRENT);
     if (IsiOS7Later) {
         //导航栏背景和字体颜色
         [self.navigationController.navigationBar setBarTintColor:IWcolor(193, 193, 193)];
@@ -52,34 +53,17 @@
 
 
 - (void)listRefresh{
-    NSArray *devicearray = @[@{
-                                 @"iCardimg"     :   @"i1",
-                                 @"Cardstr"     :   @"Bikernel 项目",
-                                 @"financingStatus"       :   @"股权融资中",
-                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.25f],
-                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                                 @"reading":   [NSNumber numberWithInt:5],
-                                 @"collection"     :   [NSNumber numberWithInt:8]
-                                 },@{
-                                 @"iCardimg"     :   @"i2",
-                                 @"Cardstr"     :   @"Bikernel 项目",
-                                 @"financingStatus"       :   @"股权融资中",
-                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:0.75f],
-                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                                 @"reading":   [NSNumber numberWithInt:5],
-                                 @"collection"     :   [NSNumber numberWithInt:18]
-                                 },@{
-                                 @"iCardimg"     :   @"i3",
-                                 @"Cardstr"     :   @"Bikernel 项目",
-                                 @"financingStatus"       :   @"融资完成",
-                                 @"financingStatusPercentage"      :   [NSNumber numberWithFloat:1.0f],
-                                 @"projectIntroduction"      :   @"该项目由阿里系知名创业团队带领，团队协作力度和执行度都很优秀",
-                                 @"reading":   [NSNumber numberWithInt:15],
-                                 @"collection"     :   [NSNumber numberWithInt:8]
-                                 }];
-    _Cardarray = [PublicTool cardModelarray:devicearray];
-    [self.tableView reloadData];
-    [self.tableView.mj_header endRefreshing];
+    dispatch_async(networkQueue, ^{
+        BmobTool *bmobtool = [[BmobTool alloc]init];
+        [bmobtool Bmobquery:@"projecttest" andBlock:^(BOOL ret, NSArray *mainarray) {
+            _Cardarray = mainarray;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+                [self.tableView.mj_header endRefreshing];
+            });
+        }];
+    });
+
 }
 
 
