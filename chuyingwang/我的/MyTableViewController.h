@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewController : UITableViewController
+- (IBAction)loginbtn:(id)sender;
 
 @end

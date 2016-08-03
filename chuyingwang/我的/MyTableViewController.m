@@ -8,6 +8,7 @@
 
 #import "MyTableViewController.h"
 #import "bhkCommon.h"
+#import "LoginViewController.h"
 
 
 @interface MyTableViewController ()
@@ -99,4 +100,10 @@
     return height;
 }
 
+- (IBAction)loginbtn:(id)sender {
+    LoginViewController *loginView = [[LoginViewController alloc]init];
+    [self presentViewController:loginView animated:YES completion:^{
+        
+    }];
+}
 @end

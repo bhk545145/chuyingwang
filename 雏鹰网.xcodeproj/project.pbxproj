@@ -13,6 +13,9 @@
 		0219963A1D004BBF00923E20 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021996391D004BBF00923E20 /* MyTableViewController.m */; };
 		021B79761D3C72D4007CA42A /* CYCollectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 021B79751D3C72D4007CA42A /* CYCollectButton.m */; };
 		0220AE2C1D34C8E9005E1A96 /* DetailProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */; };
+		024B376C1D51979700B4F01E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024B376A1D51979700B4F01E /* LoginViewController.m */; };
+		024B376D1D51979700B4F01E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024B376B1D51979700B4F01E /* LoginViewController.xib */; };
+		024B37701D519C2900B4F01E /* CYUITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 024B376F1D519C2900B4F01E /* CYUITextFieldView.m */; };
 		024F32C91D4C81CB00DBBE8A /* BmobTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 024F32C81D4C81CB00DBBE8A /* BmobTool.m */; };
 		024F32CB1D4C85DB00DBBE8A /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024F32CA1D4C85DB00DBBE8A /* BmobSDK.framework */; };
 		024F32CD1D4C860F00DBBE8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024F32CC1D4C860F00DBBE8A /* CoreLocation.framework */; };
@@ -169,6 +172,11 @@
 		021B79751D3C72D4007CA42A /* CYCollectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCollectButton.m; sourceTree = "<group>"; };
 		0220AE2A1D34C8E9005E1A96 /* DetailProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProjectTableViewController.h; sourceTree = "<group>"; };
 		0220AE2B1D34C8E9005E1A96 /* DetailProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProjectTableViewController.m; sourceTree = "<group>"; };
+		024B37691D51979700B4F01E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "chuyingwang/我的/LoginViewController.h"; sourceTree = SOURCE_ROOT; };
+		024B376A1D51979700B4F01E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "chuyingwang/我的/LoginViewController.m"; sourceTree = SOURCE_ROOT; };
+		024B376B1D51979700B4F01E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = "chuyingwang/我的/LoginViewController.xib"; sourceTree = SOURCE_ROOT; };
+		024B376E1D519C2900B4F01E /* CYUITextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYUITextFieldView.h; sourceTree = "<group>"; };
+		024B376F1D519C2900B4F01E /* CYUITextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYUITextFieldView.m; sourceTree = "<group>"; };
 		024F32C71D4C81CB00DBBE8A /* BmobTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobTool.h; sourceTree = "<group>"; };
 		024F32C81D4C81CB00DBBE8A /* BmobTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BmobTool.m; sourceTree = "<group>"; };
 		024F32CA1D4C85DB00DBBE8A /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
@@ -684,6 +692,8 @@
 				026C49E31D2617FC00214630 /* PublicTool.m */,
 				024F32C71D4C81CB00DBBE8A /* BmobTool.h */,
 				024F32C81D4C81CB00DBBE8A /* BmobTool.m */,
+				024B376E1D519C2900B4F01E /* CYUITextFieldView.h */,
+				024B376F1D519C2900B4F01E /* CYUITextFieldView.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -1042,6 +1052,9 @@
 		3AA6C25B1CF9DF5E00AEE4A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				024B37691D51979700B4F01E /* LoginViewController.h */,
+				024B376A1D51979700B4F01E /* LoginViewController.m */,
+				024B376B1D51979700B4F01E /* LoginViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1207,6 +1220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024B376D1D51979700B4F01E /* LoginViewController.xib in Resources */,
 				3AA6C2671CF9F03D00AEE4A9 /* projectTableViewCell.xib in Resources */,
 				02BED99A1D2A0FE9001304B5 /* Info.plist in Resources */,
 				0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */,
@@ -1313,9 +1327,11 @@
 				0274918B1CF55CE200C8E0B0 /* ZLSwipeableViewMovement.m in Sources */,
 				02DF7B431CF3FEAF00C9C8F0 /* ASICloudFilesContainer.m in Sources */,
 				02BED9A01D2A4664001304B5 /* DBHelp.m in Sources */,
+				024B376C1D51979700B4F01E /* LoginViewController.m in Sources */,
 				02DF7B471CF3FEAF00C9C8F0 /* ASICloudFilesObjectRequest.m in Sources */,
 				0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */,
 				02BED9991D2A0FE9001304B5 /* FMResultSet.m in Sources */,
+				024B37701D519C2900B4F01E /* CYUITextFieldView.m in Sources */,
 				02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */,
 				02D3B0741D4F43EA00CA97F2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				02D3B06E1D4F43EA00CA97F2 /* SDWebImageManager.m in Sources */,
