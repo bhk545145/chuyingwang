@@ -24,4 +24,6 @@
 + (UIImage *)scaleImage:(UIImage *)image withWidth:(CGFloat)width;
 //根据高度等比例改变图片
 + (UIImage *)scaleImage:(UIImage *)image withHeight:(CGFloat)height;
+//设置textField左边leftView的图片
++ (UIImageView *)setTextFieldimageView:(NSString *)image HighImage:(NSString *)highImage;
 @end

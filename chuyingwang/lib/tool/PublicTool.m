@@ -90,4 +90,21 @@
     return returnString;
 }
 
+/**
+ *  设置textField左边leftView的图片
+ *
+ *  @param image     图片
+ *  @param highImage 高亮图片
+ *
+ *  @return imageView
+ */
++ (UIImageView *)setTextFieldimageView:(NSString *)image HighImage:(NSString *)highImage{
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 20)];
+    [imageView setImage:[UIImage imageNamed:image]];
+    [imageView setHighlightedImage:[UIImage imageNamed:highImage]];
+    imageView.highlighted = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    return imageView;
+}
+
 @end

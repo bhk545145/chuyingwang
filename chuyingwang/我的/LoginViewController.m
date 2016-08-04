@@ -7,7 +7,10 @@
 //
 
 #import "LoginViewController.h"
-
+#import "PublicTool.h"
+#import "BmobTool.h"
+#import "SignViewController.h"
+#import "Toast+UIView.h"
 
 @implementation LoginViewController
 
@@ -15,24 +18,14 @@
     [super viewDidLoad];
     _loginNameField.borderStyle = UITextBorderStyleRoundedRect;
     _loginNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 20)];
-    [imageView setImage:[UIImage imageNamed:@"account_def"]];
-    [imageView setHighlightedImage:[UIImage imageNamed:@"account"]];
-    imageView.highlighted = YES;
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    _loginNameField.leftView.center = imageView.center;
+    UIImageView *imageView = [PublicTool setTextFieldimageView:@"account_def" HighImage:@"account"];
     _loginNameField.leftView = imageView;
     _loginNameField.leftViewMode = UITextFieldViewModeAlways;
     _loginNameField.delegate = self;
     
     _loginPasswordField.borderStyle = UITextBorderStyleRoundedRect;
     _loginPasswordField.secureTextEntry = YES;
-    UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 20)];
-    [imageView1 setImage:[UIImage imageNamed:@"password_def"]];
-    [imageView1 setHighlightedImage:[UIImage imageNamed:@"password"]];
-    imageView1.highlighted = YES;
-    imageView1.contentMode = UIViewContentModeScaleAspectFit;
-    _loginPasswordField.leftView.center = imageView1.center;
+    UIImageView *imageView1 = [PublicTool setTextFieldimageView:@"password_def" HighImage:@"password"];
     _loginPasswordField.leftView = imageView1;
     _loginPasswordField.leftViewMode = UITextFieldViewModeAlways;
     _loginPasswordField.delegate =self;
@@ -47,6 +40,29 @@
 - (IBAction)loginbtn:(id)sender {
     [_loginNameField resignFirstResponder];
     [_loginPasswordField resignFirstResponder];
+    BmobTool *bmobtool = [[BmobTool alloc]init];
+    [bmobtool BmobloginwhithUsername:_loginNameField.text Password:_loginPasswordField.text andBlock:^(BOOL ret, NSString *msg) {
+        if (ret) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        }else{
+            [self.view makeToast:[NSString stringWithFormat:@"getMsg:%@",msg] duration:3.0f position:@"bottom"];
+            NSLog(@"%d  %@",ret,msg);
+        }
+        
+    }];
+    
+}
+
+- (IBAction)signup:(id)sender {
+    SignViewController *signView = [[SignViewController alloc]init];
+    [self presentViewController:signView animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
@@ -78,4 +94,9 @@
     self.view.frame = CGRectOffset(self.view.frame, 0, movement);
     [UIView commitAnimations];
 }
+
+
+
+
+
 @end

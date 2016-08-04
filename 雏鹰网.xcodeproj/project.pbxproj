@@ -72,6 +72,9 @@
 		0286AA571D00373F00C21703 /* investorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0286AA551D00373F00C21703 /* investorTableViewCell.m */; };
 		0286AA581D00373F00C21703 /* investorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0286AA561D00373F00C21703 /* investorTableViewCell.xib */; };
 		0288D0D31D0713490057D970 /* InvestorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0288D0D21D0713490057D970 /* InvestorModel.m */; };
+		02A1C1371D53298600482ECC /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A1C1351D53298600482ECC /* SignViewController.m */; };
+		02A1C1381D53298600482ECC /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A1C1361D53298600482ECC /* SignViewController.xib */; };
+		02A1C13C1D5347CA00482ECC /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A1C13B1D5347CA00482ECC /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02BED9951D2A0FE9001304B5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BED98A1D2A0FE9001304B5 /* FMDatabase.m */; };
 		02BED9961D2A0FE9001304B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BED98C1D2A0FE9001304B5 /* FMDatabaseAdditions.m */; };
 		02BED9971D2A0FE9001304B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BED98E1D2A0FE9001304B5 /* FMDatabasePool.m */; };
@@ -281,6 +284,11 @@
 		0286AA561D00373F00C21703 /* investorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = investorTableViewCell.xib; path = "chuyingwang/投资人/investorTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		0288D0D11D0713490057D970 /* InvestorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvestorModel.h; path = "chuyingwang/投资人/InvestorModel.h"; sourceTree = SOURCE_ROOT; };
 		0288D0D21D0713490057D970 /* InvestorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InvestorModel.m; path = "chuyingwang/投资人/InvestorModel.m"; sourceTree = SOURCE_ROOT; };
+		02A1C1341D53298600482ECC /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignViewController.h; path = "chuyingwang/我的/SignViewController.h"; sourceTree = SOURCE_ROOT; };
+		02A1C1351D53298600482ECC /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignViewController.m; path = "chuyingwang/我的/SignViewController.m"; sourceTree = SOURCE_ROOT; };
+		02A1C1361D53298600482ECC /* SignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignViewController.xib; path = "chuyingwang/我的/SignViewController.xib"; sourceTree = SOURCE_ROOT; };
+		02A1C13A1D5347CA00482ECC /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		02A1C13B1D5347CA00482ECC /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		02BED9891D2A0FE9001304B5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		02BED98A1D2A0FE9001304B5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		02BED98B1D2A0FE9001304B5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -674,6 +682,7 @@
 		026EF51F1CF3022C003A8A95 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				02A1C1391D5347CA00482ECC /* Toast+UIView */,
 				02D3B0451D4F43EA00CA97F2 /* SDWebImage */,
 				0255150C1D33A79400D0CF2C /* JSONKit */,
 				02BED9881D2A0FE9001304B5 /* fmdb */,
@@ -723,6 +732,15 @@
 				027491821CF55CE200C8E0B0 /* ZLSwipeableViewSwipeOptions.m */,
 			);
 			path = ZLSwipeableView;
+			sourceTree = "<group>";
+		};
+		02A1C1391D5347CA00482ECC /* Toast+UIView */ = {
+			isa = PBXGroup;
+			children = (
+				02A1C13A1D5347CA00482ECC /* Toast+UIView.h */,
+				02A1C13B1D5347CA00482ECC /* Toast+UIView.m */,
+			);
+			path = "Toast+UIView";
 			sourceTree = "<group>";
 		};
 		02BED9881D2A0FE9001304B5 /* fmdb */ = {
@@ -1055,6 +1073,9 @@
 				024B37691D51979700B4F01E /* LoginViewController.h */,
 				024B376A1D51979700B4F01E /* LoginViewController.m */,
 				024B376B1D51979700B4F01E /* LoginViewController.xib */,
+				02A1C1341D53298600482ECC /* SignViewController.h */,
+				02A1C1351D53298600482ECC /* SignViewController.m */,
+				02A1C1361D53298600482ECC /* SignViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1226,6 +1247,7 @@
 				0214C56F1D20CCCC00F33FA7 /* FirstView.xib in Resources */,
 				026C49DC1D260C1000214630 /* MJRefresh.bundle in Resources */,
 				026EF4F11CF2FCCC003A8A95 /* Assets.xcassets in Resources */,
+				02A1C1381D53298600482ECC /* SignViewController.xib in Resources */,
 				026EF4EF1CF2FCCC003A8A95 /* Main.storyboard in Resources */,
 				0286AA581D00373F00C21703 /* investorTableViewCell.xib in Resources */,
 				02DF7B4F1CF3FEAF00C9C8F0 /* README-GHUnit in Resources */,
@@ -1256,6 +1278,7 @@
 				02C564071D39CD2E00B2371B /* CYTabbar.m in Sources */,
 				02D3B0671D4F43EA00CA97F2 /* MKAnnotationView+WebCache.m in Sources */,
 				02DF7B501CF3FEAF00C9C8F0 /* Reachability.m in Sources */,
+				02A1C13C1D5347CA00482ECC /* Toast+UIView.m in Sources */,
 				026C49DE1D260C1000214630 /* NSBundle+MJRefresh.m in Sources */,
 				02DF7B3A1CF3FEAF00C9C8F0 /* ASIDataCompressor.m in Sources */,
 				0286AA571D00373F00C21703 /* investorTableViewCell.m in Sources */,
@@ -1332,6 +1355,7 @@
 				0255150F1D33A79400D0CF2C /* JSONKit.m in Sources */,
 				02BED9991D2A0FE9001304B5 /* FMResultSet.m in Sources */,
 				024B37701D519C2900B4F01E /* CYUITextFieldView.m in Sources */,
+				02A1C1371D53298600482ECC /* SignViewController.m in Sources */,
 				02E1ECB81CF6FEF500BD56E8 /* CardView.m in Sources */,
 				02D3B0741D4F43EA00CA97F2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				02D3B06E1D4F43EA00CA97F2 /* SDWebImageManager.m in Sources */,

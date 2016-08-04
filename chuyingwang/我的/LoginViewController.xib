@@ -18,42 +18,60 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-kv-DYW">
-                    <rect key="frame" x="59" y="140" width="256" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFg-YK-03x">
-                    <rect key="frame" x="59" y="199" width="256" height="30"/>
+                    <rect key="frame" x="57" y="261" width="260" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-Tt-eXs">
-                    <rect key="frame" x="83" y="272" width="208" height="30"/>
-                    <state key="normal" title="登入"/>
+                    <rect key="frame" x="82" y="337" width="210" height="30"/>
+                    <state key="normal" title="登入" backgroundImage="blue_pic">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="loginbtn:" destination="-1" eventType="touchUpInside" id="LrY-JV-xtg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-eA-YOi">
-                    <rect key="frame" x="164" y="310" width="46" height="30"/>
+                    <rect key="frame" x="164" y="375" width="46" height="30"/>
                     <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="signup:" destination="-1" eventType="touchUpInside" id="sHL-lj-VbY"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj4-9x-mc7">
-                    <rect key="frame" x="258" y="234" width="46" height="30"/>
+                    <rect key="frame" x="258" y="299" width="46" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <state key="normal" title="忘记密码"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic" translatesAutoresizingMaskIntoConstraints="NO" id="l1X-i8-6BH">
-                    <rect key="frame" x="121" y="57" width="132" height="75"/>
+                    <rect key="frame" x="121" y="122" width="132" height="75"/>
                 </imageView>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTN-SH-DbD">
+                    <rect key="frame" x="0.0" y="18" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="登入" id="aag-Ci-jKG">
+                            <barButtonItem key="leftBarButtonItem" title="返回" id="fQt-OO-DBe">
+                                <connections>
+                                    <action selector="back:" destination="-1" id="Sl5-41-MSP"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-kv-DYW">
+                    <rect key="frame" x="57" y="205" width="260" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="252.5" y="228.5"/>
+            <point key="canvasLocation" x="320.5" y="232.5"/>
         </view>
     </objects>
     <resources>
+        <image name="blue_pic" width="360" height="40"/>
         <image name="pic" width="58" height="58"/>
     </resources>
 </document>
