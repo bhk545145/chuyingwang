@@ -30,5 +30,5 @@
  *  @param password 密码
  *  @param block    返回结果
  */
-- (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSString *msg))block;
+- (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSDictionary *reult))block;
 @end

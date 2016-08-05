@@ -70,12 +70,18 @@
  *  @param password 密码
  *  @param block    返回结果
  */
-- (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSString *msg))block{
+- (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSDictionary *reult))block{
     [BmobUser loginInbackgroundWithAccount:username andPassword:password block:^(BmobUser *user, NSError *error) {
         if (user) {
-            block(YES,[NSString stringWithFormat:@"%@",user]);
+            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [user objectForKey:@"username"], @"username",
+                                 [user objectForKey:@"total_money"],@"total_money",
+                                 [user objectForKey:@"already_amount"],@"already_amount",
+                                 [user objectForKey:@"out_amount"],@"out_amount",
+                                 nil];
+            block(YES,dic);
         } else {
-            block(NO,[NSString stringWithFormat:@"%@",error.userInfo]);
+            block(NO,error.userInfo);
         }
     }];
 }

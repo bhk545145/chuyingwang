@@ -32,36 +32,46 @@
     
     _loginbtn.layer.masksToBounds = YES;
     _loginbtn.layer.cornerRadius = 5.0f;
+    //取出账号信息
+    NSUserDefaults *userDefults = [[NSUserDefaults alloc]init];
+    _loginNameField.text = [userDefults objectForKey:@"loginName"];
+    _loginPasswordField.text = [userDefults objectForKey:@"loginPassword"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 }
 
+//登录
 - (IBAction)loginbtn:(id)sender {
     [_loginNameField resignFirstResponder];
     [_loginPasswordField resignFirstResponder];
     BmobTool *bmobtool = [[BmobTool alloc]init];
-    [bmobtool BmobloginwhithUsername:_loginNameField.text Password:_loginPasswordField.text andBlock:^(BOOL ret, NSString *msg) {
+    [bmobtool BmobloginwhithUsername:_loginNameField.text Password:_loginPasswordField.text andBlock:^(BOOL ret, NSDictionary *reult) {
         if (ret) {
             [self dismissViewControllerAnimated:YES completion:^{
-                
+                //储存账号信息
+                NSUserDefaults *userDefults = [[NSUserDefaults alloc]init];
+                [userDefults setObject:_loginNameField.text forKey:@"loginName"];
+                [userDefults setObject:_loginPasswordField.text forKey:@"loginPassword"];
+                //注册通知
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"MyTableViewreload" object:nil userInfo:reult];
             }];
         }else{
-            [self.view makeToast:[NSString stringWithFormat:@"getMsg:%@",msg] duration:3.0f position:@"bottom"];
-            NSLog(@"%d  %@",ret,msg);
+            [self.view makeToast:[NSString stringWithFormat:@"getMsg:%@",reult] duration:3.0f position:@"bottom"];
+            NSLog(@"%d/-----/%@",ret,reult);
         }
         
     }];
     
 }
-
+//注册
 - (IBAction)signup:(id)sender {
     SignViewController *signView = [[SignViewController alloc]init];
     [self presentViewController:signView animated:YES completion:^{
         
     }];
 }
-
+//返回
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
         
@@ -82,7 +92,7 @@
     [self animateTextField: textField up: NO];
 
 }
-
+//页面上移或下移50
 - (void) animateTextField:(UITextField*)textField up:(BOOL)up {
     const int movementDistance = 50; // tweak as needed
     const float movementDuration = 0.3f; // tweak as needed
