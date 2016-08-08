@@ -73,11 +73,17 @@
 - (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSDictionary *reult))block{
     [BmobUser loginInbackgroundWithAccount:username andPassword:password block:^(BmobUser *user, NSError *error) {
         if (user) {
+            BmobFile *imagefile = [user objectForKey:@"image_path"];
             NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 imagefile.url,@"image_path",
                                  [user objectForKey:@"username"], @"username",
                                  [user objectForKey:@"total_money"],@"total_money",
                                  [user objectForKey:@"already_amount"],@"already_amount",
                                  [user objectForKey:@"out_amount"],@"out_amount",
+                                 [user objectForKey:@"Investment_projects"],@"Investment_projects",
+                                 [user objectForKey:@"created_projects"],@"created_projects",
+                                 [user objectForKey:@"Collection_projects"],@"Collection_projects",
+                                 [user objectForKey:@"Audited_projects"],@"Audited_projects",
                                  nil];
             block(YES,dic);
         } else {

@@ -53,6 +53,7 @@
                 NSUserDefaults *userDefults = [[NSUserDefaults alloc]init];
                 [userDefults setObject:_loginNameField.text forKey:@"loginName"];
                 [userDefults setObject:_loginPasswordField.text forKey:@"loginPassword"];
+                [userDefults setObject:@1 forKey:@"isLoginSuccess"];
                 //注册通知
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"MyTableViewreload" object:nil userInfo:reult];
             }];

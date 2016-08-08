@@ -10,8 +10,5 @@
 
 @interface MyTableViewController : UITableViewController
 - (IBAction)loginbtn:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *total_money;
-@property (weak, nonatomic) IBOutlet UILabel *already_amount;
-@property (weak, nonatomic) IBOutlet UILabel *out_amount;
 
 @end
