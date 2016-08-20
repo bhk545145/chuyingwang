@@ -36,6 +36,10 @@
     [self isLoginSuccess];
     //通知刷新页面
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTabel:) name:@"MyTableViewreload" object:nil];
+    //进入后台通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterBackgroud:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    //进入前台通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
 }
 
@@ -94,6 +98,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimleTableIdentifier];
     }
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UIButton *imagebtn = (UIButton *)[cell viewWithTag:104];
     [imagebtn sd_setBackgroundImageWithURL:_dic[@"image_path"] forState:UIControlStateNormal];
     if (_isLoginSuccess) {
@@ -191,5 +196,15 @@
             [self.tableView reloadData];
         }];
     }
+}
+
+-(void)appEnterBackgroud:(NSNotification *)notification
+{
+    DLog(@"app 进入后台");
+}
+
+-(void)appBecomeActive:(NSNotification *)notification
+{
+    DLog(@"app 被唤醒了");
 }
 @end
