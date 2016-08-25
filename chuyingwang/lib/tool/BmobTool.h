@@ -31,4 +31,14 @@
  *  @param block    返回结果
  */
 - (void)BmobloginwhithUsername:(NSString *)username Password:(NSString *)password andBlock:(void(^)(BOOL ret,NSDictionary *reult))block;
+
+/**
+ *  阅读量原子计数器
+ *
+ *  @param classname    表名
+ *  @param objectId     对象的ID
+ *  @param incrementKey 列名
+ *  @param block        返回结果
+ */
+- (void)BmobClassName:(NSString *)classname ObjectId:(NSString *)objectId IncrementKey:(NSString *)incrementKey updateInBackgroundWithResultBlock:(void(^)(BOOL ret,NSString *msg))block;
 @end

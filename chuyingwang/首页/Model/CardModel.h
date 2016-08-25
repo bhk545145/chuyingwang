@@ -23,6 +23,8 @@
 @property(nonatomic,assign)NSInteger reading;
 //收藏量
 @property(nonatomic,assign)NSInteger collection;
+//objectid
+@property(nonatomic,strong)NSString *objectid;
 
 - (id)initWithDict:(NSDictionary *)dict;
 + (id)DeviceinfoWithDict:(NSDictionary *)dict;

@@ -100,6 +100,12 @@
     CYTabBarViewController *DetailProject = [[CYTabBarViewController alloc]init];
     DetailProject.CardModel = cardModel;
     [self.navigationController pushViewController:DetailProject animated:YES];
+    BmobTool *bmobtool = [[BmobTool alloc]init];
+    [bmobtool BmobClassName:@"projecttest" ObjectId:cardModel.objectid IncrementKey:@"reading" updateInBackgroundWithResultBlock:^(BOOL ret, NSString *msg) {
+        if (ret) {
+            DLog(@"%@",msg);
+        }
+    }];
     //隐藏底部Tabbar
     self.tabBarController.tabBar.hidden = YES;
 }

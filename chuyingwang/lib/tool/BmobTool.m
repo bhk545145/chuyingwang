@@ -28,6 +28,7 @@
             cardmodel.reading = [[obj objectForKey:@"reading"] integerValue
             ];
             cardmodel.collection = [[obj objectForKey:@"collection"] integerValue];
+            cardmodel.objectid = [obj objectForKey:@"objectId"];
             [mainarray addObject:cardmodel];
         }
         if (error) {
@@ -88,6 +89,25 @@
             block(YES,dic);
         } else {
             block(NO,error.userInfo);
+        }
+    }];
+}
+/**
+ *  阅读量原子计数器
+ *
+ *  @param classname    表名
+ *  @param objectId     对象的ID
+ *  @param incrementKey 列名
+ *  @param block        返回结果
+ */
+- (void)BmobClassName:(NSString *)classname ObjectId:(NSString *)objectId IncrementKey:(NSString *)incrementKey updateInBackgroundWithResultBlock:(void(^)(BOOL ret,NSString *msg))block{
+    BmobObject *bObject = [BmobObject objectWithoutDataWithClassName:classname objectId:objectId];
+    [bObject incrementKey:incrementKey];
+    [bObject updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        if (isSuccessful) {
+            block(YES,@"计数成功");
+        } else {
+            block(NO,@"计数失败");
         }
     }];
 }
