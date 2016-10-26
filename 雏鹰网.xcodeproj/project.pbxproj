@@ -1205,6 +1205,7 @@
 					026EF4E01CF2FCCC003A8A95 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 5YQ85Q9UV8;
+						ProvisioningStyle = Manual;
 					};
 					026EF4F91CF2FCCC003A8A95 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1519,11 +1520,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Broadlink Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Broadlink Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/chuyingwang";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = chuyingwang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1531,7 +1533,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwang;
 				PRODUCT_NAME = "雏鹰网";
-				PROVISIONING_PROFILE = "86c60867-c394-4ef6-ad2e-18b0a0726e65";
+				PROVISIONING_PROFILE = "1268ad35-3562-4355-ae6e-6fcb6b695c32";
+				PROVISIONING_PROFILE_SPECIFIER = ios2_econtrol_development;
 			};
 			name = Debug;
 		};
@@ -1540,11 +1543,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Broadlink Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Broadlink Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/chuyingwang";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = chuyingwang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1552,7 +1556,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.chuyingwang;
 				PRODUCT_NAME = "雏鹰网";
-				PROVISIONING_PROFILE = "86c60867-c394-4ef6-ad2e-18b0a0726e65";
+				PROVISIONING_PROFILE = "1268ad35-3562-4355-ae6e-6fcb6b695c32";
+				PROVISIONING_PROFILE_SPECIFIER = ios2_econtrol_development;
 			};
 			name = Release;
 		};
